@@ -8,5 +8,7 @@
       endif;
       ?>
     </nav>
+    <h1>This is where the Logo and Menu go</h1>
+    <hr>
   </div>
 </header>
