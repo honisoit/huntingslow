@@ -1,0 +1,38 @@
+.sidebar-recommended {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.sidebar-recommended__title {
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin-bottom: 0.5em;
+  list-style: none;
+}
+
+.sidebar-recommended__items {
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.sidebar-recommended__item {
+  list-style: none;
+  list-style-type: none;
+  display: table;
+}
+
+.sidebar-recommended__headline {
+  list-style: none;
+  list-style-type: none;
+}
+
+.sidebar-recommended__number {
+  font-size: 3em;
+  list-style: none;
+  list-style-type: none;
+  padding-right: 0.25em;
+  vertical-align: middle;
+}

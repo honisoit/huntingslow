@@ -1,0 +1,49 @@
+.main-column {
+  @include make-row();
+}
+
+.reg-article {}
+
+.reg-article__identifier {
+  @include make-lg-column(6);
+  @include make-lg-column-offset(2);
+  text-transform: uppercase;
+}
+
+.reg-article__headline {
+  @include make-lg-column(6);
+  @include make-lg-column-push(2);
+  color: purple;
+  font-size: 4.5em;
+}
+
+.reg-article__category {
+  @include make-row();
+}
+
+.reg-article__social-buttons {
+  @include make-row();
+}
+
+.reg-article__single-column {
+  @include make-lg-column(2);
+}
+
+.reg-article__featured-image {
+  @include make-lg-column(7);
+}
+
+.reg-article__date {
+  @include make-lg-column(6);
+  @include make-lg-column-push(2);
+}
+
+.reg-article__byline {
+  @include make-lg-column(6);
+  @include make-lg-column-push(2);
+}
+
+.reg-article__standfirst {
+  @include make-lg-column(6);
+  @include make-lg-column-push(2);
+}
