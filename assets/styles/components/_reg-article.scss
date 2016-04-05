@@ -2,6 +2,11 @@
   @include make-row();
 }
 
+.entry-content {
+  @include make-lg-column(8);
+  @include make-lg-column-offset(2);
+}
+
 .reg-article {}
 
 .reg-article__identifier {
@@ -14,7 +19,8 @@
   @include make-lg-column(6);
   @include make-lg-column-push(2);
   color: purple;
-  font-size: 4.5em;
+  font-size: 10em;
+  font-family: serif;
 }
 
 .reg-article__category {

@@ -43,8 +43,10 @@
         </div>
       </div>
     </header>
-    <div class="entry-content">
-      <?php the_content(); ?>
+    <div class="main-column">
+      <div class="entry-content">
+        <?php the_content(); ?>
+      </div>
     </div>
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
