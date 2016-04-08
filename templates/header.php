@@ -1,6 +1,11 @@
 <header class="banner">
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
+        <div class="header__banner">
+          <div class="header__logo">
+            <img src="https://filldunphy.com/150/30"></src>
+          </div>
+        </div>
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

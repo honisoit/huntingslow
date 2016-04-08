@@ -1,55 +1,81 @@
-.main-column {
+.content-wrapper {
   @include make-row();
 }
 
-.entry-content {
-  @include make-lg-column(8);
-  @include make-lg-column-offset(2);
-}
-
-.reg-article {}
-
-.reg-article__identifier {
-  @include make-lg-column(6);
-  @include make-lg-column-offset(2);
-  text-transform: uppercase;
-}
-
-.reg-article__headline {
-  @include make-lg-column(6);
-  @include make-lg-column-push(2);
-  color: purple;
-  font-size: 10em;
-  font-family: serif;
-}
-
-.reg-article__category {
+.reg__content-row,
+.reg__headline-row,
+.reg__meta-row,
+.reg__byline-row {
   @include make-row();
 }
 
-.reg-article__social-buttons {
-  @include make-row();
+.reg__main-column {
+  @include make-xs-column(12);
+  @include make-md-column(9);
 }
 
-.reg-article__single-column {
-  @include make-lg-column(2);
+.reg__content {
+  @include make-xs-column(12);
+  @include make-md-column(10);
+  @include make-md-column-offset(2);
 }
 
-.reg-article__featured-image {
-  @include make-lg-column(7);
+.reg__details {
+  @include make-xs-column(12);
+  @include make-md-column(2);
+  @include make-md-column-pull(10);
+}
+.reg__sidebar {
+  @include make-md-column(3);
 }
 
-.reg-article__date {
-  @include make-lg-column(6);
-  @include make-lg-column-push(2);
+.reg__category {
+  @include make-xs-column(12);
+  @include make-md-column-offset(2);
 }
 
-.reg-article__byline {
-  @include make-lg-column(6);
-  @include make-lg-column-push(2);
+.reg__primary-tag {
+  @include make-xs-column(12);
+  @include make-md-column-offset(2);
 }
 
-.reg-article__standfirst {
-  @include make-lg-column(6);
-  @include make-lg-column-push(2);
+.reg__headline {
+  @include make-xs-column(12);
+  @include make-md-column(10);
+  @include make-md-column-offset(2);
+}
+
+.reg__standfirst {
+  @include make-xs-column(12);
+  @include make-md-column-offset(2);
+}
+
+.reg__article-image {
+  @include make-xs-column(12);
+  @include make-md-column(10);
+  @include make-md-column-push(2);
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.reg__article-image__media {}
+
+.reg__article-image__caption {}
+
+.reg__byline {
+  @include make-xs-column(12);
+}
+
+.reg__date {
+  @include make-xs-column(6);
+  @include make-md-column(12);
+}
+
+.reg__social {
+  @include make-xs-column(6);
+  @include make-md-column(12);
 }
