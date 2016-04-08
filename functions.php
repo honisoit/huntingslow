@@ -13,6 +13,7 @@ $sage_includes = [
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
   'lib/walker.php',    // Custom menu walker
+  'lib/metafields.php', // Custom metafields
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class

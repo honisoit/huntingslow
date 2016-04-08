@@ -1,17 +1,22 @@
 <div class="reg__main-column">
   <header>
     <div class="reg__headline-row">
-      <div class="reg__primary-tag">
-        <p>Primary Tag</p>
-      </div>
       <div class="reg__category">
         <?php the_category(); ?>
       </div>
+      <div class="reg__primary-tag">
+        <p><?php
+          $primary_tag_id = get_post_meta( get_the_id(), 'primary_tag', true );
+          $primary_tag_array = get_term_by( 'id', $primary_tag_id, 'post_tag', ARRAY_A);
+          echo ucwords($primary_tag_array['name']);
+        ?></p>
+      </div>
+
       <div class="reg__headline">
         <h1><?php the_title(); ?></h1>
       </div>
       <div class="reg__standfirst">
-        <p>Standfirst</p>
+        <p><?php echo get_post_meta( get_the_id(), 'standfirst', true); ?></p>
       </div>
     </div>
     <div class="reg__meta-row">
@@ -26,7 +31,7 @@
       <div class="reg__details">
         <div class="reg__byline-row">
           <div class="reg__byline">
-            <p class="byline author vcard"><?= __('By', 'sage'); ?> <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a></p>
+              <?php echo fm_get_bylines_posts_links(); ?>
           </div>
           <div class="reg__date">
             <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
