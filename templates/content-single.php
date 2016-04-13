@@ -11,6 +11,9 @@
             get_template_part('templates/feature-article');
             break;
           case 3:
+            get_template_part('templates/podcast');
+            break;
+          case 4:
             get_template_part('templates/shell-article');
             break;
         };

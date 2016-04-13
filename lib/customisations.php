@@ -106,7 +106,7 @@ function add_post_format() {
       'name'    => 'post_format',
       'default_value' => '1',
       'options' => array (
-        1 => 'Regular', 2 => 'Feature (for Feature articles and those with large, impressive images)', 3 => 'Shell (for apps; only if you know what is going on)' )
+        1 => 'Regular', 2 => 'Feature (for Feature articles and those with large, impressive images)', 3 => 'Podcast', 4 => 'Shell (for apps; only if you know what is going on)' )
   ));
   $fm->add_meta_box( 'Format', 'post' );
 }
