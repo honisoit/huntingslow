@@ -1,7 +1,7 @@
 <header class="banner">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container">
-        <div class="header__banner">
+        <div class="header__banner visible-sm visible-md">
           <div class="header__logo">
             <img src="https://filldunphy.com/150/30"></src>
           </div>
@@ -14,7 +14,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
+          <a class="navbar-brand visible-xs" href="<?= esc_url(home_url('/')); ?>">
             <img src="http://honisoit.com/wp-content/uploads/2016/02/Honilogo20161.png" width="135px" height="30px"></img>
           </a>
 

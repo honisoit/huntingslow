@@ -1,0 +1,31 @@
+.social {
+
+}
+.social__buttons {
+  display: inline-block;
+}
+.social__button {
+}
+
+.social__button__logo {
+
+
+}
+.social__button__logo--fb {
+  fill: $facebook-color;
+}
+.social__button__logo--tw {
+  fill: $twitter-color;
+}
+
+.social__shares {
+  display: table-cell;
+  vertical-align: middle;
+}
+.social__shares--fb {
+  color: $facebook-color;
+}
+
+.social__shares--tw {
+ color: $twitter-color;
+}

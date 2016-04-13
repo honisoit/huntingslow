@@ -1,3 +1,4 @@
+// Variables to override bootstrap defaults
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -9,15 +10,10 @@
 @import "components/license";
 @import "components/sidebar-recommended";
 @import "components/reg-article";
-@import "components/buttons";
 @import "components/comments";
-@import "components/forms";
-@import "components/grid";
+@import "components/search-form";
+@import "components/social";
+@import "components/tags";
 @import "components/wp-classes";
 
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+@import "tinymce";

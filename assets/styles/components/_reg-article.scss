@@ -29,14 +29,14 @@
   @include make-md-column(3);
 }
 
-.reg__category {
+.reg__topic-line {
   @include make-xs-column(12);
   @include make-md-column-offset(2);
 }
 
+.reg__category {}
+
 .reg__primary-tag {
-  @include make-xs-column(12);
-  @include make-md-column-offset(2);
 }
 
 .reg__headline {
@@ -78,4 +78,10 @@
 .reg__social {
   @include make-xs-column(6);
   @include make-md-column(12);
+}
+
+.reg__tags {
+  @include make-xs-column(12);
+  @include make-md-column(10);
+  @include make-md-column-offset(2);
 }

@@ -51,3 +51,11 @@
     </li>
   </ul>
 </div>
+
+<div>
+  <?php
+    if ( get_post_meta( get_the_id(), 'cc_license', true ) === "1" ) {
+      get_template_part('templates/commons-license');
+    } ;
+  ?>
+</div>
