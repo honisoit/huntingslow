@@ -4,15 +4,19 @@
 
 .tags__title {}
 
-.tags__tag-list {
+.tags__tag-list,
+.tags__tag-list ul {
   display: inline-block;
+  -webkit-padding-start: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .tags__tag-list-item {
   display: inline-block;
   margin-right: 5px; // PUT THE ACTUAL REM VALUES IN HERE
+  margin-bottom: 5px; //I assume this also needs rem values but idk how to do
   padding: 0.5rem;
-  padding-right: 0.5rem;
   background-color: $brand-primary;
   border-radius: 0;
   color: #fff;

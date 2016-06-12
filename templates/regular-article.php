@@ -2,7 +2,8 @@
   <header>
     <div class="reg__headline-row">
       <div class="reg__topic-line">
-        <span class="reg__category"><?php the_category(','); ?> — </span>
+        <span class="reg__category"><?php the_category(','); ?></span>
+        <span> — </span>
         <span class="reg__primary-tag">
           <?php
             $primary_tag_id = get_post_meta( get_the_id(), 'primary_tag', true );
