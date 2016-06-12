@@ -19,7 +19,7 @@
  								'copyright' => new Fieldmanager_Textfield( array (
  									'label' => 'Text for the copyright in the footer.'
  								) ),
-                 'media'        => new Fieldmanager_Media( array (
+                 'media'  => new Fieldmanager_Media( array (
  									'label' => 'Label describing the format (SVG), location and parameters for the site logo'
  								) ),
  								'license' => new Fieldmanager_Group( array (
@@ -38,7 +38,7 @@
 
 function podcast_cpt() {
 
-   $args = array(
+   $args = array (
        'label'  => 'Podcast',
        'public' => true,
 				'menu_position' => 15,
@@ -56,10 +56,11 @@ function embedded_cpt() {
 			'label' => 'Embedded',
 			'public' => true,
 			'menu_position' => 15,
-			'menu_icon' => 'dashicons-media-document'
+			'menu_icon' => 'dashicons-media-document',
+      'supports' => 'title'
 		);
 
-		register_post_type( 'embedded_cpt', $args );
+		register_post_type( 'embedded', $args );
 }
 
 add_action( 'init', 'embedded_cpt' );
@@ -112,5 +113,82 @@ function add_post_format() {
   $fm->add_meta_box( 'Format', 'post' );
 }
 add_action( 'fm_post_post', 'add_post_format' );
+
+function add_embedded_content() {
+  $fm = new Fieldmanager_Group( array (
+    'name' => 'embedded',
+    'limit' => 0,
+    'label' => 'Embed',
+    'label_macro' => array( 'Slide: %s', 'title' ),
+    'add_more_label' => 'Add another embedded thing',
+    'sortable' => true,
+    'children' => array(
+      'embed-type' => new Fieldmanager_Select( array(
+        'label' => 'Type',
+        'options' => array(
+            'raw-code' => 'Raw styles, script or data',
+            'github' => 'Github repository',
+            'google-sheet' => 'Google Sheet data import',
+        )
+      )),
+      'github-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'github'
+        ),
+        'children' => array(
+          'github-link' => new Fieldmanager_Link( array (
+            'label' => 'Full link to Github account/repository',
+            'description' => 'This presumes an index.html awaits in the directory at the end of the URL rainbow',
+          )),
+          'github-checkbox' => new Fieldmanager_Checkbox( array (
+            'label' => 'This is safe and I have no idea what I is doing'
+          ))
+        )
+      )),
+      'google-sheet-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'google-sheet'
+        ),
+        'children' => array(
+          'github-link' => new Fieldmanager_Link( array (
+            'label' => 'Link to the .json output of a google sheet',
+          )),
+        )
+      )),
+      'raw-code-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'raw-code'
+        ),
+        'children' => array(
+          'raw-code-location' => new Fieldmanager_Select( array(
+            'label' => 'Where do you want the code?',
+            'options' => array(
+                'header' => 'Header',
+                'body' => 'Body',
+                'bottom' => 'Force to the bottom of the body',
+            )
+          )),
+          'raw-code-content' => new Fieldmanager_TextArea( array(
+            'label' => 'Paste your code in this box right here...'
+          ))
+        )
+      )),
+    ),
+  ) );
+  $fm->add_meta_box( 'Embeds', 'embedded' );
+}
+add_action( 'fm_post_embedded', 'add_embedded_content' );
+
+function add_embedded_global_styles() {
+  $fm = new Fieldmanager_Checkbox ( array (
+    'name' => 'embedded_global_styles',
+    'label' => 'Include the main site stylesheet. (Easy way of keeping the embedded contents consistent and future proof.)'
+  ) );
+  $fm->add_meta_box( 'Global Styles', 'embedded' );
+}
+add_action( 'fm_post_embedded', 'add_embedded_global_styles' );
 
 ?>
