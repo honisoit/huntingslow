@@ -127,36 +127,12 @@ function add_embedded_content() {
         'label' => 'Type',
         'options' => array(
             'raw-code' => 'Raw styles, script or data',
+            'external-link' => 'Link an external stylesheet or script',
             'github' => 'Github repository',
             'google-sheet' => 'Google Sheet data import',
         )
       )),
-      'github-option' => new Fieldmanager_Group( array(
-        'display_if' => array(
-          'src' => 'embed-type',
-          'value' => 'github'
-        ),
-        'children' => array(
-          'github-link' => new Fieldmanager_Link( array (
-            'label' => 'Full link to Github account/repository',
-            'description' => 'This presumes an index.html awaits in the directory at the end of the URL rainbow',
-          )),
-          'github-checkbox' => new Fieldmanager_Checkbox( array (
-            'label' => 'This is safe and I have no idea what I is doing'
-          ))
-        )
-      )),
-      'google-sheet-option' => new Fieldmanager_Group( array(
-        'display_if' => array(
-          'src' => 'embed-type',
-          'value' => 'google-sheet'
-        ),
-        'children' => array(
-          'github-link' => new Fieldmanager_Link( array (
-            'label' => 'Link to the .json output of a google sheet',
-          )),
-        )
-      )),
+
       'raw-code-option' => new Fieldmanager_Group( array(
         'display_if' => array(
           'src' => 'embed-type',
@@ -176,6 +152,61 @@ function add_embedded_content() {
           ))
         )
       )),
+
+      'external-link-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'external-link'
+        ),
+        'children' => array(
+          'external-link-type' => new Fieldmanager_Select( array(
+            'label' => 'Type of link',
+            'options' => array(
+                'css' => 'CSS',
+                'javascript' => 'Javascript',
+            )
+          )),
+          'external-link-location' => new Fieldmanager_Select( array(
+            'label' => 'Where do you want the link?',
+            'options' => array(
+                'header' => 'Header',
+                'body' => 'Body',
+                'bottom' => 'Force to the bottom of the body',
+            )
+          )),
+          'external-link' => new Fieldmanager_Link( array (
+            'label' => 'Full link to the script/stylesheet/library'
+          )),
+        )
+      )),
+
+      'github-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'github'
+        ),
+        'children' => array(
+          'github-link' => new Fieldmanager_Link( array (
+            'label' => 'Full link to Github account/repository',
+            'description' => 'This presumes an index.html awaits in the directory at the end of the URL rainbow',
+          )),
+          'github-checkbox' => new Fieldmanager_Checkbox( array(
+            'label' => 'This is safe and I have no idea what I is doing'
+          ))
+        )
+      )),
+
+      'google-sheet-option' => new Fieldmanager_Group( array(
+        'display_if' => array(
+          'src' => 'embed-type',
+          'value' => 'google-sheet'
+        ),
+        'children' => array(
+          'github-link' => new Fieldmanager_Link( array (
+            'label' => 'Link to the .json output of a google sheet',
+          )),
+        )
+      )),
     ),
   ) );
   $fm->add_meta_box( 'Embeds', 'embedded' );
@@ -185,7 +216,7 @@ add_action( 'fm_post_embedded', 'add_embedded_content' );
 function add_embedded_global_styles() {
   $fm = new Fieldmanager_Checkbox ( array (
     'name' => 'embedded_global_styles',
-    'label' => 'Include the main site stylesheet. (Easy way of keeping the embedded contents consistent and future proof.)'
+    'label' => 'Include the main site stylesheet on the page'
   ) );
   $fm->add_meta_box( 'Global Styles', 'embedded' );
 }
