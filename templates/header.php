@@ -3,7 +3,7 @@
       <div class="container">
         <div class="header__banner">
           <div class="header__logo">
-            <img src="https://filldunphy.com/150/30"></src>
+            <h1>Honi Soit</h1>
           </div>
         </div>
         <!-- Brand and toggle get grouped for better mobile display -->
