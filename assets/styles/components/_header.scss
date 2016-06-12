@@ -1,0 +1,11 @@
+.header__banner {
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+}
+
+.navbar-brand {
+  @media (min-width: $screen-xs-max) {
+    display: none;
+  }
+}
