@@ -98,8 +98,8 @@ function add_cc_license() {
   ) );
   $fm->add_meta_box( 'Creative Commons Licensing', array( 'post', 'podcast' ) );
 }
-add_action( 'fm_post_post', 'add_podcast' );
-add_action( 'fm_post_podcast', 'add_podcast' );
+add_action( 'fm_post_post', 'add_cc_license' );
+add_action( 'fm_post_podcast', 'add_cc_license' );
 
 function add_post_format() {
   $fm = new Fieldmanager_Radios( false, array (
