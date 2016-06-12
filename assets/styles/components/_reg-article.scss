@@ -36,12 +36,12 @@
 }
 
 .reg__category {
-  font-family: "Cutive Mono";
+  font-family: $font-family-monospace;
   text-transform: uppercase;
 }
 
 .reg__primary-tag {
-  font-family: "Cutive Mono";
+  font-family: $font-family-monospace;
 }
 
 .reg__headline {
@@ -91,4 +91,13 @@
   @include make-xs-column(12);
   @include make-md-column(10);
   @include make-md-column-offset(2);
+}
+
+.reg__tags.list.item {
+  display: inline-block;
+  margin-right: 5px;
+  padding: .5rem;
+  padding-right: .75rem;
+  background-color: #999;
+  border-radius: 0;
 }

@@ -1,4 +1,6 @@
-.tags {}
+.tags {
+  font-family: $font-family-monospace;
+}
 
 .tags__title {}
 
@@ -10,7 +12,16 @@
   display: inline-block;
   margin-right: 5px; // PUT THE ACTUAL REM VALUES IN HERE
   padding: 0.5rem;
-  padding-right: 0.75rem;
-  background-color: #999;
-  border-radius: 0rem 1rem 1rem 0rem;
+  padding-right: 0.5rem;
+  background-color: $brand-primary;
+  border-radius: 0;
+  color: #fff;
+}
+
+.tags__tag-list-item a {
+  color: inherit;
+}
+
+.tags__tag-list-item:hover {
+  background-color:$brand-primary-dark;
 }
