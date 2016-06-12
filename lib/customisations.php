@@ -64,7 +64,8 @@ function embedded_cpt() {
 
 add_action( 'init', 'embedded_cpt' );
 
-// CUSTOM METABOXES - Standfirst, Post Format, Creative Commons License and Primary Tag. Assigns them to the relevant post types
+// CUSTOM METABOXES - Standfirst, Post Format, Creative Commons License and
+// Primary Tag. Assigns them to the relevant post types
 
 function add_standfirst() {
   $fm = new Fieldmanager_Textfield( array (
