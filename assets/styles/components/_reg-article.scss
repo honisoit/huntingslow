@@ -20,13 +20,6 @@
   @include make-md-column-offset(2);
 }
 
-.reg__details {
-  @include make-xs-column(12);
-  @include make-md-column(2);
-  @include make-md-column-pull(10);
-  font-size: $font-size-small;
-}
-
 .reg__sidebar {
   @include make-md-column(3);
 
@@ -81,6 +74,14 @@
 
 .reg__article-image__caption {}
 
+.reg__details {
+  @include make-xs-column(12);
+  @include make-md-column(2);
+  @include make-md-column-pull(10);
+  font-size: $font-size-small;
+  padding-right: 0;
+}
+
 .reg__byline {
   @include make-xs-column(12);
 }
@@ -99,4 +100,5 @@
   @include make-xs-column(12);
   @include make-md-column(10);
   @include make-md-column-offset(2);
+  font-size: $font-size-small;
 }
