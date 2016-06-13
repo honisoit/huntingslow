@@ -24,15 +24,22 @@
   @include make-xs-column(12);
   @include make-md-column(2);
   @include make-md-column-pull(10);
+  font-size: $font-size-small;
 }
+
 .reg__sidebar {
   @include make-md-column(3);
-  display: none;
+
+  @media (max-width: $screen-md-min) {
+    display:none;
+  }
 }
 
 .reg__topic-line {
   @include make-xs-column(12);
+  @include make-md-column(10);
   @include make-md-column-offset(2);
+  font-size: $font-size-small;
 }
 
 .reg__category {
@@ -52,7 +59,9 @@
 
 .reg__standfirst {
   @include make-xs-column(12);
+  @include make-md-column(10);
   @include make-md-column-offset(2);
+  font-size: $font-size-large;
 }
 
 .reg__article-image {
@@ -62,6 +71,7 @@
 
   img {
     max-width: 100%;
+    width: 100%; // may want to remove this - it's going to stretch all the previously uploaded images on site
     height: auto;
     display: block;
   }
