@@ -21,6 +21,7 @@
 .social__shares {
   display: table-cell;
   vertical-align: middle;
+  font-family: $font-family-monospace;
 }
 .social__shares--fb {
   color: $facebook-color;
