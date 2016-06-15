@@ -96,6 +96,10 @@
 .reg__social {
   @include make-xs-column(6);
   @include make-md-column(12);
+
+  @media (max-width: $screen-md-min) {
+    border-left: 1px dotted #bbb;
+  }
 }
 
 .reg__byline,
