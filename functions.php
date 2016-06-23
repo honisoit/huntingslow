@@ -12,7 +12,7 @@
 $sage_includes = [
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
-  'lib/walker.php',    // Custom menu walker
+  'lib/walkers.php',    // Custom menu walkers
   'lib/customisations.php', // Custom post types, metafields and options
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
