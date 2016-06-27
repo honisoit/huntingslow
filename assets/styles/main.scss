@@ -1,5 +1,5 @@
 // Variables to override bootstrap defaults
-@import "common/variables";
+
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -7,6 +7,7 @@
 // endbower
 
 @import "common/global";
+@import "common/variables";
 @import "components/license";
 @import "components/sidebar-recommended";
 @import "components/header";

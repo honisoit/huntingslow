@@ -1,5 +1,5 @@
 // Breakpoints
-$small: new-breakpoint(max-width 768);
-$medium: new-breakpoint(max-width 992);
-$large: new-breakpoint(max-width 1200);
-// $massive: new-breakpoint(max-width 1200);
+
+$medium: new-breakpoint(min-width 768px);
+$large: new-breakpoint(min-width 992px);
+$massive: new-breakpoint(min-width 1200px);

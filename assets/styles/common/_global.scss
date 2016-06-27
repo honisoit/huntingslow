@@ -2,6 +2,6 @@
   list-style: none;
 }
 
-.container {
-  @include outer-container(100%);
+.content-wrapper {
+  @include outer-container();
 }
