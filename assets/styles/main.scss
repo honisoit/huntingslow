@@ -4,10 +4,11 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+@import "../../bower_components/typi/scss/_typi.scss";
 // endbower
 
-@import "common/global";
 @import "common/variables";
+@import "common/global";
 @import "mixins/grid-helper";
 @import "components/license";
 @import "components/sidebar-recommended";
