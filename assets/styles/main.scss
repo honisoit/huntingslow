@@ -1,5 +1,5 @@
 // Variables to override bootstrap defaults
-
+@import "common/overrides";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -10,6 +10,7 @@
 @import "common/variables";
 @import "mixins/grid-helper";
 @import "components/license";
+@import "components/large-header";
 @import "components/sidebar-recommended";
 @import "components/header";
 @import "components/reg-article";

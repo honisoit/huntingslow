@@ -1,0 +1,120 @@
+.large-header {
+  @include outer-container();
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 1em;
+}
+
+.large-header__logo {
+  display: block;
+  text-align: center;
+  @include media($medium) {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+#large-header__toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+#large-header__toggle:checked ~ .large-header__nav {
+  right: 0px;
+}
+
+.large-header__toggle-label {
+  right: 1rem;
+  // height: 50px;
+  // width: 50px;
+  padding: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  background: white;
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+
+  /* Eventual hamburger
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: #000;
+    left: 13px;
+    top: 18px;
+    box-shadow: 0 6px 0 #000, 0 12px 0 #000;
+
+  } */
+
+  @include media($medium) {
+    display: none;
+  }
+}
+.large-header__nav {
+  position: fixed;
+  top: 0;
+  right:-16rem;
+  height: 100%;
+  width: 16rem;
+  background: white;
+  border-left-style: solid;
+  border-left-width: 1px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+
+  @include media($medium) {
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    border-style: none;
+    background-color: inherit;
+  }
+}
+
+.large-header__nav-list {
+  list-style: none;
+  margin-top: 2rem;
+  padding-left: 0;
+  padding-top: 0.5rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #c7c7c7;
+
+  @include media($medium) {
+    display: inline;
+  }
+}
+
+.header__nav-list-item {
+  padding: 0;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #c7c7c7;
+  @include media($medium) {
+    display: inline;
+    float: left;
+    padding-right: 0.5rem;
+    border-style: none;
+    padding: 0;
+    margin: 0;
+    padding-right: 0.5rem;
+  }
+}
+
+.large-header__search-form {
+
+  @include media($medium) {
+    display: inline;
+    float: right;
+  }
+}

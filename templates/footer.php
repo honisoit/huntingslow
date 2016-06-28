@@ -8,7 +8,7 @@
         wp_nav_menu( array(
             'menu'              => 'footer_categories',
             'theme_location'    => 'footer_categories',
-            'walker'            => new Simple_Walker,
+            'walker'            => new Footer_Walker,
             'items_wrap'        => '<ul>%3$s</ul>'
           )
         );
@@ -19,7 +19,7 @@
         wp_nav_menu( array(
             'menu'              => 'footer_pages',
             'theme_location'    => 'footer_pages',
-            'walker'            => new Simple_Walker,
+            'walker'            => new Footer_Walker,
             'items_wrap'        => '<ul>%3$s</ul>'
           )
         );
