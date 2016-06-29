@@ -1,36 +1,50 @@
-// Typi maps (responsive type)
+//BREAKPOINTS
 
+//this first breakpoints variable is used by typi
 $breakpoints: (
   medium: 768px,
   large: 992px,
   xlarge: 1200px
 );
 
-$typi: (
-  null: (16px, 1.3),
-  medium: 18px,
-  large: (20px, 1.4),
-  xlarge: 22px
-);
-
-$h1-map: (
-  null: (3.129em, 1.2),
-  large: (2.3353em, 1.3)
-  );
-
-// end typi
-
-
-// Breakpoints
-// (at the moment these are pulled from the typi sass map. inelegant but necessary for testing)
-
+//this second set of breakpoints is for neat and is pulled from the typi breakpoint map above. inelegant but necessary for the time being.
 $medium: new-breakpoint(min-width #{map-get($breakpoints, medium)});
 $large: new-breakpoint(min-width #{map-get($breakpoints, large)});
 $xlarge: new-breakpoint(min-width #{map-get($breakpoints, xlarge)});
 
+// modular scale (for type sizes etc.)
+
+$ms-base: 1rem;
+$ms-ratio: $golden;
+
+// TYPI MAPS (responsive type)
+
+$typi: (
+  null: (17px, 1.6),
+  medium: (18px, 1.6),
+  large: (19px, 1.7),
+  xlarge: (20px, 1.7)
+);
+
+$h1-map: (
+  null: (ms(2), 1.6),
+  large: (ms(2), 1.7)
+  );
+
+$h2-map: (
+  null: (ms(1), 1.6)
+);
+
+$h3-map: (
+  null: (ms(0), 1.6)
+);
+
+// end typi
+
+
 // type variables
 
-$font-family-serif: "Lora", Georgia, "Times New Roman", Times, serif !default;
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-headlines: "Merriweather" !default;
-$font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-serif: "Lora", Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-headlines: "Merriweather";
+$font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;

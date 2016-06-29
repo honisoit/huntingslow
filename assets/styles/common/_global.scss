@@ -11,12 +11,28 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+{
   font-family: $font-family-headlines;
 }
 
 p {
-  font-family: $font-family-serif !default;
+  font-family: $font-family-serif;
+}
+
+h1 {
+  @include typi($h1-map);
+  //not sure why we need the margin stuff below - user agent stylesheet was adding margin automatically
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+h2 {
+  @include typi($h2-map);
+}
+
+h3 {
+  @include typi($h3-map);
 }
 
 // end type
