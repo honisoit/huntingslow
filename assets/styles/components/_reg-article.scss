@@ -34,6 +34,10 @@
   @include lg-columns(10, 2);
 }
 
+.reg__standfirst {
+  @extend .standfirst; 
+}
+
 .reg__article-image {
   img {
     width: 100%;

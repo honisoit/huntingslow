@@ -15,7 +15,7 @@ $xlarge: new-breakpoint(min-width #{map-get($breakpoints, xlarge)});
 // modular scale (for type sizes etc.)
 
 $ms-base: 1rem;
-$ms-ratio: $golden;
+$ms-ratio: $major-third;
 
 // TYPI MAPS (responsive type)
 
@@ -27,15 +27,19 @@ $typi: (
 );
 
 $h1-map: (
-  null: (ms(2), 1.6),
-  large: (ms(2), 1.7)
+  null: (ms(5), 1.6),
+  large: (ms(5), 1.7)
   );
 
 $h2-map: (
-  null: (ms(1), 1.6)
+  null: (ms(3), 1.6)
 );
 
 $h3-map: (
+  null: (ms(1), 1.6)
+);
+
+$h4-map: (
   null: (ms(0), 1.6)
 );
 
@@ -45,6 +49,6 @@ $h3-map: (
 // type variables
 
 $font-family-serif: "Lora", Georgia, "Times New Roman", Times, serif;
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-headlines: "Merriweather";
 $font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;

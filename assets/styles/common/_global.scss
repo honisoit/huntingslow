@@ -6,17 +6,7 @@ html {
 
 // type
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-  font-family: $font-family-headlines;
-}
-
-p {
+body {
   font-family: $font-family-serif;
 }
 
@@ -25,15 +15,26 @@ h1 {
   //not sure why we need the margin stuff below - user agent stylesheet was adding margin automatically
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
+  font-family: $font-family-headlines;
 }
 
 h2 {
   @include typi($h2-map);
+  font-family: $font-family-headlines;
 }
 
 h3 {
+  font-family: $font-family-sans-serif;
+  @include typi($h3-map);
+  font-weight: 600;
+}
+
+.standfirst {
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
   @include typi($h3-map);
 }
+
 
 // end type
 
