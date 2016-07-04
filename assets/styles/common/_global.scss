@@ -10,29 +10,37 @@ body {
   font-family: $font-family-serif;
 }
 
+p {
+  margin: 1rem 0 1rem 0;
+  -webkit-margin-before: 1rem;
+  -webkit-margin-after: 1rem;
+}
+
 h1 {
   @include typi($h1-map);
-  //not sure why we need the margin stuff below - user agent stylesheet was adding margin automatically
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
   font-family: $font-family-headlines;
+  margin: 0; //need to change to whatever spacer we want, needed rn to override -webkit-margin in user agent stylesheet
 }
 
 h2 {
   @include typi($h2-map);
   font-family: $font-family-headlines;
+  margin: 0; //see comment in h1
 }
 
 h3 {
   font-family: $font-family-sans-serif;
   @include typi($h3-map);
   font-weight: 600;
+  margin:0; //see comment in h1
 }
 
-.standfirst {
+.standfirst,
+.standfirst p {
   font-family: $font-family-sans-serif;
   font-weight: 300;
   @include typi($h3-map);
+  margin: 0; //see comment in h1
 }
 
 
