@@ -18,6 +18,7 @@
 .reg__details {
   @include sm-columns(12);
   @include lg-columns(2, -12);
+  @include mono;
 }
 
 .reg__sidebar {
@@ -25,17 +26,27 @@
   @include lg-columns(3);
 }
 
-.reg__topic-line,
-.reg__headline,
-.reg__article-image,
-.reg__standfirst,
-.reg__tags {
-  @include sm-columns(12);
+.reg__topic-line {
+  @include lg-columns(10, 2);
+  @include mono;
+}
+
+.reg__headline {
   @include lg-columns(10, 2);
 }
 
+.reg__article-image {
+  @include lg-columns(10, 2);
+}
+
+.reg__tags {
+  @include lg-columns(10, 2);
+  @include mono;
+}
+
 .reg__standfirst {
-  @extend .standfirst; 
+  @include standfirst;
+  @include lg-columns(10, 2);
 }
 
 .reg__article-image {
@@ -46,7 +57,11 @@
   }
 }
 
-.reg__date,
+.reg__date {
+  @include sm-columns(6);
+  @include lg-columns(12);
+}
+
 .reg__social {
   @include sm-columns(6);
   @include lg-columns(12);

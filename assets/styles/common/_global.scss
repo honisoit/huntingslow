@@ -11,36 +11,53 @@ body {
 }
 
 p {
-  margin: 1rem 0 1rem 0;
-  -webkit-margin-before: 1rem;
-  -webkit-margin-after: 1rem;
+  margin: $baseline 0 $baseline 0;
+  -webkit-margin-before: $baseline;
+  -webkit-margin-after: $baseline;
 }
 
 h1 {
-  @include typi($h1-map);
+  @include typi($size5-map);
   font-family: $font-family-headlines;
-  margin: 0; //need to change to whatever spacer we want, needed rn to override -webkit-margin in user agent stylesheet
+  margin-top: $baseline;
+  margin-bottom: $baseline;
 }
 
 h2 {
-  @include typi($h2-map);
+  @include typi($size4-map);
   font-family: $font-family-headlines;
-  margin: 0; //see comment in h1
+  margin-top: $baseline;
+  margin-bottom: $baseline;
 }
 
 h3 {
   font-family: $font-family-sans-serif;
-  @include typi($h3-map);
+  @include typi($size3-map);
   font-weight: 600;
-  margin:0; //see comment in h1
+  margin-top: $baseline;
+  margin-bottom: $baseline;
 }
 
-.standfirst,
-.standfirst p {
+blockquote {
+  @include typi($size3-map);
+  font-style: italic;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+}
+
+@mixin standfirst {
   font-family: $font-family-sans-serif;
   font-weight: 300;
-  @include typi($h3-map);
-  margin: 0; //see comment in h1
+  @include typi($size3-map);
+
+  p {
+    margin-top: 0;
+  }
+}
+
+@mixin mono {
+  font-family: $font-family-monospace;
+  @include typi($size1-map);
 }
 
 
