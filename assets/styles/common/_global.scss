@@ -1,3 +1,77 @@
+
+
+html {
+  @include typi-base();
+}
+
+// type
+
+body {
+  font-family: $font-family-serif;
+}
+
+p {
+  margin: $baseline 0 $baseline 0;
+  -webkit-margin-before: $baseline;
+  -webkit-margin-after: $baseline;
+}
+
+h1 {
+  @include typi($size5-map);
+  font-family: $font-family-headlines;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+}
+
+h2 {
+  @include typi($size4-map);
+  font-family: $font-family-headlines;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+}
+
+h3 {
+  font-family: $font-family-sans-serif;
+  @include typi($size3-map);
+  font-weight: 600;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+}
+
+blockquote {
+  @include typi($size3-map);
+  font-style: italic;
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+}
+
+@mixin standfirst {
+  font-family: $font-family-sans-serif;
+  font-weight: 300;
+  @include typi($size3-map);
+
+  p {
+    margin-top: 0;
+  }
+}
+
+@mixin mono {
+  font-family: $font-family-monospace;
+  @include typi($size1-map);
+}
+
+
+// end type
+
+@mixin side-padding {
+  padding: 0 $baseline/2 0 $baseline/2;
+
+  @include media($large) {
+    padding: 0; 
+  }
+
+}
+
 .u-unstyled-list {
   list-style: none;
 }
