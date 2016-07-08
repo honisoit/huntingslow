@@ -3,7 +3,17 @@
     <label for="large-header__toggle" id="">Menu</label>
   </span>
   <span class="large-header__logo">
-    <a class="" href="<?= esc_url(home_url('/')); ?>">Honi Soit</a>
+    <a class="" href="<?= esc_url(home_url('/')); ?>">
+      <img src="
+        <?php
+          $options = get_option( 'global_options' );
+          $logoImageID = $options['media'];
+          $logoImageArray = wp_get_attachment_image_src($logoImageID);
+          $logoURL = $logoImageArray[0];
+          echo $logoURL;
+        ?>
+      "></img>
+    </a>
   </span>
 
   <input type="checkbox" id="large-header__toggle" name="large-header__toggle"/>

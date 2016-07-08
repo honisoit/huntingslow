@@ -5,6 +5,13 @@
  */
 
 
+ // Attempt to add SVG support to the Theme
+ function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+ }
+
+ add_filter( 'upload_mimes', 'cc_mime_types' );
  // THEME SETTINGS
 
  if ( function_exists( 'fm_register_submenu_page' ) ) {

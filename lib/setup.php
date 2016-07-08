@@ -7,6 +7,9 @@ use Roots\Sage\Assets;
 /**
  * Theme setup
  */
+
+
+// default setup
 function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/

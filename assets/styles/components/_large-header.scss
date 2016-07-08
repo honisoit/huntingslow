@@ -1,17 +1,17 @@
 .large-header {
-  @include outer-container();
+  // @include outer-container();
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  padding-bottom: 1em;
+  padding: 1rem 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .large-header__logo {
   display: block;
-  text-align: center;
+  width: 40%;
+  margin: auto;
   @include media($medium) {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-align: left;
+    margin: 0;
   }
 }
 
