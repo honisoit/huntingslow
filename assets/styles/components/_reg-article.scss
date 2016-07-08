@@ -1,12 +1,25 @@
-.reg__content-row,
-.reg__headline-row,
-.reg__meta-row,
+.reg__content-row {
+  @include row();
+  @include side-padding;
+}
+
+.reg__headline-row {
+  @include row();
+  @include side-padding;
+}
+
+.reg__meta-row {
+  @include row();
+}
+
 .reg__byline-row {
   @include row();
+  @include side-padding;
 }
 
 .reg__main-column {
   @include sm-columns(12);
+  @include md-columns (10,1);
   @include lg-columns(9);
 }
 

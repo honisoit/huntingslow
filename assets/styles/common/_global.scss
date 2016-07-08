@@ -63,6 +63,15 @@ blockquote {
 
 // end type
 
+@mixin side-padding {
+  padding: 0 $baseline/2 0 $baseline/2;
+
+  @include media($large) {
+    padding: 0; 
+  }
+
+}
+
 .u-unstyled-list {
   list-style: none;
 }
