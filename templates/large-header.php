@@ -6,6 +6,7 @@
     <a class="" href="<?= esc_url(home_url('/')); ?>">
       <img src="
         <?php
+          // we should consider using wp_get_attachment_image here
           $options = get_option( 'global_options' );
           $logoImageID = $options['media'];
           $logoImageArray = wp_get_attachment_image_src($logoImageID);

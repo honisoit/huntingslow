@@ -70,6 +70,13 @@
   }
 }
 
+.reg__article-image__caption {
+  font-family: $font-family-sans-serif;
+  font-size: ms(-1);
+  @include side-padding;
+  margin: 0;
+}
+
 .reg__date {
   @include sm-columns(6);
   @include lg-columns(12);

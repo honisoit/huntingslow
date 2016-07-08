@@ -25,9 +25,15 @@
         </div>
       </div>
       <div class="reg__meta-row">
-
         <div class="reg__article-image">
-          <?php get_template_part('templates/standard-image'); ?>
+          <?php if ( has_post_thumbnail() ) {
+              the_post_thumbnail();
+          } ?>
+          <span class="reg__article-image__caption">
+            <?php
+              echo get_post(get_post_thumbnail_id())->post_excerpt;
+            ?>
+          </span>
         </div>
 
         <div class="reg__details">
