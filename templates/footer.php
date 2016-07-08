@@ -1,5 +1,4 @@
 <footer class="footer">
-  <?php dynamic_sidebar('sidebar-footer'); ?>
   <div class="footer__social">
     <?php get_template_part('templates/social'); ?>
   </div>
