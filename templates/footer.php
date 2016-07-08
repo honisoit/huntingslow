@@ -1,6 +1,6 @@
 <footer class="footer">
-  <div class="footer__social">
-    <?php get_template_part('templates/social'); ?>
+  <div class="footer__social-links">
+    <p>NB: Social link buttons go here.</p>
   </div>
   <div class="footer__list">
     <?php

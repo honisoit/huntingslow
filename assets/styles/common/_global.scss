@@ -67,13 +67,9 @@ blockquote {
   padding: 0 $baseline/2 0 $baseline/2;
 
   @include media($large) {
-    padding: 0; 
+    padding: 0;
   }
 
-}
-
-.u-unstyled-list {
-  list-style: none;
 }
 
 .content-wrapper {

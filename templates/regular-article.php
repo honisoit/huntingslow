@@ -44,8 +44,8 @@
             <div class="reg__date">
               <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
             </div>
-            <div class="reg__social social">
-              <?php get_template_part('templates/social'); ?>
+            <div class="reg__share share">
+              <?php get_template_part('templates/share'); ?>
             </div>
           </div>
         </div>
@@ -58,6 +58,9 @@
       </div>
       <div class="reg__tags tags">
         <?php get_template_part('templates/tags'); ?>
+      </div>
+      <div class="reg__secondary-share share">
+        <?php get_template_part('templates/share'); ?>
       </div>
     </div>
   </div>

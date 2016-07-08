@@ -1,0 +1,13 @@
+.tags {}
+.tags__title {
+  display: inline;
+}
+.tags__tag-list {
+  display: inline;
+  list-style: none;
+  padding: 0;
+}
+.tags__tag-list-item {
+  display: inline;
+  padding-right: $baseline / 4;
+}

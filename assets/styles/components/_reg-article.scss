@@ -82,7 +82,11 @@
   @include lg-columns(12);
 }
 
-.reg__social {
+.reg__share {
   @include sm-columns(6);
   @include lg-columns(12);
+}
+
+.reg__secondary-share {
+  @include lg-columns(10, 2);
 }
