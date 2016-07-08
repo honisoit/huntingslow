@@ -1,1 +1,2 @@
-<h1>These are the contents of a shell article</h1>
+<?php get_template_part('templates/small-header'); ?>
+<?php the_content(); ?>

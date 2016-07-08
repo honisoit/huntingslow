@@ -1,4 +1,11 @@
 feat__main-column {}
+feat__content-row {
+  @include row();
+}
+feat__content {
+  @include span-columns(4);
+  font-size: 5em;
+}
 feat__headline {}
 feat__byline {}
 feat__date {}

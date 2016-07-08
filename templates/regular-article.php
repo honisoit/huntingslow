@@ -1,3 +1,7 @@
+<?php
+  do_action('get_header');
+  get_template_part('templates/large-header');
+?>
 <div class="reg__main-column">
   <header>
     <div class="reg__headline-row">
@@ -22,10 +26,7 @@
     <div class="reg__meta-row">
 
       <div class="reg__article-image">
-        <?php if ( has_post_thumbnail() ) {
-            the_post_thumbnail();
-        } ?>
-        <p>Caption and Credit</p>
+        <?php get_template_part('templates/standard-image'); ?>
       </div>
 
       <div class="reg__details">
