@@ -1,8 +1,50 @@
 .footer {
   border-top-style: solid;
   border-top-width: 1px;
+  @include side-margins;
+  @include media($xlarge) {
+    @include outer-container();
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
-.footer__social {}
-.footer__list {}
-.footer__list-item {}
-.footer__small-text {}
+
+.footer__link-row {
+  @include row();
+  padding-bottom: $baseline;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__column-item {
+  list-style: none;
+}
+
+.footer__column--categories {
+  @include md-columns(6);
+
+  li {
+    @include media($medium) {
+      width: 50%;
+      display:inline;
+      float: left;
+    }
+  }
+}
+
+.footer__column--pages {
+  @include md-columns(3);
+}
+
+.footer__column--social-links {
+  @include md-columns(3);
+}
+
+.footer__column-title {
+  margin: 0;
+  padding: 0;
+}
