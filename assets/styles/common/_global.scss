@@ -22,6 +22,11 @@ p {
   @include fontcolor;
 }
 
+a:link {
+  color: $brand-primary;
+  text-decoration:underline;
+}
+
 h1 {
   @include typi($size5-map);
   font-family: $font-family-headlines;
@@ -40,7 +45,7 @@ h2 {
 h3 {
   font-family: $font-family-sans-serif;
   @include typi($size3-map);
-  font-weight: 600;
+  font-weight: 700;
   margin-top: $baseline;
   margin-bottom: $baseline;
 }
