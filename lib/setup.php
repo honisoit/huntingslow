@@ -32,7 +32,8 @@ function setup() {
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
     'footer_categories' => __('Footer Categories', 'sage'),
-    'footer_pages' => __('Footer Pages', 'sage')
+    'footer_pages' => __('Footer Pages', 'sage'),
+    'footer_social-links' => __('Footer Social Links', 'sage')
   ]);
 
   // Enable post thumbnails
