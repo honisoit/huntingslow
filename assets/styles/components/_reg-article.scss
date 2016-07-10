@@ -8,6 +8,10 @@
   @include side-padding;
 }
 
+.reg__related-row {
+  @include row();
+}
+
 .reg__meta-row {
   @include row();
 }

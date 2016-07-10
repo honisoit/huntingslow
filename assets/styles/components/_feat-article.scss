@@ -1,15 +1,44 @@
-feat__main-column {}
-feat__content-row {
+.feat__main-column {}
+.feat__content-row {
   @include row();
 }
-feat__content {
-  @include span-columns(4);
-  font-size: 5em;
+.feat__content {
+  @include sm-columns(8, 2);
+  @include lg-columns(6, 3);
 }
-feat__headline {}
-feat__byline {}
-feat__date {}
-feat__standfirst {}
-feat__article-image {}
-feat__article-image__media {}
-feat__article-image__caption {}
+.feat__headline {}
+.feat__byline {}
+.feat__date {}
+.feat__standfirst {
+  @include media($medium) {
+    width: 50%;
+  }
+}
+.feat__article-image {
+  img {
+    height: 100vh;
+    display: inline-block;
+  }
+}
+.feat__logo {
+  position: absolute;
+  top: 2.5%;
+  width: 20%;
+  margin: auto;
+
+  svg {
+    fill: #fff;
+  }
+}
+.feat__titles {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+}
+.feat__article-image__media {}
+.feat__article-image__caption {}
+.feat__secondary-share {
+  @include sm-columns(8, 2);
+  @include lg-columns(6, 3);
+}

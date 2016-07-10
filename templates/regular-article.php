@@ -67,6 +67,8 @@
   <aside class="reg__sidebar">
     <?php dynamic_sidebar('sidebar-regular'); ?>
   </aside>
+</div>
+<div class="content-wrapper">
   <div class="reg__related-row">
     <?php dynamic_sidebar('sidebar-related'); ?>
   </div>
