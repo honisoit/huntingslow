@@ -23,17 +23,19 @@
 
 .reg__main-column {
   @include sm-columns(12);
-  @include md-columns (10,1);
   @include lg-columns(9);
 }
 
 .reg__content {
   @include sm-columns(12);
+  @include md-columns(10, 1);
   @include lg-columns(10, 2);
+  display: block;
 }
 
 .reg__details {
   @include sm-columns(12);
+  @include md-columns(10, 1);
   @include lg-columns(2, -12);
   @include mono;
 }
@@ -53,10 +55,13 @@
 }
 
 .reg__article-image {
+  @include sm-columns(12);
   @include lg-columns(10, 2);
 }
 
 .reg__tags {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
   @include lg-columns(10, 2);
   @include mono;
 }
@@ -92,5 +97,7 @@
 }
 
 .reg__secondary-share {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
   @include lg-columns(10, 2);
 }

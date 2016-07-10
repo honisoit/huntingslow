@@ -10,10 +10,16 @@ body {
   font-family: $font-family-serif;
 }
 
+@mixin fontcolor {
+  color: #000;
+  opacity: 0.9;
+}
+
 p {
   margin: $baseline 0 $baseline 0;
   -webkit-margin-before: $baseline;
   -webkit-margin-after: $baseline;
+  @include fontcolor;
 }
 
 h1 {
@@ -21,6 +27,7 @@ h1 {
   font-family: $font-family-headlines;
   margin-top: $baseline;
   margin-bottom: $baseline;
+  @include fontcolor;
 }
 
 h2 {
