@@ -1,7 +1,6 @@
 .footer {
   border-top-style: solid;
   border-top-width: 1px;
-  @include side-margins;
   @include media($xlarge) {
     @include outer-container();
     margin-left: 0;
@@ -47,4 +46,12 @@
 .footer__column-title {
   margin: 0;
   padding: 0;
+}
+
+.footer__small-text {
+  font-family: $font-family-sans-serif;
+  font-size: ms(-1);
+  @include side-padding;
+  margin: 0;
+  text-align: center;
 }

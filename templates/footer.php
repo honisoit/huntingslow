@@ -37,16 +37,16 @@
       ?>
     </div>
   </div>
-
+  <div class="footer__small-text">
   <?php
-    // $options = get_option( 'global_options' );
-    // $option = $options['copyright'];
-    // echo $option;
+    $options = get_option( 'global_options' );
+    $option = $options['copyright'];
+    echo $option;
   ?>
   <?php
-    // $options = get_option( 'global_options' );
-    // $option = $options['acknowledgment_text'];
-    // echo $option;
+    $options = get_option( 'global_options' );
+    $option = $options['acknowledgment_text'];
+    echo $option;
   ?>
-
+  </div>
 </footer>
