@@ -1,0 +1,33 @@
+.popular {}
+
+.popular__title {
+  margin-bottom: $baseline/2
+}
+
+.popular__list {
+  list-style-type: none;
+  counter-reset: popular-counter;
+  padding-left: 0;
+}
+
+.popular__list-item,
+.popular__list-item a {
+  text-decoration: none;
+  @include fontcolor;
+}
+
+.popular__list-item::before {
+  counter-increment: popular-counter;
+  content: counter(popular-counter);
+  margin-right: 10px;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  @include mono;
+  line-height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: baseline;
+  background-color: $brand-primary;
+  color: $text-on-brand-primary;
+}
