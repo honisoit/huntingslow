@@ -1,0 +1,25 @@
+.related {
+  @include md-columns(8, 2);
+}
+
+.related__title {
+  color: red;
+}
+
+.related__item-row {
+  @include row();
+}
+
+.related__item {
+  @include md-columns(4);
+}
+
+.related__category {
+  color: red;
+}
+
+.related__headline {
+  font-size: 1rem;
+}
+
+.related__date {}
