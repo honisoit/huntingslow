@@ -10,6 +10,7 @@
 
 .reg__related-row {
   @include row();
+  @include side-padding;
 }
 
 .reg__meta-row {
@@ -43,6 +44,7 @@
 .reg__sidebar {
   display:none;
   @include lg-columns(3);
+  padding-top: 800px; // remove later
 }
 
 .reg__topic-line {
@@ -86,14 +88,26 @@
   margin: 0;
 }
 
-.reg__date {
-  @include sm-columns(6);
+.reg__byline {
+  @include sm-columns(9);
   @include lg-columns(12);
+  font-family: $font-family-sans-serif;
+}
+
+.reg__date {
+  @include sm-columns(9);
+  @include lg-columns(12);
+  @include media($large) {
+    margin-top: $baseline;
+  }
 }
 
 .reg__share {
-  @include sm-columns(6);
+  @include sm-columns(3, 10);
   @include lg-columns(12);
+  @include media($large) {
+    margin-top: $baseline/2;
+  }
 }
 
 .reg__secondary-share {

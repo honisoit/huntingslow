@@ -1,4 +1,7 @@
-.popular {}
+.popular {
+  @include md-columns(10, 1);
+  @include lg-columns(14 of 16, 2);
+}
 
 .popular__title {
   margin-bottom: $baseline/2
@@ -14,6 +17,10 @@
 .popular__list-item a {
   text-decoration: none;
   @include fontcolor;
+}
+
+.popular__list-item a:hover {
+  color: $brand-primary;
 }
 
 .popular__list-item::before {

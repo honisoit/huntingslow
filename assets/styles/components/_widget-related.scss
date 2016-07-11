@@ -1,9 +1,9 @@
 .related {
-  @include md-columns(8, 2);
+  @include md-columns(10, 1);
+  @include lg-columns(14 of 16, 2);
 }
 
 .related__title {
-  color: red;
 }
 
 .related__item-row {
@@ -15,11 +15,18 @@
 }
 
 .related__category {
-  color: red;
+  @include mono;
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
 }
 
 .related__headline {
-  font-size: 1rem;
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
 }
 
-.related__date {}
+.related__date {
+  @include mono;
+  margin-top: $baseline/2;
+  margin-bottom: $baseline/2;
+}
