@@ -12,6 +12,9 @@
   padding: 0 0 0 0.4rem;
   margin: 0;
   @include typi($size1-map);
+  @include media($medium) {
+    border-width: 1px 0px 0px 1px;
+  }
 }
 
 .search-form__submit {
@@ -23,4 +26,8 @@
   padding: 0 0.4rem 0;
   margin: 0;
   @include typi($size1-map);
+
+  @include media($medium) {
+    border-width: 1px 1px 0px 1px;
+  }
 }
