@@ -1,0 +1,30 @@
+.article-summary {
+  @include row();
+  margin-bottom: $baseline;
+}
+
+.article-summary__image {
+  @include md-columns(6);
+  img {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.article-summary__copy {
+  @include md-columns(6);
+}
+
+.article-summary__headline {}
+
+.article-summary__byline {}
+
+.article-summary__date {}
+
+.article-summary__category {}
+
+.article-summary__primary-tag {}
+
+.article-summary__excerpt {
+  overflow: hidden;
+}
