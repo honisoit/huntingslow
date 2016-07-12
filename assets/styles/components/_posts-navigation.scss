@@ -1,0 +1,17 @@
+// Using the WP-generated classes here until we filter them properly, if we do.
+.posts-navigation {
+  margin-bottom: $baseline/2;
+}
+.nav-links {
+  text-align: center;
+  @include typi($size1-map);
+  font-family: $font-family-monospace;
+}
+.nav-previous {}
+.nav-next {}
+
+// Also uses
+.screen-reader-text {
+  @include typi($size3-map);
+  text-align: center;
+}

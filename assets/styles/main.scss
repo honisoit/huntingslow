@@ -8,22 +8,32 @@
 @import "../../bower_components/modular-scale/stylesheets/_modular-scale.scss";
 // endbower
 
+// Theme-wide styles and utilities
 @import "common/variables";
 @import "common/global";
 @import "mixins/grid-helper";
+
+// Page level
+@import "components/reg-article";
+@import "components/feat-article";
+
+// Template parts
 @import "components/license";
 @import "components/large-header";
 @import "components/sidebar-recommended";
 @import "components/header";
-@import "components/reg-article";
-@import "components/feat-article";
 @import "components/search-form";
-@import "components/widget-related";
-@import "components/widget-single-article";
-@import "components/widget-popular";
 @import "components/share";
 @import "components/tags";
 @import "components/footer";
-@import "components/wp-classes";
+@import "components/article-summary";
+@import "components/posts-navigation";
 
+// External Widgets
+@import "components/widget-related";
+@import "components/widget-single-article";
+@import "components/widget-popular";
+
+// WordPress core things
+@import "components/wp-classes";
 @import "tinymce";

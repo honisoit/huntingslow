@@ -54,6 +54,9 @@
 
 .reg__headline {
   @include lg-columns(10, 2);
+  h1 {
+    margin: $baseline/2 0 $baseline/2;
+  }
 }
 
 .reg__article-image {
@@ -71,6 +74,9 @@
 .reg__standfirst {
   @include standfirst;
   @include lg-columns(10, 2);
+  p {
+    margin-bottom: $baseline/2;
+  }
 }
 
 .reg__article-image {

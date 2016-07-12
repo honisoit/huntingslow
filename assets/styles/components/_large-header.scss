@@ -3,7 +3,7 @@
   border-bottom-style: solid;
   border-bottom-width: 1px;
   padding: 0 1rem 0;
-  margin-bottom: 1rem;
+  margin-bottom: $baseline/2;
 
   @include media($medium) {
     @include outer-container();
