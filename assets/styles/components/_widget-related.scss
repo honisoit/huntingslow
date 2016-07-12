@@ -21,6 +21,7 @@
 }
 
 .related__headline {
+  @include typi($size3-map);
   margin-top: $baseline/2;
   margin-bottom: $baseline/2;
 }
