@@ -19,8 +19,8 @@
   border: 1px solid #000;
   border-radius: 50%;
   display:inline-block;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2rem;
+  height: 2rem;
   position: relative;
   background: transparent;
   vertical-align: top;
@@ -46,10 +46,11 @@
 }
 
 .share__total {
-  height: 2.5em;
+  height: 2rem;
   display: inline-block;
   vertical-align: top;
-  line-height: 2.5em;
+  line-height: 2rem;
+  @include mono;
 }
 
 .share__total--fb {}

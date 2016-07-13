@@ -39,6 +39,10 @@
   @include md-columns(10, 1);
   @include lg-columns(2, -12);
   @include mono;
+  margin-top: $baseline/2;
+  @include media($large) {
+    margin-top: 0;
+  }
 }
 
 .reg__sidebar {
@@ -83,29 +87,31 @@
   img {
     width: 100%;
     height: auto;
-    display: inline-block;
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .reg__article-image__caption {
   font-family: $font-family-sans-serif;
-  font-size: ms(-1);
+  @include typi($size1-map);
   @include side-padding;
-  margin: 0;
 }
 
 .reg__byline {
-  @include sm-columns(12);
-  @include lg-columns(12);
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-monospace;
 }
 
 .reg__date {
-  @include sm-columns(3 of 12);
-  @include lg-columns(12);
   @include media($large) {
     margin-top: $baseline;
   }
+}
+
+.reg__bylinedate {
+  @include sm-columns(8 of 12);
+  @include lg-columns(12);
 }
 
 .reg__share {
@@ -115,10 +121,14 @@
   @include media($large) {
     margin-top: $baseline/2;
   }
+  ul {
+    float:right;
+  }
 }
 
 .reg__secondary-share {
   @include sm-columns(12);
   @include md-columns(10, 1);
   @include lg-columns(10, 2);
+  margin-bottom: $baseline;
 }

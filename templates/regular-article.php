@@ -38,12 +38,14 @@
 
         <div class="reg__details">
           <div class="reg__byline-row">
+            <div class="reg__bylinedate">
             <div class="reg__byline">
                 <?php echo fm_get_bylines_posts_links(); ?>
             </div>
             <div class="reg__date">
               <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
             </div>
+          </div>
             <div class="reg__share share">
               <?php get_template_part('templates/share'); ?>
             </div>
