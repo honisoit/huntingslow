@@ -58,7 +58,19 @@ $font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
 $font-family-headlines: "Merriweather";
 $font-family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
 
+// color functions
+
+@function lightercolor($color, $percentage) {
+  @return mix(white, $color, $percentage); // lightercolor function now mixes any color with white in % specified
+}
+
+@function darkercolor($color, $percentage) {
+  @return mix(black, $color, $percentage); // darkercolor now mixes any color with black in % specified
+}
+
 // colours
 
 $brand-primary: #454545;
+$brand-primary-dark: darkercolor($brand-primary, 20%);
+$brand-primary-light: lightercolor($brand-primary, 30%);
 $text-on-brand-primary: #fff;
