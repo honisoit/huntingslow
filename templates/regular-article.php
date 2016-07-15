@@ -72,6 +72,8 @@
 </div>
 <div class="content-wrapper">
   <div class="reg__related-row">
+    <div class="reg__related">
     <?php dynamic_sidebar('sidebar-related'); ?>
+    </div>
   </div>
 </div>

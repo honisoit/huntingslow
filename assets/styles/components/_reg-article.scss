@@ -13,6 +13,11 @@
   @include side-padding;
 }
 
+.reg__related {
+  @include md-columns(10, 1);
+  @include lg-columns(10 of 16, 2)
+}
+
 .reg__meta-row {
   @include row();
 }
