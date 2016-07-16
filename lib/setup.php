@@ -90,8 +90,17 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Related Content', 'sage'),
-    'id'            => 'sidebar-related',
+    'name'          => __('Related Content One', 'sage'),
+    'id'            => 'sidebar-related-one',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Related Content Two', 'sage'),
+    'id'            => 'sidebar-related-two',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',

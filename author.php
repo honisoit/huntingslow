@@ -1,9 +1,10 @@
 <div class="author__main-column">
 
 <?php get_template_part('templates/page', 'header'); ?>
-<h1 class="author__author-name">Naaman Zhou</h1>
+<h1 class="author__author-name">This is an author page</h1>
 
 <?php if (!have_posts()) : ?>
+  <p>Author page, but no posts</p>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>
   </div>
