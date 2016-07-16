@@ -68,10 +68,18 @@
   </div>
   <aside class="reg__sidebar">
     <?php dynamic_sidebar('sidebar-regular'); ?>
+
+    <?php
+      // $blids = fm_get_byline_posts( fm_get_byline_ids() );
+      // Need to do a foreach on the ids here ^
+      // echo implode($blids, ', ');
+    ?>
   </aside>
 </div>
 <div class="content-wrapper">
   <div class="reg__related-row">
-    <?php dynamic_sidebar('sidebar-related'); ?>
+    <div class="reg__related">
+      <?php dynamic_sidebar('sidebar-related'); ?>
+    </div>
   </div>
 </div>

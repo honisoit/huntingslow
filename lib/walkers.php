@@ -6,7 +6,7 @@
  * Simple menu walker for the footer
  */
 
-class Header_Walker extends Walker {
+class Header_Menu_Walker extends Walker {
   public function walk( $elements, $max_depth ) {
     $list = array ();
 
@@ -17,7 +17,7 @@ class Header_Walker extends Walker {
   }
 }
 
-class Footer_Walker extends Walker {
+class Footer_Menu_Walker extends Walker {
   public function walk( $elements, $max_depth ) {
     $list = array ();
 

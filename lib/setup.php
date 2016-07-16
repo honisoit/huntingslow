@@ -8,7 +8,6 @@ use Roots\Sage\Assets;
  * Theme setup
  */
 
-
 // default setup
 function setup() {
   // Enable features from Soil when plugin is activated
@@ -31,7 +30,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'footer_categories' => __('Footer Categories', 'sage'),
+    'footer_categories_one' => __('Footer Categories One', 'sage'),
+    'footer_categories_two' => __('Footer Categories Two', 'sage'),
     'footer_pages' => __('Footer Pages', 'sage'),
     'footer_social-links' => __('Footer Social Links', 'sage')
   ]);
@@ -57,16 +57,15 @@ function setup() {
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
-/**
- * Enable upload of SVG images to media browser
- * Inexplicably not working (I think clashing with one of the plugins. Will investigate and fix.
+/*
+ * Bylines messing around
  */
 
-// function allow_svgimg_types($mimes) {
-//   $mimes['svg'] = 'image/svg+xml';
-//   return $mimes;
-// }
-// add_filter('upload_mimes', 'allow_svgimg_types');
+add_filter( 'fm_bylines_filter_types', function() {
+  return array_merge( array( 'post' ), array( 'author', 'illustrator', 'content-editor' ) );
+} );
+
+add_post_type_support( 'post', array( 'author', 'illustrator', 'content-editor' ) );
 
 /**
  * Register sidebars

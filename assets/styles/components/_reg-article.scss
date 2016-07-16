@@ -13,6 +13,10 @@
   @include side-padding;
 }
 
+.reg__related {
+  @include md-columns(6, 2);
+}
+
 .reg__meta-row {
   @include row();
 }

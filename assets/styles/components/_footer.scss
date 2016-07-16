@@ -29,22 +29,20 @@
   list-style: none;
 }
 
-.footer__column--categories {
+.footer__categories {
   @include md-columns(6);
-
-  li {
-    width: 50%;
-    display:inline;
-    float: left;
-  }
 }
 
-.footer__column--pages {
+.footer__categories-column {
+  @include sm-columns(6);
+}
+
+.footer__pages {
   @include sm-columns(6);
   @include md-columns(3);
 }
 
-.footer__column--social-links {
+.footer__social-links {
   @include sm-columns(6);
   @include md-columns(3);
 }
