@@ -7,15 +7,25 @@
 
 .related__item-row {
   @include row();
+  display: flex;
+  flex-direction: column;
+  margin: 0 -$baseline/4;
+  padding-bottom: $baseline/2;
+  @include media($medium) {
+    flex-direction: row;
+  }
+
 }
 
 .related__item {
-  @include md-columns(4);
+  //@include md-columns(4);
   //background-color: #efefef;
   border: 1px solid #ccc;
-  padding-left: $baseline/4;
-  padding-right: $baseline/4;
-  margin-bottom: $baseline/2;
+  @include media($medium) {
+    width: 33.33333%;
+  }
+  padding: $baseline/4;
+  margin: $baseline/4;
 }
 
 .related__category {

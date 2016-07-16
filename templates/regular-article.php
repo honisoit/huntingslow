@@ -79,11 +79,8 @@
 <div class="content-wrapper">
   <div class="reg__related-row">
     <div class="reg__related">
-<<<<<<< HEAD
+
     <?php dynamic_sidebar('sidebar-related'); ?>
-=======
-      <?php dynamic_sidebar('sidebar-related'); ?>
->>>>>>> origin/dev
     </div>
   </div>
 </div>
