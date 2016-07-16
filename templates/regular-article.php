@@ -40,7 +40,13 @@
           <div class="reg__byline-row">
             <div class="reg__bylinedate">
             <div class="reg__byline">
-                <?php echo fm_get_bylines_posts_links(); ?>
+                <?php
+                  if ( function_exists( 'coauthors_posts_links' ) ) {
+                    coauthors_posts_links();
+                  } else {
+                    the_author_posts_link();
+                  }
+                ?>
             </div>
             <div class="reg__date">
               <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
@@ -68,19 +74,17 @@
   </div>
   <aside class="reg__sidebar">
     <?php dynamic_sidebar('sidebar-regular'); ?>
-
-    <?php
-      // $blids = fm_get_byline_posts( fm_get_byline_ids() );
-      // Need to do a foreach on the ids here ^
-      // echo implode($blids, ', ');
-    ?>
   </aside>
 </div>
 <div class="content-wrapper">
   <div class="reg__related-row">
     <div class="reg__related">
-
-    <?php dynamic_sidebar('sidebar-related'); ?>
+      <?php dynamic_sidebar('sidebar-related-one'); ?>
+    </div>
+  </div>
+  <div class="reg__related-row">
+    <div class="reg__related">
+      <?php dynamic_sidebar('sidebar-related-two'); ?>
     </div>
   </div>
 </div>
