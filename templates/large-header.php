@@ -15,7 +15,7 @@
             'menu'              => 'primary_navigation',
             'theme_location'    => 'primary_navigation',
             'items_wrap'        => '<ul class="large-header__nav-list">%3$s</ul>',
-            'walker'            => new Header_Walker
+            'walker'            => new Header_Menu_Walker
           )
         );
     ?>

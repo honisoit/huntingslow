@@ -1,6 +1,7 @@
 .article-summary {
   @include row();
   margin-bottom: $baseline;
+  background-color: #efefef;
 }
 
 .article-summary__image {
@@ -15,7 +16,9 @@
   @include md-columns(6);
 }
 
-.article-summary__headline {}
+.article-summary__headline {
+  margin: 0;
+}
 
 .article-summary__byline {}
 
@@ -26,5 +29,11 @@
 .article-summary__primary-tag {}
 
 .article-summary__excerpt {
-  overflow: hidden;
+  display: none;
+  @include media($medium) {
+    display: block;
+  }
+  p {
+    margin: 0;
+  }
 }

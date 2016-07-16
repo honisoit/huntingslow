@@ -1,45 +1,48 @@
 <?php
+// Custom options for Huntingslow
 
 /**
- * Create options, Custom Post Types and metaboxes throughout the site
+ * Add SVG support to the theme. Might remove this pending direct backend options
+ * for copying in straight svg markup
  */
 
+function cc_mime_types( $mimes ){
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
 
- // Attempt to add SVG support to the Theme
- function cc_mime_types( $mimes ){
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
- }
+ /*
+  * Theme settings
+  */
 
- add_filter( 'upload_mimes', 'cc_mime_types' );
- // THEME SETTINGS
-
- if ( function_exists( 'fm_register_submenu_page' ) ) {
-     fm_register_submenu_page( 'global_options', 'options-general.php', 'Huntingslow Options' );
-     add_action( 'fm_submenu_global_options', function() {
-         $fm = new Fieldmanager_Group( array(
-             'name'     => 'global_options',
-             'children' => array(
-                 'acknowledgment_text' => new Fieldmanager_Textfield( array (
- 									'label' => 'Text for the Acknowledgment of Country contained in the footer.'
- 								) ),
- 								'copyright' => new Fieldmanager_Textfield( array (
- 									'label' => 'Text for the copyright in the footer.'
- 								) ),
-                 'media'        => new Fieldmanager_Media( array (
- 									'label' => 'Label describing the format (SVG), location and parameters for the site logo'
- 								) ),
- 								'license' => new Fieldmanager_Group( array (
- 									'label' => 'Creative Commons Options',
- 									'children' => array(
- 										'license_info' => new Fieldmanager_Textfield( 'License_Info' )
- 									)
- 								))
-             )
-         ) );
-         $fm->activate_submenu_page();
-     } );
- }
+if ( function_exists( 'fm_register_submenu_page' ) ) {
+   fm_register_submenu_page( 'global_options', 'options-general.php', 'Huntingslow Options' );
+   add_action( 'fm_submenu_global_options', function() {
+       $fm = new Fieldmanager_Group( array(
+           'name'     => 'global_options',
+           'children' => array(
+               'acknowledgment_text' => new Fieldmanager_Textfield( array (
+									'label' => 'Text for the Acknowledgment of Country contained in the footer.'
+								) ),
+								'copyright' => new Fieldmanager_Textfield( array (
+									'label' => 'Text for the copyright in the footer.'
+								) ),
+                'site_logo' => new Fieldmanager_Textfield( array (
+									'label' => 'SVG markup for the site logo',
+                  'sanitize' => 'esc_html'
+								) ),
+								'license' => new Fieldmanager_Group( array (
+									'label' => 'Creative Commons Options',
+									'children' => array(
+										'license_info' => new Fieldmanager_Textfield( 'License_Info' )
+									)
+								))
+           )
+       ) );
+       $fm->activate_submenu_page();
+   } );
+}
 
 // CUSTOM POST TYPES - Podcast, Embedded
 
