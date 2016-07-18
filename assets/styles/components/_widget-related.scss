@@ -29,19 +29,18 @@
 }
 
 .related__category {
-  @include mono;
+  @include smallsans;
   margin-top: 0;
   margin-bottom: $baseline/2;
 }
 
 .related__headline {
-  @include typi($size3-map);
   margin-top: $baseline/2;
   margin-bottom: $baseline/2;
 }
 
 .related__date {
-  @include mono;
+  @include smallsans;
   margin-top: $baseline/2;
   margin-bottom: $baseline/4;
 }

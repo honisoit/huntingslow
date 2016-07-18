@@ -70,6 +70,9 @@
       <div class="reg__secondary-share share">
         <?php get_template_part('templates/share'); ?>
       </div>
+      <div class="reg__related">
+        <?php dynamic_sidebar('sidebar-related-one'); ?>
+      </div>
     </div>
   </div>
   <aside class="reg__sidebar">
@@ -77,14 +80,11 @@
   </aside>
 </div>
 <div class="content-wrapper">
-  <div class="reg__related-row">
-    <div class="reg__related">
-      <?php dynamic_sidebar('sidebar-related-one'); ?>
-    </div>
-  </div>
-  <div class="reg__related-row">
-    <div class="reg__related">
+  <div class="reg__content-row">
+    <div class="reg__othercontent">
+      <div class="reg__othercontent-flex">
       <?php dynamic_sidebar('sidebar-related-two'); ?>
+      </div> 
     </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ use Roots\Sage\Assets;
 
 /**
  * Filter out the 'category:' or 'author:' prefix
- * 
+ *
  */
 
 add_filter( 'get_the_archive_title', function ($title) {
@@ -127,8 +127,8 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Related Content Two', 'sage'),
     'id'            => 'sidebar-related-two',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);

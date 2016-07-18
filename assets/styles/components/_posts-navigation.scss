@@ -5,7 +5,7 @@
 .nav-links {
   text-align: center;
   @include typi($size1-map);
-  font-family: $font-family-monospace;
+  font-family: $font-family-sans-serif;
 }
 .nav-previous {}
 .nav-next {}

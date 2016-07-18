@@ -1,4 +1,38 @@
+.single-article {
+  flex: 0 0 66.6%;
+}
+
+.single-article__flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-article__imagebox {
+  flex: 0 0 auto;
+  width: 40%;
+}
+
 .single-article__image {
-  width: 100%;
-  margin: auto;
+  max-width: 100%;
+}
+
+.single-article__textbox {
+  flex: 0 0 60%;
+}
+
+.single-article__headline {
+  margin-top: 0;
+  margin-bottom: $baseline/4;
+}
+
+.single-article__byline {
+  @include smallsans;
+  margin-top: $baseline/4;
+  margin-bottom: $baseline/4;
+}
+
+.single-article__excerpt {
+  @include typi($size1-map);
+  margin-top: $baseline/4;
+  margin-bottom: $baseline/4;
 }

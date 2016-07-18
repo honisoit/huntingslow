@@ -71,8 +71,8 @@ blockquote {
   }
 }
 
-@mixin mono {
-  font-family: $font-family-monospace;
+@mixin smallsans { //previously known as 'mono'. rip.
+  font-family: $font-family-sans-serif;
   @include typi($size1-map);
 }
 
