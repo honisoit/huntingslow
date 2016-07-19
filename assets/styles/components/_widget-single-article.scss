@@ -9,7 +9,7 @@
 
 .single-article__imagebox {
   flex: 0 0 auto;
-  width: 40%;
+  width: 50%;
 }
 
 .single-article__image {
@@ -17,22 +17,28 @@
 }
 
 .single-article__textbox {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
+  padding-left: $baseline/4;
 }
 
 .single-article__headline {
   margin-top: 0;
   margin-bottom: $baseline/4;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .single-article__byline {
-  @include smallsans;
+  font-family: $font-family-sans-serif;
+  font-size: typi($size3-map);
   margin-top: $baseline/4;
   margin-bottom: $baseline/4;
 }
 
 .single-article__excerpt {
   @include typi($size1-map);
-  margin-top: $baseline/4;
+  margin-top: 0;
   margin-bottom: $baseline/4;
+  line-height: $baseline;
 }
