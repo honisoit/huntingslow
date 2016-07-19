@@ -30,8 +30,7 @@
 }
 
 .single-article__byline {
-  font-family: $font-family-sans-serif;
-  font-size: typi($size3-map);
+  @include smallsans;
   margin-top: $baseline/4;
   margin-bottom: $baseline/4;
 }
