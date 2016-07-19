@@ -1,6 +1,6 @@
 .popular {
-  //flex: 0 0 33.3%;
-  //width: $column*3;
+  flex: 0 0 33.3%;
+  width: $column*3;
 }
 
 .popular__title {
@@ -15,14 +15,19 @@
 
 .popular__list-item {
   display: list-item;
-  margin-left: $baseline*2;
+  margin-left: $baseline*1.5;
+  @include smallsans;
+  font-weight: bold;
+  line-height: $baseline*0.75;
+  height: auto;
+  box-sizing: content-box;
 }
 
 .popular__list-item a {
   text-decoration: none;
   @include fontcolor;
   position: relative;
-  top: -1.5rem;
+  top: -$baseline*0.75;
 }
 
 .popular__list-item a:hover {
