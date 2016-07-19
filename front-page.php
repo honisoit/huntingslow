@@ -34,16 +34,15 @@
   <div class="home__row">
 
     <div class="home__headline-column">
-        <?php
-        $args = array( 'posts_per_page' => 5, 'offset'=> 0, 'category_name' => 'news' );
+      <?php
+      $args = array( 'posts_per_page' => 5, 'offset'=> 0, 'category_name' => 'news' );
 
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        	<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-          <hr>
-        <?php endforeach;
-        wp_reset_postdata();?>
-      </ul>
+      $myposts = get_posts( $args );
+      foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+      	<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+        <hr>
+      <?php endforeach;
+      wp_reset_postdata();?>
     </div>
 
     <div class="home__10-pane-container">

@@ -74,16 +74,6 @@ function setup() {
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
 /*
- * Bylines messing around
- */
-
-add_filter( 'fm_bylines_filter_types', function() {
-  return array_merge( array( 'post' ), array( 'author', 'illustrator', 'content-editor' ) );
-} );
-
-add_post_type_support( 'post', array( 'author', 'illustrator', 'content-editor' ) );
-
-/**
  * Register sidebars
  */
 function widgets_init() {
