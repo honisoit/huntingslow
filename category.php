@@ -3,7 +3,6 @@
 <div class="content-wrapper">
   <div class="category__banner">
     <?php get_template_part('templates/page', 'header'); ?>
-    <p> The category banner widget content will go here</p>
   </div>
   <div class="archive">
     <div class="archive__main-column">
