@@ -1,14 +1,13 @@
 .large-header {
-
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  background-color: $headerfooterbg;
+  //border-bottom: 1px solid #000;
   padding: 0 1rem 0;
   margin-bottom: $baseline/2;
 
-  @include media($medium) {
-    @include outer-container();
-    padding: 1rem 0 0;
-  }
+  //@include media($medium) {
+    //@include outer-container();
+    //padding: 1rem 0 0;
+  //}
 }
 
 .large-header__logo {
@@ -17,8 +16,13 @@
   margin: auto;
   padding-top: $baseline/2;
   @include media($large) {
-    width: 25%;
-    margin: 0;
+    width: 15%;
+    margin: 0 auto;
+    padding-top: $baseline*1.5;
+    padding-bottom: $baseline;
+  }
+  svg {
+    fill: $headerfootertext;
   }
 }
 
@@ -67,9 +71,10 @@
   position: fixed;
   top: 0;
   right:-16rem;
+  margin: 0 auto;
   height: 100%;
   width: 16rem;
-  background: white;
+  background: #000;
   border-left-style: solid;
   border-left-width: 1px;
   overflow-x: hidden;
@@ -78,10 +83,13 @@
   z-index: 500;
 
   @include media($large) {
-    position: inherit;
-    margin: 0;
-    padding: 0;
-    width: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    align-self: center;
+    padding: 0 0 $baseline 0;
+    width: fit-content;
     border-style: none;
     background-color: inherit;
   }
@@ -94,18 +102,23 @@
   padding-top: 0.5rem;
   border-top-style: solid;
   border-top-width: 1px;
-  border-top-color: #c7c7c7;
+  //border-top-color: #c7c7c7;
   display: block;
 
   @include media($large) {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
 
 .header__nav-list-item {
   font-family: $font-family-sans-serif;
-  @include typi($size1-map);
+  @include smallsans;
   text-transform: uppercase;
+  font-weight: bold; //supply actual weight later
   letter-spacing: 1.1;
   padding: 0;
   // padding-bottom: 0.5rem;
@@ -120,11 +133,14 @@
     border-style: none;
     padding: 0;
     margin: 0;
-    padding-right: 0.5rem;
+    padding-right: 2rem;
+    font-size: ms(-2);
+    letter-spacing: 0.1rem;
   }
 
   a {
     text-decoration: none;
+    color: $headerfootertext2;
   }
 
   a:visited {
@@ -134,7 +150,10 @@
 
 .large-header__search-form {
   @include media($large) {
-    display: inline;
-    float: right;
+    //display: inline;
+    //float: right;
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: middle;
   }
 }

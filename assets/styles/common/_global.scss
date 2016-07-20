@@ -10,9 +10,6 @@ body {
   font-family: $font-family-serif;
 }
 
-@mixin fontcolor {
-  color: #080808;
-}
 
 p {
   margin: 0 0 $baseline 0;
@@ -22,7 +19,7 @@ p {
 
 a:link {
   color: $brand-primary;
-  text-decoration:underline;
+  text-decoration:none;
 }
 
 h1 {
@@ -30,7 +27,7 @@ h1 {
   font-family: $font-family-headlines;
   margin-top: $baseline;
   margin-bottom: $baseline;
-  @include fontcolor;
+  font-color: $fontcolor;;
 }
 
 h2 {
@@ -46,7 +43,7 @@ h3 {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: $baseline;
-  @include fontcolor;
+  font-color: $fontcolor;;
 }
 
 h4 {

@@ -1,4 +1,5 @@
 <footer class="footer">
+  <div class="content-wrapper">
   <div class="footer__link-row">
     <div class="footer__categories">
       <h3 class="footer__column-title">From The Mines</h3>
@@ -62,4 +63,5 @@
     echo $option;
   ?>
   </div>
+</div>
 </footer>

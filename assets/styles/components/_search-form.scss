@@ -15,6 +15,14 @@
   @include media($medium) {
     border-width: 1px 0px 0px 1px;
   }
+  @include media($large) {
+     border-style: solid;
+     border-color: $headerfootertext;
+     border-width: 0px 0px 2px 0px;
+     background: none;
+     color: $headerfootertext;
+     padding-top: 2px; //makes same height as submit
+  }
 }
 
 .search-form__submit {
@@ -29,5 +37,11 @@
 
   @include media($medium) {
     border-width: 1px 1px 0px 1px;
+  }
+  @include media($large) {
+    border-color: $headerfootertext;
+    border-width: 2px;
+    background-color: $headerfootertext;
+    color: $headerfooterbg;
   }
 }
