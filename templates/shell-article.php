@@ -1,2 +1,2 @@
-<?php get_template_part('templates/small-header'); ?>
+<?php get_template_part('templates/large-header'); ?>
 <?php the_content(); ?>
