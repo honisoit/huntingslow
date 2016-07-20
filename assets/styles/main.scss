@@ -13,30 +13,28 @@
 @import "common/global";
 @import "mixins/grid-helper";
 
-// Page level
-@import "components/front-page";
-@import "components/reg-article";
-@import "components/feat-article";
-@import "components/archive";
-@import "components/category";
+// Layouts ayouts
+@import "layouts/front-page";
+@import "layouts/reg-article";
+@import "layouts/feat-article";
+@import "layouts/archive";
+@import "layouts/category";
+@import "layouts/content-page";
 
 // Template parts
 @import "components/license";
 @import "components/large-header";
-@import "components/sidebar-recommended";
-@import "components/header";
 @import "components/search-form";
 @import "components/share";
 @import "components/tags";
 @import "components/footer";
 @import "components/article-summary";
 @import "components/posts-navigation";
-@import "components/content-page";
 
 // External Widgets
-@import "components/widget-related";
-@import "components/widget-single-article";
-@import "components/widget-popular";
+@import "widgets/widget-related";
+@import "widgets/widget-single-article";
+@import "widgets/widget-popular";
 
 // WordPress core things
 @import "components/wp-classes";

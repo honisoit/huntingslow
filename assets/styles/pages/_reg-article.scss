@@ -1,0 +1,151 @@
+.reg__content-row {
+  @include row();
+  @include side-padding;
+}
+
+.reg__headline-row {
+  @include row();
+  @include side-padding;
+}
+
+.reg__othercontent {
+  @include md-columns(10, 1);
+  @include lg-columns(12);
+}
+
+.reg__othercontent-flex {
+  display: flex;
+  flex-direction: column;
+  @include media($large) {
+    flex-direction: row;
+    padding: $baseline;
+  }
+
+}
+
+.reg__meta-row {
+  @include row();
+}
+
+.reg__byline-row {
+  @include row();
+  @include side-padding;
+}
+
+.reg__main-column {
+  @include sm-columns(12);
+  @include lg-columns(9);
+}
+
+.reg__content {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
+  @include lg-columns(10, 2);
+  display: block;
+}
+
+.reg__details {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
+  @include lg-columns(2, -12);
+  @include smallsans;
+  margin-top: $baseline/2;
+  @include media($large) {
+    margin-top: 0;
+  }
+}
+
+.reg__sidebar {
+  display:none;
+  @include lg-columns(3);
+  padding-top: 800px; // remove later
+}
+
+.reg__topic-line {
+  @include lg-columns(10, 2);
+  @include smallsans;
+}
+
+.reg__headline {
+  @include lg-columns(10, 2);
+  h1 {
+    margin: $baseline/2 0 $baseline/2;
+  }
+}
+
+.reg__article-image {
+  @include sm-columns(12);
+  @include lg-columns(10, 2);
+}
+
+.reg__tags {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
+  @include lg-columns(10, 2);
+  @include smallsans;
+}
+
+.reg__related {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
+  @include lg-columns(10, 2);
+}
+
+.reg__standfirst {
+  @include standfirst;
+  @include lg-columns(10, 2);
+  p {
+    margin-bottom: $baseline/2;
+  }
+}
+
+.reg__article-image {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Pull type out of here.
+.reg__article-image__caption {
+  font-family: $font-family-sans-serif;
+  @include typi($size1-map);
+  @include side-padding;
+}
+
+.reg__byline {
+  font-family: $font-family-sans-serif;
+}
+
+.reg__date {
+  @include media($large) {
+    margin-top: $baseline;
+  }
+}
+
+.reg__bylinedate {
+  @include sm-columns(8 of 12);
+  @include lg-columns(12);
+}
+
+.reg__share {
+  @include sm-columns(4 of 12);
+  @include lg-columns(12);
+  vertical-align: top;
+  @include media($large) {
+    margin-top: $baseline/2;
+  }
+  ul {
+    float:right;
+  }
+}
+
+.reg__secondary-share {
+  @include sm-columns(12);
+  @include md-columns(10, 1);
+  @include lg-columns(10, 2);
+  margin-bottom: $baseline;
+}

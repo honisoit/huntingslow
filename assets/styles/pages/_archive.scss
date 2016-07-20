@@ -1,0 +1,11 @@
+.archive {
+  @include row();
+}
+
+.archive__main-column {
+  @include md-columns(8);
+}
+
+.archive__sidebar {
+  @include md-columns(4);
+}
