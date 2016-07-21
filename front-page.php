@@ -128,6 +128,7 @@
         foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
           <p class="home__category-pane__primary-tag">
             <?php
+              // need to update this with the primary-tag code from category_line.php
               $primary_tag_id = get_post_meta( get_the_id(), 'primary_tag', true );
               $primary_tag_array = get_term_by( 'id', $primary_tag_id, 'post_tag', ARRAY_A);
               echo ucwords($primary_tag_array['name']);

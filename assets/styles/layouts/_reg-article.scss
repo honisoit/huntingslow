@@ -77,9 +77,8 @@
   padding-top: 800px; // remove later
 }
 
-.reg__topic-line {
+.reg__category-line {
   @include lg-columns(10, 2);
-  @include small-sans;
   margin-top: $baseline/2;
 }
 

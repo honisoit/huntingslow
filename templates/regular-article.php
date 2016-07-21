@@ -6,15 +6,8 @@
   <div class="reg__main-column">
     <header>
       <div class="reg__headline-row">
-        <div class="reg__topic-line">
-          <span class="reg__category"><?php the_category(','); ?> — </span>
-          <span class="reg__primary-tag">
-            <?php
-              $primary_tag_id = get_post_meta( get_the_id(), 'primary_tag', true );
-              $primary_tag_array = get_term_by( 'id', $primary_tag_id, 'post_tag', ARRAY_A);
-              echo ucwords($primary_tag_array['name']);
-            ?>
-          </span>
+        <div class="reg__category-line category-line">
+          <?php get_template_part('templates/category-line'); ?>
         </div>
 
         <div class="reg__headline">
@@ -66,6 +59,7 @@
         <?php the_content(); ?>
       </div>
       <div class="reg__tags tags">
+        <hr>
         <?php get_template_part('templates/tags'); ?>
       </div>
       <div class="reg__secondary-share share">
