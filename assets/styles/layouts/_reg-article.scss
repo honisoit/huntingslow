@@ -64,6 +64,7 @@
 .reg__topic-line {
   @include lg-columns(10, 2);
   @include smallsans;
+  margin-top: $baseline/2;
 }
 
 .reg__headline {

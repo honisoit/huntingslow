@@ -6,7 +6,7 @@ use Roots\Sage\Assets;
 
 /**
  * Filter out the 'category:' or 'author:' prefix
- *
+ * Move this to customisations.php
  */
 
 add_filter( 'get_the_archive_title', function ($title) {
