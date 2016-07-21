@@ -4,12 +4,11 @@
 .share__buttons {
   padding:0;
   margin:0;
+  display: inline-block;
 }
 .share__button {
   list-style-type: none;
   display:inline-block;
-  margin-bottom: $baseline/2;
-  margin-right: $baseline/2;
 }
 
 
@@ -18,7 +17,6 @@
   display:inline-block;
   position: relative;
   vertical-align: top;
-  margin-right: $baseline/8;
 }
 
 .share__logo--fb {}

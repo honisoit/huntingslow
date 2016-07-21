@@ -141,6 +141,10 @@
   }
   ul {
     float:right;
+
+    @include media($large) {
+      float: left;
+    }
   }
 }
 
