@@ -11,8 +11,6 @@
   display:inline-block;
 }
 
-
-
 .share__logo {
   display:inline-block;
   position: relative;
@@ -39,12 +37,11 @@
   border-color: $brand-primary;
 }
 
-.share__total {
-  @include small-sans;
-  height: 2rem;
-  display: inline-block;
-  line-height: 2rem;
+.share__traction {
+  @include small-grey;
+  @include lg-columns(12);
 }
 
-.share__total--fb {}
-.share__total--tw {}
+.share__traction-count {
+  font-weight: 700;
+}

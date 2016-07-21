@@ -32,20 +32,20 @@
         <div class="reg__details">
           <div class="reg__byline-row">
             <div class="reg__bylinedate">
-            <div class="reg__byline">
-              by
-                <?php
-                  if ( function_exists( 'coauthors_posts_links' ) ) {
-                    coauthors_posts_links();
-                  } else {
-                    the_author_posts_link();
-                  }
-                ?>
+              <div class="reg__byline">
+                by
+                  <?php
+                    if ( function_exists( 'coauthors_posts_links' ) ) {
+                      coauthors_posts_links();
+                    } else {
+                      the_author_posts_link();
+                    }
+                  ?>
+              </div>
+              <div class="reg__date">
+                <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
+              </div>
             </div>
-            <div class="reg__date">
-              <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
-            </div>
-          </div>
             <div class="reg__share share">
               <?php get_template_part('templates/share'); ?>
             </div>
@@ -59,7 +59,6 @@
         <?php the_content(); ?>
       </div>
       <div class="reg__tags tags">
-        <hr>
         <?php get_template_part('templates/tags'); ?>
       </div>
       <div class="reg__secondary-share share">
