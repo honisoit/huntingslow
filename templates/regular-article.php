@@ -40,6 +40,7 @@
           <div class="reg__byline-row">
             <div class="reg__bylinedate">
             <div class="reg__byline">
+              by
                 <?php
                   if ( function_exists( 'coauthors_posts_links' ) ) {
                     coauthors_posts_links();
@@ -84,7 +85,7 @@
     <div class="reg__othercontent">
       <div class="reg__othercontent-flex">
       <?php dynamic_sidebar('sidebar-related-two'); ?>
-      </div> 
+      </div>
     </div>
   </div>
 </div>

@@ -14,11 +14,11 @@
           echo ucwords($primary_tag_array['name']);
         ?>
       </span>
-      <h2 class="article-summary__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h4 class="article-summary__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
       <span>
-        <time class="" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
+        <time class="article-summary__date" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
       </span>
-      <span>
+      <span class="article-summary__byline">
         <?php
           if ( function_exists( 'coauthors_posts_links' ) ) {
             coauthors_posts_links();
@@ -29,7 +29,7 @@
       </span>
     </header>
     <div class="article-summary__excerpt">
-      <?php the_excerpt(); ?>
+      <?php echo get_post_meta( get_the_id(), 'standfirst', true); ?>
     </div>
   </div>
 </article>

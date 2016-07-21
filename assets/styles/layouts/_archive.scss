@@ -3,9 +3,9 @@
 }
 
 .archive__main-column {
-  @include md-columns(8);
+  @include md-columns(9 of 12);
 }
 
 .archive__sidebar {
-  @include md-columns(4);
+  @include md-columns(3 of 12);
 }

@@ -17,15 +17,24 @@ p {
   -webkit-margin-after: $baseline;
 }
 
-a:link {
+a:link,
+a:active {
   color: $brand-primary;
   text-decoration:none;
+}
+
+a:visited {
+  color: $brand-primary-dark;
+}
+
+a:hover {
+  color: $brand-primary-light;
 }
 
 h1 {
   @include typi($size5-map);
   font-family: $font-family-headlines;
-  margin-top: $baseline;
+  margin-top: 0;
   margin-bottom: $baseline;
   font-color: $fontcolor;;
 }
@@ -67,6 +76,11 @@ blockquote {
 @mixin smallsans { //previously known as 'mono'. rip.
   font-family: $font-family-sans-serif;
   @include typi($size1-map);
+}
+
+@mixin smallbody { //smaller body font
+  @include typi($size1-map);
+  font-family: $font-family-serif; 
 }
 
 
