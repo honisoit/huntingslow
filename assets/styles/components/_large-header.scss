@@ -24,6 +24,10 @@
   svg {
     fill: $headerfootertext;
   }
+
+  svg:hover {
+    fill: lightercolor($headerfootertext, 100%);
+  }
 }
 
 #large-header__toggle {
@@ -144,7 +148,15 @@
   }
 
   a:visited {
-    color: black;
+    color: $headerfootertext2;
+  }
+
+  a:hover {
+      @include media($large) {
+      color: $headerfootertext;
+      border-bottom: 1px solid $brand-primary;
+      padding-bottom: $baseline/8;
+    }
   }
 }
 
