@@ -5,6 +5,10 @@
 .feat__content {
   @include sm-columns(8, 2);
   @include lg-columns(6, 3);
+
+  a {
+    @include link-underline(#fff, $fontcolor, $brand-primary)
+  }
 }
 .feat__headline {}
 .feat__byline {}

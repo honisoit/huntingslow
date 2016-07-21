@@ -43,6 +43,10 @@
   @include lg-columns(10, 2);
   display: block;
 
+  a {
+    @include link-underline(#fff, $fontcolor, $brand-primary);
+  }
+  /*
   a,
   a:active,
   a:visited {
@@ -50,8 +54,10 @@
   }
 
   a:hover {
-    border-color: $fontcolor; 
+    border-color: $fontcolor;
   }
+  */
+
 }
 
 .reg__details {
@@ -123,7 +129,7 @@
 // Pull type out of here.
 .reg__article-image__caption {
   font-family: $font-family-sans-serif;
-  @include typi($size1-map);
+  @include small-sans;
   @include side-padding;
 }
 
