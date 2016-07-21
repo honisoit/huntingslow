@@ -24,19 +24,19 @@
 }
 
 .article-summary__byline {
-  @include smallsans;
+  @include small-sans;
 }
 
 .article-summary__date {
-  @include smallsans;
+  @include small-sans;
 }
 
 .article-summary__category {
-  @include smallsans;
+  @include small-sans;
 }
 
 .article-summary__primary-tag {
-  @include smallsans;
+  @include small-sans;
 }
 
 .article-summary__excerpt {
@@ -44,7 +44,7 @@
   @include media($medium) {
     display: block;
     margin-top: $baseline/4;
-    @include smallbody;
+    @include small-body;
   }
 //  p {
   //  margin: $baseline 0;

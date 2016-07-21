@@ -43,7 +43,7 @@
 }
 
 .single-article__byline {
-  @include smallsans;
+  @include small-sans;
   margin-top: 0;
   margin-bottom: $baseline/2;
 }

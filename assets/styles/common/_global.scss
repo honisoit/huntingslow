@@ -18,25 +18,21 @@ p {
 }
 
 a:link,
-a:active {
-  color: $brand-primary;
+a:active,
+a:visited {
+  color: $fontcolor;
   text-decoration:none;
 }
 
-a:visited {
-  color: $brand-primary-dark;
-}
 
-a:hover {
-  color: $brand-primary-light;
-}
+a:hover {}
 
 h1 {
   @include typi($size5-map);
   font-family: $font-family-headlines;
   margin-top: 0;
   margin-bottom: $baseline;
-  font-color: $fontcolor;;
+  font-color: $fontcolor;
 }
 
 h2 {
@@ -73,14 +69,15 @@ blockquote {
   @include typi($size3-map);
 }
 
-@mixin smallsans { //previously known as 'mono'. rip.
+@mixin small-sans { //previously known as 'mono'. rip.
   font-family: $font-family-sans-serif;
   @include typi($size1-map);
 }
 
-@mixin smallbody { //smaller body font
+@mixin small-body { //smaller body font
   @include typi($size1-map);
-  font-family: $font-family-serif; 
+  font-family: $font-family-serif;
+  line-height: $baseline * 2/3;
 }
 
 

@@ -42,13 +42,23 @@
   @include md-columns(10, 1);
   @include lg-columns(10, 2);
   display: block;
+
+  a,
+  a:active,
+  a:visited {
+    border-bottom: 1px solid $brand-primary;
+  }
+
+  a:hover {
+    border-color: $fontcolor; 
+  }
 }
 
 .reg__details {
   @include sm-columns(12);
   @include md-columns(10, 1);
   @include lg-columns(2, -12);
-  @include smallsans;
+  @include small-sans;
   margin-top: $baseline/2;
   @include media($large) {
     margin-top: 0;
@@ -63,7 +73,7 @@
 
 .reg__topic-line {
   @include lg-columns(10, 2);
-  @include smallsans;
+  @include small-sans;
   margin-top: $baseline/2;
 }
 
@@ -83,7 +93,7 @@
   @include sm-columns(12);
   @include md-columns(10, 1);
   @include lg-columns(10, 2);
-  @include smallsans;
+  @include small-sans;
 }
 
 .reg__related {

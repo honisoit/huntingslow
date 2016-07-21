@@ -71,13 +71,13 @@ $font-family-monospace: "Roboto", Menlo, Monaco, Consolas, "Courier New", monosp
 
 // colours
 
-$brand-primary: #8dbdd8;
+$brand-primary: #ff5c33; //8dbdd8 is max's bland one
 $brand-primary-dark: darkercolor($brand-primary, 20%);
 $brand-primary-light: lightercolor($brand-primary, 30%);
 $text-on-brand-primary: #fff;
 $fontcolor: #080808;
 
-$headerfootertext2: white;
+$headerfootertext2: #ccc;
 
 //dark theme (comment out & uncomment below if you want light)
 
