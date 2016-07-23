@@ -11,11 +11,11 @@
 
 .large-header__logo {
   display: block;
-  width: 45%;
+  width: $baseline*5;
   margin: auto;
   padding-top: $baseline/2;
   @include media($large) {
-    width: 15%;
+    width: 20%;
     margin: 0 auto;
     padding-top: $baseline/1.5;
     padding-bottom: $baseline/2;

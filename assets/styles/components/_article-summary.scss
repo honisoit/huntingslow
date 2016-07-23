@@ -6,10 +6,10 @@
 
 .article-summary__image {
   @include md-columns(6);
+  height: 80%;
   img {
     width: 100%;
     height: auto;
-    margin: auto;
   }
 }
 
