@@ -5,7 +5,7 @@
           wp_nav_menu( array(
               'menu'              => 'footer_pages',
               'theme_location'    => 'footer_pages',
-              'walker'            => new Footer_Walker,
+              'walker'            => new Footer_Menu_Walker,
               'items_wrap'        => '<ul class="page__list">%3$s</ul>'
             )
           );

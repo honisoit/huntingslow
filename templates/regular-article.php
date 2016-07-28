@@ -70,14 +70,21 @@
     </div>
   </div>
   <aside class="reg__sidebar">
-    <?php dynamic_sidebar('sidebar-regular'); ?>
+    <?php dynamic_sidebar('regular-article-sidebar'); ?>
   </aside>
 </div>
 <div class="content-wrapper">
   <div class="reg__content-row">
     <div class="reg__othercontent">
       <div class="reg__othercontent-flex">
-      <?php dynamic_sidebar('sidebar-related-two'); ?>
+      <?php dynamic_sidebar('regular-article-related-one'); ?>
+      </div>
+    </div>
+  </div>
+  <div class="reg__content-row">
+    <div class="reg__othercontent">
+      <div class="reg__othercontent-flex">
+      <?php dynamic_sidebar('regular-article-related-two'); ?>
       </div>
     </div>
   </div>

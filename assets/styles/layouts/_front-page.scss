@@ -10,6 +10,12 @@
   @include lg-columns(2);
 }
 
+.home__headline-column__headline {
+  @include small-body;
+  text-align: center;
+  margin: 0 0 $baseline/4;
+}
+
 .home__10-pane-container {
   @include lg-columns(10);
 }

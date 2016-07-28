@@ -1,0 +1,14 @@
+.pane-banner-link {
+  background-color: #666;
+  margin-bottom: $baseline;
+  padding: $baseline/3;
+  text-align: center;
+}
+
+.pane-banner-link--breaking {
+  background-color: rgb(250, 100, 100);
+}
+
+.pane-banner-link__text {
+  margin: 0;
+}

@@ -19,7 +19,7 @@
       <?php the_posts_navigation(); ?>
     </div>
     <aside class="archive__sidebar">
-      <?php dynamic_sidebar('sidebar-archive'); ?>
+      <?php dynamic_sidebar('archive-page-sidebar'); ?>
     </aside>
   </div>
 </div>

@@ -78,49 +78,103 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  */
 function widgets_init() {
   register_sidebar([
-    'name'          => __('Regular Article', 'sage'),
-    'id'            => 'sidebar-regular',
+    'name'          => __('Regular Article Sidebar', 'sage'),
+    'id'            => 'regular-article-sidebar',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
   ]);
 
   register_sidebar([
-    'name'          => __('Archive', 'sage'),
-    'id'            => 'sidebar-archive',
+    'name'          => __('Archive Page Sidebar', 'sage'),
+    'id'            => 'archive-page-sidebar',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
   ]);
 
   register_sidebar([
-    'name'          => __('Related Content One', 'sage'),
-    'id'            => 'sidebar-related-one',
+    'name'          => __('Regular Article Related One', 'sage'),
+    'id'            => 'regular-article-related-one',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
   ]);
 
   register_sidebar([
-    'name'          => __('Related Content Two', 'sage'),
-    'id'            => 'sidebar-related-two',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'name'          => __('Regular Article Related Two', 'sage'),
+    'id'            => 'regular-article-related-two',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap One (Banner)', 'sage'),
+    'id'            => 'front-strap-one',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Two', 'sage'),
+    'id'            => 'front-strap-two',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Three', 'sage'),
+    'id'            => 'front-strap-three',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Four', 'sage'),
+    'id'            => 'front-strap-four',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Five', 'sage'),
+    'id'            => 'front-strap-five',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Six', 'sage'),
+    'id'            => 'front-strap-six',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Seven', 'sage'),
+    'id'            => 'front-strap-seven',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Eight', 'sage'),
+    'id'            => 'front-strap-eight',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Strap Nine', 'sage'),
+    'id'            => 'front-strap-nine',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
   ]);
 
   register_sidebar([
     'name'          => __('Footer Demon', 'sage'),
-    'id'            => 'sidebar-footer-demon',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
+    'id'            => 'footer-demon',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
   ]);
+
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 

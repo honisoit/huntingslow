@@ -14,7 +14,7 @@
 @import "mixins/grid-helper";
 @import "mixins/good-underlines.scss";
 
-// Layouts ayouts
+// Layouts
 @import "layouts/front-page";
 @import "layouts/reg-article";
 @import "layouts/feat-article";
@@ -37,6 +37,16 @@
 @import "widgets/widget-related";
 @import "widgets/widget-single-article";
 @import "widgets/widget-popular";
+@import "widgets/widget-headline-list";
+
+@import "widgets/pane-banner-link";
+@import "widgets/pane-headline-list";
+@import "widgets/pane-raw-frame";
+@import "widgets/pane-single-lg-image";
+@import "widgets/pane-single-lg";
+@import "widgets/pane-single-md";
+@import "widgets/pane-single-sm";
+@import "widgets/pane-aggregator-md";
 
 // WordPress core things
 @import "components/wp-classes";

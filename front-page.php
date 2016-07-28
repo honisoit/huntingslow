@@ -1,4 +1,11 @@
 <?php get_template_part('templates/large-header'); ?>
+
+<?php dynamic_sidebar('front-strap-one'); ?>
+
+<?php dynamic_sidebar('front-strap-two'); ?>
+
+<?php dynamic_sidebar('front-strap-three'); ?>
+
 <div class="content-wrapper">
   <div class="home__row">
     <div class="home__feat-single-pane">
@@ -39,7 +46,7 @@
 
       $myposts = get_posts( $args );
       foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-      	<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+      	<p class="home__headline-column__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <hr>
       <?php endforeach;
       wp_reset_postdata();?>
