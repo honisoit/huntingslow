@@ -2,9 +2,79 @@
 
 <?php dynamic_sidebar('front-strap-one'); ?>
 
-<?php dynamic_sidebar('front-strap-two'); ?>
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-two'); ?>
+  </div>
+</div>
 
-<?php dynamic_sidebar('front-strap-three'); ?>
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-three'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__array">
+    <div class="front__array__headlines">
+      <?php dynamic_sidebar('front-headline-column'); ?>
+    </div>
+    <div class="front__array__secondary">
+      <div class="front__strap">
+        <?php dynamic_sidebar('front-array-one'); ?>
+      </div>
+      <div class="front__strap">
+        <?php dynamic_sidebar('front-array-two'); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-three'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-four'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-five'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-six'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-seven'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-eight'); ?>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="front__strap">
+    <?php dynamic_sidebar('front-strap-nine'); ?>
+  </div>
+</div>
+
+<hr>
+<hr>
+<hr>
 
 <div class="content-wrapper">
   <div class="home__row">

@@ -1,0 +1,10 @@
+.single-md {
+  @include lg-columns(6);
+  border: 1px solid black;
+  padding: $baseline/2 0 $baseline/2;
+  text-align: center;
+}
+
+.single-md__headline {
+  @include small-sans;
+}

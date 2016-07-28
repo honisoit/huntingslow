@@ -80,15 +80,22 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Regular Article Sidebar', 'sage'),
     'id'            => 'regular-article-sidebar',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Archive Page Sidebar', 'sage'),
     'id'            => 'archive-page-sidebar',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Category Page Featured', 'sage'),
+    'id'            => 'category-page-featured',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
@@ -115,57 +122,78 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Front Strap Two', 'sage'),
     'id'            => 'front-strap-two',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Three', 'sage'),
     'id'            => 'front-strap-three',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Four', 'sage'),
     'id'            => 'front-strap-four',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Five', 'sage'),
     'id'            => 'front-strap-five',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Six', 'sage'),
     'id'            => 'front-strap-six',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Seven', 'sage'),
     'id'            => 'front-strap-seven',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Eight', 'sage'),
     'id'            => 'front-strap-eight',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Front Strap Nine', 'sage'),
     'id'            => 'front-strap-nine',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Headline Column', 'sage'),
+    'id'            => 'front-headline-column',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Array Strap One', 'sage'),
+    'id'            => 'front-array-one',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Front Array Strap Two', 'sage'),
+    'id'            => 'front-array-two',
+    'before_widget' => '',
+    'after_widget'  => '2e',
   ]);
 
   register_sidebar([

@@ -2,7 +2,8 @@
 // Custom options for Huntingslow
 
 /**
- * Unregister the default widgets which we won't be using
+ * Unregister the default widgets which we won't be using.
+ * That's everything apart from text.
  */
 
 function huntingslow_unregister_default_widgets() {
@@ -12,7 +13,7 @@ function huntingslow_unregister_default_widgets() {
   unregister_widget('WP_Widget_Links');
   unregister_widget('WP_Widget_Meta');
   unregister_widget('WP_Widget_Search');
-  unregister_widget('WP_Widget_Text');
+  // unregister_widget('WP_Widget_Text');
   unregister_widget('WP_Widget_Categories');
   unregister_widget('WP_Widget_Recent_Posts');
   unregister_widget('WP_Widget_Recent_Comments');
@@ -21,6 +22,11 @@ function huntingslow_unregister_default_widgets() {
   unregister_widget('WP_Nav_Menu_Widget');
 }
 add_action( 'widgets_init', 'huntingslow_unregister_default_widgets' );
+
+/**
+ * Filter the text widget to allow shortcodes.
+ */
+add_filter('widget_text', 'do_shortcode');
 
 /*
 * Theme settings

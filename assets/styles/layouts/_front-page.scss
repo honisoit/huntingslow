@@ -1,3 +1,16 @@
+.front__strap,
+.front__array {
+  @include row();
+}
+
+.front__array__headlines {
+  @include lg-columns(2);
+}
+
+.front__array__secondary {
+  @include lg-columns(10);
+}
+
 .home__row {
   @include row();
 }

@@ -1,8 +1,10 @@
 <?php get_template_part('templates/large-header'); ?>
-
 <div class="content-wrapper">
   <div class="category__banner">
     <?php get_template_part('templates/page', 'header'); ?>
+  </div>
+  <div class="category__featured">
+    <?php dynamic_sidebar('category-page-featured'); ?>
   </div>
   <div class="archive">
     <div class="archive__main-column">
@@ -20,7 +22,7 @@
       <?php the_posts_navigation(); ?>
     </div>
     <aside class="archive__sidebar">
-      <?php dynamic_sidebar('sidebar-archive'); ?>
+      <?php dynamic_sidebar('archive-page-sidebar'); ?>
     </aside>
   </div>
 </div>

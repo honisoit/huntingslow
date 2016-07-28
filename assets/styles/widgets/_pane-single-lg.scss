@@ -1,0 +1,9 @@
+.single-lg {
+  border: 1px solid black;
+  padding: $baseline/2 0 $baseline/2;
+  text-align: center;
+}
+
+.single-lg__headline {
+  @include small-sans;
+}

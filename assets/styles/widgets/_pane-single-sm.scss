@@ -1,0 +1,10 @@
+.single-sm {
+  @include lg-columns(3);
+  border: 1px solid black;
+  padding: $baseline/2 0 $baseline/2;
+  text-align: center;
+}
+
+.single-sm__headline {
+  @include small-sans;
+}
