@@ -57,7 +57,10 @@ h3 {
 
 h4 {
   font-family: $font-family-headlines;
-  @include typi($size3-map);
+  @include typi-base;
+  @include media($medium) {
+    @include typi($size3-map);
+  }
 }
 
 blockquote {
@@ -81,7 +84,7 @@ blockquote {
 @mixin small-body { //smaller body font
   @include typi($size1-map);
   font-family: $font-family-serif;
-  line-height: $baseline * 2/3;
+  //line-height: $baseline * 2/3;
 }
 
 @mixin small-grey {
@@ -91,7 +94,7 @@ blockquote {
   margin-top: $baseline/2;
   font-family: $font-family-sans-serif;
   text-transform: uppercase;
-  color: #888;
+  color: $earl-grey;
 }
 
 

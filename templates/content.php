@@ -13,7 +13,7 @@
       <span>
         <time class="article-summary__date" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
       </span>
-      <span class="article-summary__byline">
+      <span class="article-summary__byline">| By
         <?php
           if ( function_exists( 'coauthors_posts_links' ) ) {
             coauthors_posts_links();

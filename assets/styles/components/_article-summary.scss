@@ -1,39 +1,74 @@
 .article-summary {
   @include row();
   margin-bottom: $baseline;
-  border: 1px solid #000;
+  border-style: solid;
+  border-color: $earl-grey;
+  border-width: 0;
+  @include side-padding;
+  @include media($medium) {
+    border-width: 1px;
+    padding: 0;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $earl-grey;
+    display: block;
+    position: relative;
+    bottom: -$baseline/2;
+    left: 0px;
+    @include media($medium) {
+      width: 0;
+      height: 0;
+    }
+  }
 }
 
 .article-summary__image {
+  display:none;
   @include md-columns(6);
-  height: 80%;
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
+  @include media($medium) {
+    display:block;
+    height: 80%;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 }
 
 .article-summary__copy {
+  @include sm-columns(12);
   @include md-columns(6);
-  padding-right: $gutter;
 }
 
 .article-summary__headline {
-  margin: $baseline/2 0 0 0;
-  font-size: ms(2);
+  margin: 0;
+  @include media($medium) {
+    @include typi($size3-map);
+    margin: $baseline/4 0 0 0;
+  }
 }
 
 .article-summary__byline {
   @include small-sans;
+  color: $earl-grey;
 }
 
 .article-summary__date {
   @include small-sans;
+  color: $earl-grey;
 }
 
-.article-summary__category {
+.article-summary__category-line {
   @include small-sans;
+  display:none;
+  color: $earl-grey;
+  @include media($medium) {
+    display: block;
+  }
 }
 
 .article-summary__primary-tag {
@@ -41,13 +76,10 @@
 }
 
 .article-summary__excerpt {
-  display: none;
-  @include media($medium) {
+  //display: none;
+  @include small-body;
+  margin-top: $baseline/2;
+  @include media($large) {
     display: block;
-    margin-top: $baseline/4;
-    @include small-body;
   }
-//  p {
-  //  margin: $baseline 0;
-  //}
 }
