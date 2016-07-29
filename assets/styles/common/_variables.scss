@@ -77,7 +77,12 @@ $brand-primary-light: lightercolor($brand-primary, 30%);
 $text-on-brand-primary: #fff;
 $fontcolor: #080808;
 $headerfootertext2: #ccc;
-$earl-grey: #888;
+
+// fifty shades of grey
+
+$earl-grey: #888; // a dark grey you can use for type
+$mid-grey: #ccc; // a medium grey you can use for lines
+$light-grey: #f0f0f0; // a light grey for backgrounds
 
 //dark theme (comment out & uncomment below if you want light)
 

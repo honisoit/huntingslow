@@ -10,7 +10,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background-color: $earl-grey;
+    background-color: $mid-grey;
     display: block;
     position: relative;
     bottom: -$baseline/2;
@@ -65,7 +65,7 @@
   color: $earl-grey;
   @include media($medium) {
     display: inline-block;
-    background-color: #ebebeb;
+    background-color: $light-grey;
     margin: 0;
     padding: 0 $baseline/8;
   }
