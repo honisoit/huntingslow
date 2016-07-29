@@ -25,7 +25,8 @@ a:visited {
 }
 
 
-a:hover {}
+a:hover {
+}
 
 hr {
 
@@ -84,17 +85,29 @@ blockquote {
 @mixin small-body { //smaller body font
   @include typi($size1-map);
   font-family: $font-family-serif;
-  //line-height: $baseline * 2/3;
+  line-height: $baseline * 2/3;
 }
 
 @mixin small-grey {
-  font-size: $baseline/3;
-  line-height: $baseline/2.4;
+  //font-size: $baseline/3;
+  font-size: ms(-2);
+  line-height: $baseline/2;
   letter-spacing: 1.1;
   margin-top: $baseline/2;
   font-family: $font-family-sans-serif;
   text-transform: uppercase;
   color: $earl-grey;
+}
+
+@mixin brand-primary-link {
+  a,
+  a:active,
+  a:link {
+    color: $brand-primary;
+  }
+  a:hover {
+    color: $earl-grey;
+  }
 }
 
 
