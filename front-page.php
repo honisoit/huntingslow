@@ -32,12 +32,6 @@
 
 <div class="content-wrapper">
   <div class="front__strap">
-    <?php dynamic_sidebar('front-strap-three'); ?>
-  </div>
-</div>
-
-<div class="content-wrapper">
-  <div class="front__strap">
     <?php dynamic_sidebar('front-strap-four'); ?>
   </div>
 </div>

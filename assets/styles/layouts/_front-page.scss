@@ -1,6 +1,7 @@
 .front__strap,
 .front__array {
   @include row();
+  margin: $baseline/2 0 $baseline/2;
 }
 
 .front__array__headlines {
@@ -40,11 +41,6 @@
 
 .home__md-single-pane__image {
   @include md-columns(6 of 12);
-  img {
-    width: 100%;
-    height: auto;
-    margin: auto;
-  }
 }
 
 .home__md-single-pane__copy {

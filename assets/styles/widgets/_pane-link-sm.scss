@@ -1,0 +1,19 @@
+.link-sm {
+  @include lg-columns(3);
+  border-top: 3px solid rgb(0, 100, 200);
+  background-color: rgb(100, 150, 200);
+  padding: $baseline/4;
+  text-align: center;
+}
+
+.link-sm__title {
+  @include typi($size1-map);
+  font-family: $font-family-serif;
+  padding: $baseline/4;
+  margin: 0
+}
+
+.link-sm__text {
+  @include small-sans;
+  margin: 0;
+}

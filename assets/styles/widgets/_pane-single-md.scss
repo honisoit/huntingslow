@@ -1,10 +1,23 @@
 .single-md {
-  @include lg-columns(6);
+  @include md-columns(6);
   border: 1px solid black;
-  padding: $baseline/2 0 $baseline/2;
   text-align: center;
+}
+
+.single-md__image {
+  @include md-columns(6);
+  img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+.single-md__copy {
+  @include md-columns(6);
 }
 
 .single-md__headline {
   @include small-sans;
+  margin: 0;
 }
