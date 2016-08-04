@@ -193,14 +193,14 @@ function widgets_init() {
     'name'          => __('Front Array Strap Two', 'sage'),
     'id'            => 'front-array-two',
     'before_widget' => '',
-    'after_widget'  => '2e',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
     'name'          => __('Footer Demon', 'sage'),
     'id'            => 'footer-demon',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
 }
