@@ -110,6 +110,13 @@ blockquote {
   }
 }
 
+@mixin label {
+  display: inline-block;
+  background-color: $light-grey;
+  margin: 0;
+  padding: 0 $baseline/8;
+}
+
 
 // end type
 
