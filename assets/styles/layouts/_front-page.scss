@@ -1,7 +1,18 @@
 .front__strap,
 .front__array {
-  @include row();
+  //@include row();
   margin: $baseline/2 0 $baseline/2;
+  display: block;
+  @include media($medium) {
+    display: flex;
+    padding: 0 -$baseline/4 0 -$baseline/4;
+  }
+}
+
+.front__strap > div {
+  @include media($medium) {
+    margin: 0 $baseline/4 0 $baseline/4;
+  }
 }
 
 .front__array__headlines {
