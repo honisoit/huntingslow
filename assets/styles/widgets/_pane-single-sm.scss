@@ -1,5 +1,5 @@
 .single-sm {
-  @include md-columns(3);
+  flex: 1 1 25%;
   border: 1px solid black;
   padding: $baseline/2 0 $baseline/2;
   text-align: center;

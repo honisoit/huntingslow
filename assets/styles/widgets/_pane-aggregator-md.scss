@@ -1,5 +1,5 @@
 .aggregator-md {
-  @include md-columns(6);
+  flex: 1 1 50%;
 }
 
 .aggregator-md__featured {

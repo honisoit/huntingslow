@@ -1,5 +1,5 @@
 .single-md {
-  @include md-columns(6);
+  flex: 1 1 50%;
   border: 1px solid black;
   text-align: center;
 }
