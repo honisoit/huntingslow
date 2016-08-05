@@ -1,5 +1,5 @@
 .link-sm {
-  @include lg-columns(3);
+  @include md-columns(3);
   border-top: 3px solid rgb(0, 100, 200);
   background-color: rgb(100, 150, 200);
   padding: $baseline/4;
