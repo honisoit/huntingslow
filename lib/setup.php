@@ -115,8 +115,8 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Front Strap One (Banner)', 'sage'),
     'id'            => 'front-strap-one',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([

@@ -28,6 +28,8 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  // Below is the sage default, have substituted a straight ellipsis for now
+  // return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return '&hellip;';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
