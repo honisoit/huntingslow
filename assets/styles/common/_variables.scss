@@ -47,7 +47,7 @@ $size3-map: (
 //size 2 is default
 
 $size1-map: (
-  null: (ms(-1), $baseline)
+  null: (ms(-1), $baseline*2/3)
 );
 
 // end typi

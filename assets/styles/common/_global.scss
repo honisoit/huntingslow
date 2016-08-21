@@ -22,6 +22,9 @@ a:active,
 a:visited {
   color: $fontcolor;
   text-decoration:none;
+  img {
+    display:block;
+  }
 }
 
 
@@ -33,35 +36,47 @@ hr {
 }
 
 h1 {
-  @include typi($size5-map);
+  @include typi($size4-map);
   font-family: $font-family-headlines;
   margin-top: 0;
   margin-bottom: $baseline;
   font-color: $fontcolor;
+  @include media($medium) {
+    @include typi($size5-map);
+  }
 }
 
 h2 {
-  @include typi($size4-map);
+  @include typi($size3-map);
   font-family: $font-family-headlines;
   margin-top: $baseline;
   margin-bottom: $baseline;
+  font-color: $fontcolor;
+  @include media($medium) {
+    @include typi($size4-map);
+  }
 }
 
 h3 {
-  font-family: $font-family-sans-serif;
-  @include typi($size3-map);
-  font-weight: 700;
-  margin-top: 0;
+  font-family: $font-family-headlines;
+  @include typi-base;
+  margin-top: $baseline;
   margin-bottom: $baseline;
-  font-color: $fontcolor;;
+  font-color: $fontcolor;
+  @include media($medium) {
+    @include typi($size3-map);
+  }
 }
 
 h4 {
   font-family: $font-family-headlines;
   @include typi-base;
-  @include media($medium) {
-    @include typi($size3-map);
-  }
+  margin: $baseline/4 0;
+}
+
+h5 {
+  font-family: $font-family-headlines;
+  @include typi($size1-map);
 }
 
 blockquote {
@@ -70,6 +85,12 @@ blockquote {
   margin-top: $baseline;
   margin-bottom: $baseline;
 }
+
+figure {
+  margin: 0 $baseline/8;
+}
+
+
 
 @mixin standfirst {
   font-family: $font-family-sans-serif;
@@ -80,6 +101,7 @@ blockquote {
 @mixin small-sans { //previously known as 'mono'. rip.
   font-family: $font-family-sans-serif;
   @include typi($size1-map);
+  margin: $baseline/8 0;
 }
 
 @mixin small-body { //smaller body font
@@ -99,6 +121,26 @@ blockquote {
   color: $earl-grey;
 }
 
+//temporary classes pls delete after design is done
+
+.small-sans-test {
+  @include small-sans;
+}
+
+.small-body-test {
+  @include small-body;
+}
+
+.standfirst-test {
+  @include standfirst;
+}
+
+.small-grey-test {
+  @include small-grey;
+}
+
+// end temporary classes
+
 @mixin brand-primary-link {
   a,
   a:active,
@@ -110,11 +152,17 @@ blockquote {
   }
 }
 
-@mixin label {
-  display: inline-block;
-  background-color: $light-grey;
-  margin: 0;
-  padding: 0 $baseline/8;
+@mixin small-sans-prominent {
+  color: $earl-grey;
+  font-size: ms(-2);
+  font-family: $font-family-sans-serif;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: $baseline/4 0;
+  & :before {
+    content: "// ";
+  }
 }
 
 
@@ -126,12 +174,17 @@ blockquote {
   @include media($large) {
     padding: 0;
   }
+}
 
+@mixin padding {
+  padding: 0 $baseline/4;
 }
 
 .content-wrapper {
   @include outer-container();
 }
+
+
 
 .flex-container {
   @include media($medium) {

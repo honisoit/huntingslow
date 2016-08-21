@@ -43,6 +43,6 @@
   @include small-sans;
   display: none;
   @include media($medium) {
-    @include label;
+    @include small-sans-prominent;
   }
 }

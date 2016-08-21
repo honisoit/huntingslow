@@ -1,12 +1,10 @@
 .single-sm {
-  flex: 1 1 25%;
-  background-color: $light-grey;
-  padding: $baseline/2 0 $baseline/2;
-  text-align: center;
-  padding: 0;
+  flex: 0 1 25%;
+  background-color: lightercolor(#99cccc, 80%);
 }
 
 .single-sm__headline {
+  @include padding;
 }
 
 .single-sm__image {
@@ -20,9 +18,11 @@
 }
 
 .single-sm__primary-tag {
-  @include small-sans;
+  @include padding;
+  @include small-sans-prominent;
 }
 
 .single-sm__byline {
   @include small-sans;
+  @include padding;
 }

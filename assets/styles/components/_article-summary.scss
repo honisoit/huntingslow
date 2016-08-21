@@ -64,7 +64,7 @@
   display:none;
   color: $earl-grey;
   @include media($medium) {
-    @include label;
+    @include small-sans-prominent;
   }
 }
 
