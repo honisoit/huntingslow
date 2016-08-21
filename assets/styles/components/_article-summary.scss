@@ -64,10 +64,7 @@
   display:none;
   color: $earl-grey;
   @include media($medium) {
-    display: inline-block;
-    background-color: $light-grey;
-    margin: 0;
-    padding: 0 $baseline/8;
+    @include label;
   }
 }
 

@@ -1,11 +1,14 @@
 .single-md {
-  @include md-columns(6);
+  flex: 1 1 50%;
   border: 1px solid black;
   text-align: center;
 }
 
 .single-md__image {
-  @include md-columns(6);
+  margin: 0;
+  display: inline-block;
+  float: left;
+  width: 50%;
   img {
     width: 100%;
     height: 100%;
@@ -14,10 +17,11 @@
 }
 
 .single-md__copy {
-  @include md-columns(6);
+  width: 50%;
+  display: inline-block;
+  float: right;
 }
 
 .single-md__headline {
-  @include small-sans;
   margin: 0;
 }

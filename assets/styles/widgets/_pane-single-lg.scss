@@ -1,9 +1,47 @@
 .single-lg {
-  border: 1px solid black;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px 0px;
   padding: $baseline/2 0 $baseline/2;
   text-align: center;
 }
 
-.single-lg__headline {
+.single-lg__image {
+  margin: 0;
+  img {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  @include media($medium) {
+    display: inline-block;
+    width: 50%;
+    float: left;
+  }
+}
+
+.single-lg__copy {
+  @include media($medium) {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    padding: 0 $baseline; //should probably remove later
+  }
+}
+
+.single-lg__byline {
   @include small-sans;
+  margin: 0;
+}
+
+.single-lg__headline {
+  margin: $baseline 0;
+}
+
+.single-lg__primary-tag {
+  @include small-sans;
+  display: none;
+  @include media($medium) {
+    @include label;
+  }
 }
