@@ -60,8 +60,7 @@ h2 {
 h3 {
   font-family: $font-family-headlines;
   @include typi-base;
-  margin-top: $baseline;
-  margin-bottom: $baseline;
+  margin: $baseline/4 0;
   font-color: $fontcolor;
   @include media($medium) {
     @include typi($size3-map);
@@ -108,6 +107,7 @@ figure {
   @include typi($size1-map);
   font-family: $font-family-serif;
   line-height: $baseline * 2/3;
+  margin: $baseline/2 0;
 }
 
 @mixin small-grey {

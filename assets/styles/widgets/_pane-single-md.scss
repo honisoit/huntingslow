@@ -1,8 +1,9 @@
 .single-md {
   flex: 1 1 50%;
-  background-color: $light-grey;
+  //background-color: $light-grey;
+  border: 1px solid #000;
   text-align: center;
-  padding: $baseline/4;
+  padding: $baseline/2;
 }
 
 .single-md__image {
@@ -16,6 +17,10 @@
   }
 }
 
+.single-md__primary-tag {
+  @include small-sans-prominent;
+}
+
 .single-md__copy {
   display: block;
 }
@@ -25,5 +30,8 @@
 }
 
 .single-md__headline {
-  margin: 0;
+}
+
+.single-md__standfirst {
+  @include small-body;
 }
