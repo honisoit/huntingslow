@@ -4,10 +4,12 @@
   border-width: 1px 0px;
   padding: $baseline/2 0 $baseline/2;
   text-align: center;
+  flex: 1 1 100%;
 }
 
 .single-lg__image {
   margin: 0;
+  display: none;
   img {
     width: 100%;
     margin: auto;
@@ -15,15 +17,14 @@
   }
   @include media($medium) {
     display: inline-block;
-    width: 50%;
-    float: left;
+    flex: 1 0 50%;
   }
 }
 
 .single-lg__copy {
   @include media($medium) {
     display: inline-block;
-    width: 50%;
+    flex: 1 1 50%;
     float: right;
     padding: 0 $baseline; //should probably remove later
   }

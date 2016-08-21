@@ -132,3 +132,7 @@ blockquote {
 .content-wrapper {
   @include outer-container();
 }
+
+.flex-container {
+  display: flex; 
+}

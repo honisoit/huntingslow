@@ -1,13 +1,13 @@
 .single-md {
   flex: 1 1 50%;
-  border: 1px solid black;
+  background-color: $light-grey;
   text-align: center;
+  padding: $baseline/4;
 }
 
 .single-md__image {
   margin: 0;
   display: inline-block;
-  float: left;
   width: 50%;
   img {
     width: 100%;
@@ -17,9 +17,11 @@
 }
 
 .single-md__copy {
-  width: 50%;
-  display: inline-block;
-  float: right;
+  display: block;
+}
+
+.single-md__byline {
+  @include small-sans;
 }
 
 .single-md__headline {

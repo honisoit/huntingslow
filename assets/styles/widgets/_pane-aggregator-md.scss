@@ -1,5 +1,5 @@
 .aggregator-md {
-  flex: 1 0 50%;
+  flex: 1 1 50%;
 }
 
 .aggregator-md__featured {
@@ -34,11 +34,15 @@
 
 .aggregator-md__list {
   @include md-columns(4);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
 .aggregator-md__headline {
   font-family: $font-family-sans-serif;
   margin: 0 0 $baseline/4;
   padding: 0 0 $baseline/4;
-  border-bottom: 1px solid grey
+  border-bottom: 1px solid grey;
+  flex: 1 0 auto;
 }
