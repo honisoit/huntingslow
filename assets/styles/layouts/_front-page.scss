@@ -5,7 +5,12 @@
   display: block;
   @include media($medium) {
     display: flex;
-    padding: 0 -$baseline/4 0 -$baseline/4;
+  }
+  & :first-child {
+    margin-left: 0;
+  }
+  & :last-child {
+    margin-right: 0;
   }
 }
 
@@ -16,12 +21,19 @@
   }
 }
 
+
 .front__array__headlines {
-  @include lg-columns(2);
+  flex: 1 1 2/12;
 }
 
 .front__array__secondary {
-  @include lg-columns(10);
+  flex: 1 1 2/12;
+  margin-right: 0;
+  padding-right: 0;
+
+  & > .front__strap {
+    margin-top: 0;
+  }
 }
 
 .home__row {

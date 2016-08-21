@@ -3,7 +3,8 @@
 }
 
 .aggregator-md__featured {
-  @include md-columns(8);
+  flex: 1 0 2/3;
+  margin-right: $baseline/4;
 }
 
 .aggregator-md__title {
@@ -33,10 +34,8 @@
 }
 
 .aggregator-md__list {
-  @include md-columns(4);
-  display: flex;
+  flex: 1 1 1/3;
   height: 100%;
-  flex-direction: column;
 }
 
 .aggregator-md__headline {
@@ -44,5 +43,4 @@
   margin: 0 0 $baseline/4;
   padding: 0 0 $baseline/4;
   border-bottom: 1px solid grey;
-  flex: 1 0 auto;
 }
