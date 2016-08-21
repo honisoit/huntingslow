@@ -14,14 +14,11 @@
   margin: 0 0 $baseline/4;
 }
 .aggregator-md__featured-headline {
-  @include typi($size3-map);
-  line-height: $baseline;
-  margin: 0;
+
 }
 
 .aggregator-md__featured-standfirst {
-  @include small-sans;
-  margin: 0;
+  @include small-body;
 }
 
 .aggregator-md__featured-image {
