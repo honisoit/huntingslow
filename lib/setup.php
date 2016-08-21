@@ -99,17 +99,17 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Regular Article Related One', 'sage'),
-    'id'            => 'regular-article-related-one',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'name'          => __('Article Related One', 'sage'),
+    'id'            => 'article-related-one',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([
-    'name'          => __('Regular Article Related Two', 'sage'),
-    'id'            => 'regular-article-related-two',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'name'          => __('Article Related Two', 'sage'),
+    'id'            => 'article-related-two',
+    'before_widget' => '',
+    'after_widget'  => '',
   ]);
 
   register_sidebar([

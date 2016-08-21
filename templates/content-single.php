@@ -18,4 +18,12 @@
       };
     ?>
   </article>
+  <div class="content-wrapper">
+    <div class="front__strap">
+      <?php dynamic_sidebar('article-related-one'); ?>
+    </div>
+    <div class="front__strap">
+      <?php dynamic_sidebar('article-related-two'); ?>
+    </div>
+  </div>
 <?php endwhile; ?>

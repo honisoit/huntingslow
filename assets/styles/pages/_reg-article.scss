@@ -8,21 +8,6 @@
   @include side-padding;
 }
 
-.reg__othercontent {
-  @include md-columns(10, 1);
-  @include lg-columns(12);
-}
-
-.reg__othercontent-flex {
-  display: flex;
-  flex-direction: column;
-  @include media($large) {
-    flex-direction: row;
-    padding: $baseline;
-  }
-
-}
-
 .reg__meta-row {
   @include row();
 }
