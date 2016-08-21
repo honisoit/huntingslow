@@ -9,7 +9,8 @@
   }
 }
 
-.front__strap > div {
+.front__strap > div,
+.front__array > div {
   @include media($medium) {
     margin: 0 $baseline/4 0 $baseline/4;
   }
