@@ -35,7 +35,10 @@
 
 .aggregator-md__list {
   flex: 1 1 1/3;
-  height: 100%;
+  & > .flex-container {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .aggregator-md__headline {
@@ -43,4 +46,5 @@
   margin: 0 0 $baseline/4;
   padding: 0 0 $baseline/4;
   border-bottom: 1px solid grey;
+  flex: 1 0 auto;
 }

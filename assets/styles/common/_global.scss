@@ -134,5 +134,7 @@ blockquote {
 }
 
 .flex-container {
-  display: flex;
+  @include media($medium) {
+    display: flex;
+  }
 }
