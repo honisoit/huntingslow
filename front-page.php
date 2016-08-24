@@ -3,13 +3,13 @@
 <?php dynamic_sidebar('front-strap-one'); ?>
 
 <div class="content-wrapper">
-  <div class="front__strap">
+  <div class="front__strap front__strap--two">
     <?php dynamic_sidebar('front-strap-two'); ?>
   </div>
 </div>
 
 <div class="content-wrapper">
-  <div class="front__strap">
+  <div class="front__strap front-strap--three">
     <?php dynamic_sidebar('front-strap-three'); ?>
   </div>
 </div>

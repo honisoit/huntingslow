@@ -3,10 +3,12 @@
 }
 
 .headline-list__primary-tag {
-  @include small-sans;
-  color: grey;
-  margin: 0;
-  padding: 0;
+  //@include small-sans;
+  //color: grey;
+  //margin: 0;
+  //padding: 0;
+  @include small-sans-prominent;
+  color: black;
 }
 
 .headline-list__headline {
