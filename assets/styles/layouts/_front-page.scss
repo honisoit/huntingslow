@@ -1,7 +1,8 @@
 .front__strap,
 .front__array {
   //@include row();
-  margin: $baseline/2 0 $baseline/2;
+  margin-top: $baseline/2; 
+  padding-bottom: $baseline/2;
   display: block;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -36,5 +37,6 @@
 
   & > .front__strap {
     margin-top: 0;
+    border: none;
   }
 }
