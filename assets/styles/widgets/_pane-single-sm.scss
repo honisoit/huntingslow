@@ -20,6 +20,7 @@
 .single-sm__primary-tag {
   @include padding;
   @include small-sans-prominent;
+  @include before-tag;
 }
 
 .single-sm__byline {

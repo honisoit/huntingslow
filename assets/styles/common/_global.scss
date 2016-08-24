@@ -160,6 +160,9 @@ figure {
   text-transform: uppercase;
   font-weight: 700;
   margin: $baseline/4 0;
+}
+
+@mixin before-tag {
   & :before {
     content: "// ";
   }
