@@ -44,9 +44,17 @@ if ( function_exists( 'fm_register_submenu_page' ) ) {
 								'copyright' => new Fieldmanager_Textfield( array (
 									'label' => 'Text for the copyright in the footer.'
 								) ),
-                'site_logo' => new Fieldmanager_Textfield( array (
-									'label' => 'SVG markup for the site logo',
-                  'sanitize' => 'esc_html'
+                'not_found_media' => new Fieldmanager_Media ( array (
+                  'button_label' => 'Add 404 page Image',
+                  'modal_title' => 'Select 404 Image',
+                  'modal_button_label' => 'Use Image on 404 page',
+                  'preview_size' => 'icon',
+                ) ),
+                'not_found_title' => new Fieldmanager_Textfield( array (
+									'label' => 'Prominent text for error page.'
+								) ),
+                'not_found_subtitle' => new Fieldmanager_Textfield( array (
+									'label' => 'Small text for the error page.'
 								) ),
 								'license' => new Fieldmanager_Group( array (
 									'label' => 'Creative Commons Options',

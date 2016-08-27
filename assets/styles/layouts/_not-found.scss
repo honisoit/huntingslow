@@ -1,0 +1,41 @@
+.not-found {
+  margin: 0;
+  @include media($large) {
+    margin-top: $baseline;
+  }
+}
+
+.not-found__media {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+
+  @include media($large) {
+    width: 60%;
+  }
+
+  img {
+    //width: 50%;
+    //height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.not-found__title {
+  text-align: center;
+  margin: $baseline 0;
+}
+
+.not-found__subtitle {
+  @include small-sans;
+  margin: $baseline auto;
+  padding: $baseline/2;
+
+  @include media($large) {
+    width: 60%;
+    margin: $baseline auto;
+    padding: 0;
+  }
+}
