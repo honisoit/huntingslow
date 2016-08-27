@@ -17,7 +17,7 @@
 
 .headline-list__headline {
   @include small-body;
-  margin: 0;
-  padding-bottom: $baseline/2;
+  margin: $baseline/4 0;
+  padding-bottom: $baseline/4;
   border-bottom: 1px solid #000;
 }

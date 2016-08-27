@@ -126,9 +126,12 @@
 }
 
 // Pull type out of here.
+.wp-caption-text,
 .reg__article-image__caption {
-  font-family: $font-family-sans-serif;
-  @include small-sans;
+  // font-family: $font-family-sans-serif;
+  // @include small-sans;
+  @include small-grey;
+  text-transform: none;
   @include side-padding;
 }
 

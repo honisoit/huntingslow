@@ -1,7 +1,7 @@
 .link-banner {
-  background-color: #666;
+  background-color: #ffb97e;
   margin-bottom: $baseline;
-  padding: $baseline/3;
+  padding: $baseline/4;
   text-align: center;
 }
 
@@ -10,5 +10,6 @@
 }
 
 .link-banner__text {
+  @include small-sans;
   margin: 0;
 }
