@@ -168,6 +168,15 @@ figure {
   }
 }
 
+blockquote {
+  @include media($large) {
+    display: inline-block;
+    margin-left: -10%;
+    margin-top: $baseline;
+    margin-bottom: $baseline;
+  }
+}
+
 
 // end type
 

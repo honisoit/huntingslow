@@ -12,6 +12,7 @@
   @include small-sans-prominent;
   color: black;
   margin-top: $baseline/2;
+  @include before-tag;
 }
 
 .headline-list__headline {
