@@ -34,7 +34,3 @@
     </a>
   </li>
 </ul>
-<div class="share__traction">
-	<span class="share__traction-count js-traction-count">935</span>
-	<span class="js-traction-prefix">fake internet points accrued by this article.</span>
-</div>

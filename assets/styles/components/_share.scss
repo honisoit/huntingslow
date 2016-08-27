@@ -37,6 +37,8 @@
   border-color: $brand-primary;
 }
 
+/*
+/ We won't need these until the traction counter is implemented
 .share__traction {
   @include small-grey;
   @include lg-columns(12);
@@ -45,3 +47,5 @@
 .share__traction-count {
   font-weight: 700;
 }
+
+*/
