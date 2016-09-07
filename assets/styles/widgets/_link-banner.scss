@@ -1,5 +1,5 @@
 .link-banner {
-  background-color: #ffb97e;
+  @include gradient-background;
   margin-bottom: $baseline;
   padding: $baseline/4;
   text-align: center;

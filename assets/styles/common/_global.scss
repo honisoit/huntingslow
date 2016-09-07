@@ -79,8 +79,7 @@ h5 {
 }
 
 blockquote {
-  @include typi($size3-map);
-  font-style: italic;
+  @include typi($size1-map);
   margin-top: $baseline;
   margin-bottom: $baseline;
 }
@@ -113,6 +112,7 @@ figure {
 @mixin small-grey {
   //font-size: $baseline/3;
   font-size: ms(-2);
+  //@include typi($size1-map);
   line-height: $baseline/2;
   letter-spacing: 1.1;
   margin-top: $baseline/2;
@@ -169,12 +169,11 @@ figure {
 }
 
 blockquote {
-  @include media($large) {
-    display: inline-block;
-    margin-left: -10%;
-    margin-top: $baseline;
-    margin-bottom: $baseline;
-  }
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  border-left: 8px solid $mid-grey;
+  padding: 0 $baseline/2;
+  font-style: italic;
 }
 
 
@@ -190,6 +189,11 @@ blockquote {
 
 @mixin padding {
   padding: 0 $baseline/4;
+}
+
+@mixin gradient-background {
+  background: $brand-primary;
+  background: linear-gradient(90deg, $brand-primary, $brand-secondary);
 }
 
 .content-wrapper {
