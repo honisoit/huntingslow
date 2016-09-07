@@ -133,6 +133,8 @@
   @include small-grey;
   text-transform: none;
   @include side-padding;
+  margin: $baseline/8 0 0 0;
+  display: block;
 }
 
 .reg__byline {

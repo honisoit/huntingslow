@@ -86,6 +86,9 @@ blockquote {
 
 figure {
   margin: 0 $baseline/8;
+  img {
+    display:block;
+  }
 }
 
 
@@ -110,9 +113,14 @@ figure {
 }
 
 @mixin small-grey {
-  //font-size: $baseline/3;
+  @include typi($size1-map);
+  margin-top: $baseline/2;
+  font-family: $font-family-sans-serif;
+  color: $earl-grey;
+}
+
+@mixin smallest-grey {
   font-size: ms(-2);
-  //@include typi($size1-map);
   line-height: $baseline/2;
   letter-spacing: 1.1;
   margin-top: $baseline/2;

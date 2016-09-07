@@ -1,0 +1,21 @@
+// EMBEDDED IMAGE ALIGNMENT
+
+.alignright {
+  float:right;
+  margin-left: $baseline/2;
+}
+
+.alignleft {
+  float:left;
+  margin-right: $baseline/2;
+}
+
+.aligncenter {
+  margin: 0 auto;
+}
+
+// EMBEDDED IMAGE SIZES
+
+.size-medium {
+  height: auto;
+}
