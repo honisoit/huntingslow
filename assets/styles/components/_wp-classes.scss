@@ -3,19 +3,41 @@
 .alignright {
   float:right;
   margin-left: $baseline/2;
+  width: 50%;
 }
 
 .alignleft {
-  float:left;
+  float: left;
+  width: 50%;
   margin-right: $baseline/2;
+  @include media ($large) {
+    float:left;
+    margin-left: -$column*2;
+    width: 500px;
+  }
 }
 
 .aligncenter {
-  margin: 0 auto;
+  display:inline-block;
+  width: 100%;
+  margin: 0;
 }
+
+.alignnone {
+  margin: 0;
+}
+
+figure img {display:block;}
 
 // EMBEDDED IMAGE SIZES
 
 .size-medium {
+  width: 100%;
   height: auto;
+}
+
+.wp-caption-text, {
+  @include small-grey;
+  margin: $baseline/8 0 0 0;
+  display: block;
 }

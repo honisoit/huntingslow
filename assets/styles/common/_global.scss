@@ -78,12 +78,6 @@ h5 {
   @include typi($size1-map);
 }
 
-blockquote {
-  @include typi($size1-map);
-  margin-top: $baseline;
-  margin-bottom: $baseline;
-}
-
 figure {
   margin: 0 $baseline/8;
   img {
@@ -96,7 +90,10 @@ figure {
 @mixin standfirst {
   font-family: $font-family-sans-serif;
   font-weight: 300;
-  @include typi($size3-map);
+  @include typi-base;
+  @include media($medium) {
+    @include typi($size3-map);
+  }
 }
 
 @mixin small-sans { //previously known as 'mono'. rip.
@@ -176,13 +173,8 @@ figure {
   }
 }
 
-blockquote {
-  margin-top: $baseline;
-  margin-bottom: $baseline;
-  border-left: 8px solid $mid-grey;
-  padding: 0 $baseline/2;
-  font-style: italic;
-}
+
+
 
 
 // end type
@@ -199,9 +191,14 @@ blockquote {
   padding: 0 $baseline/4;
 }
 
-@mixin gradient-background {
+@mixin gradient-background-horizontal {
   background: $brand-primary;
   background: linear-gradient(90deg, $brand-primary, $brand-secondary);
+}
+
+@mixin gradient-background-vertical {
+  background: $brand-primary;
+  background: linear-gradient($brand-primary, $brand-secondary);
 }
 
 .content-wrapper {
@@ -214,4 +211,28 @@ blockquote {
   @include media($medium) {
     display: flex;
   }
+}
+
+
+blockquote {
+  @include typi($size1-map);
+  //margin-top: $baseline;
+  // margin-bottom: $baseline;
+  padding: 0 $baseline/2;
+  font-style: italic;
+  position:relative;
+  display: inline-block;
+  p {
+    margin:0;
+  }
+}
+
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 100%;
+  width: 5px;
+  @include gradient-background-vertical;
 }
