@@ -28,6 +28,61 @@ add_action( 'widgets_init', 'huntingslow_unregister_default_widgets' );
  */
 add_filter('widget_text', 'do_shortcode');
 
+/**
+ * Filter the output of embedded images to remove inline styles.
+ */
+ add_filter('img_caption_shortcode','fix_img_caption_shortcode_inline_style',10,3);
+
+ function fix_img_caption_shortcode_inline_style($output,$attr,$content) {
+ 	$atts = shortcode_atts( array(
+ 		'id'	  => '',
+ 		'align'	  => 'alignnone',
+ 		'width'	  => '',
+ 		'caption' => '',
+ 		'class'   => '',
+ 	), $attr, 'caption' );
+
+ 	$atts['width'] = (int) $atts['width'];
+ 	if ( $atts['width'] < 1 || empty( $atts['caption'] ) )
+ 		return $content;
+
+ 	if ( ! empty( $atts['id'] ) )
+ 		$atts['id'] = 'id="' . esc_attr( $atts['id'] ) . '" ';
+
+ 	$class = trim( 'wp-caption ' . $atts['align'] . ' ' . $atts['class'] );
+
+ 	if ( current_theme_supports( 'html5', 'caption' ) ) {
+ 		return '<figure ' . $atts['id'] . ' class="' . esc_attr( $class ) . '">'
+ 		. do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $atts['caption'] . '</figcaption></figure>';
+ 	}
+
+ 	$caption_width = 10 + $atts['width'];
+
+ 	$caption_width = apply_filters( 'img_caption_shortcode_width', $caption_width, $atts, $content );
+
+ 	$style = '';
+
+ 	return '<div ' . $atts['id'] . $style . 'class="' . esc_attr( $class ) . '">'
+ 		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $atts['caption'] . '</p></div>';
+ }
+
+ /**
+ * Removes width and height attributes from image tags
+ *
+ * @param string $html
+ *
+ * @return string
+ */
+function remove_image_size_attributes( $html ) {
+    return preg_replace( '/(width|height)="\d*"/', '', $html );
+}
+
+// Remove image size attributes from post thumbnails
+add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
+
+// Remove image size attributes from images added to a WordPress post
+add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
+
 /*
 * Theme settings
 */
