@@ -144,12 +144,12 @@
 }
 
 .reg__bylinedate {
-  @include sm-columns(8 of 12);
+  @include sm-columns(6 of 12);
   @include lg-columns(12);
 }
 
 .reg__share {
-  @include sm-columns(4 of 12);
+  @include sm-columns(6 of 12);
   @include lg-columns(12);
   vertical-align: top;
   @include media($large) {

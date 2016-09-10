@@ -216,8 +216,8 @@ figure {
 
 blockquote {
   @include typi($size1-map);
-  //margin-top: $baseline;
-  // margin-bottom: $baseline;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0 $baseline/2;
   font-style: italic;
   position:relative;
@@ -231,8 +231,8 @@ blockquote:before {
   content: '';
   position: absolute;
   top: 0;
-  left: -5px;
+  left: -3px;
   height: 100%;
-  width: 5px;
+  width: 3px;
   @include gradient-background-vertical;
 }

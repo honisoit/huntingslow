@@ -1,7 +1,8 @@
 .single-sm {
   flex: 0 1 25%;
   // background-color: lightercolor(#99cccc, 80%);
-  background-color: lightercolor(#02f2ab, 60%);
+  //background-color: lightercolor(#02f2ab, 60%);
+  background-color: $brand-primary-light;
 }
 
 .single-sm__headline {
