@@ -50,7 +50,7 @@
   @include smallest-grey;
   color: $earl-grey;
   a {
-    @include link-underline(#fff, $brand-primary, $earl-grey);
+    @include link-underline(#fff, $fontcolor, #fff, $brand-primary);
   }
 }
 

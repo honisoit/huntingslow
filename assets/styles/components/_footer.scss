@@ -25,17 +25,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  //below styles inefficiently copied from header, will centralise later if we like
-  font-size: ms(-2);
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  a { //will make own class later
-    color: $headerfootertext2;
-  }
-  li { //likewise
-    margin-bottom: $baseline/2;
-  }
+  @include link-nav;
 }
 
 .footer__column-item {

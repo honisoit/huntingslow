@@ -77,9 +77,9 @@
   margin: 0 auto;
   height: 100%;
   width: 16rem;
-  background: #000;
-  border-left-style: solid;
-  border-left-width: 1px;
+  background: $header-footer-bg-colour;
+  //border-left-style: solid;
+  //border-left-width: 1px;
   overflow-x: hidden;
   overflow-y: hidden;
   padding: 20px;
@@ -103,8 +103,8 @@
   margin-top: 2rem;
   padding-left: 0;
   // padding-top: 0.5rem;
-  border-top-style: solid;
-  border-top-width: 1px;
+  //border-top-style: solid;
+  //border-top-width: 1px;
   //border-top-color: #c7c7c7;
   display: block;
 
@@ -118,11 +118,7 @@
 }
 
 .header__nav-list-item {
-  font-family: $font-family-sans-serif;
-  @include small-sans;
-  text-transform: uppercase;
-  font-weight: bold; //supply actual weight later
-  letter-spacing: 1.1;
+  @include link-nav;
   padding: 0;
   // padding-bottom: 0.5rem;
   padding: $baseline/2 0 $baseline/2;
@@ -137,25 +133,6 @@
     padding: 0;
     margin: 0;
     padding-right: 2rem;
-    font-size: ms(-2);
-    letter-spacing: 0.1rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: $headerfootertext2;
-  }
-
-  a:visited {
-    color: $headerfootertext2;
-  }
-
-  a:hover {
-      @include media($large) {
-      color: $brand-primary;
-      // border-bottom: 1px solid $brand-primary;
-      padding-bottom: $baseline/8;
-    }
   }
 }
 

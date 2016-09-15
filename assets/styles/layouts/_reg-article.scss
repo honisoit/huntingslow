@@ -42,22 +42,7 @@
   @include md-columns(10, 1);
   @include lg-columns(10, 2);
   display: block;
-
-  a {
-    @include link-underline(#fff, $fontcolor, $brand-primary);
-  }
-  /*
-  a,
-  a:active,
-  a:visited {
-    border-bottom: 1px solid $brand-primary;
-  }
-
-  a:hover {
-    border-color: $fontcolor;
-  }
-  */
-
+  @include link-body;
 }
 
 .reg__details {

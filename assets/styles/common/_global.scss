@@ -126,6 +126,42 @@ figure {
   color: $earl-grey;
 }
 
+
+@mixin link-body {
+  a {
+    @include link-underline(#fff, $fontcolor, $brand-primary-light, $brand-primary);
+  }
+
+  a:hover {
+    @include link-underline(#fff, $fontcolor, $brand-primary-light, $fontcolor);
+  }
+}
+
+@mixin link-nav {
+  a,
+  a:link,
+  a:active,
+  a:visited {
+    font-family: $font-family-sans-serif;
+    font-size: ms(-2);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $headerfootertext2;
+  }
+  a:hover {
+    border-bottom: 1px solid $brand-primary;
+  }
+  li {
+    margin-bottom: $baseline/2;
+  }
+}
+
+@mixin link-apparatus {
+}
+
+
+
 //temporary classes pls delete after design is done
 
 .small-sans-test {
