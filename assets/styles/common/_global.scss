@@ -126,6 +126,7 @@ figure {
   color: $earl-grey;
 }
 
+// links
 
 @mixin link-body {
   a {
@@ -157,7 +158,8 @@ figure {
   }
 }
 
-@mixin link-apparatus {
+@mixin link-apparatus-underline {
+  border-bottom: 1px solid $brand-primary; 
 }
 
 

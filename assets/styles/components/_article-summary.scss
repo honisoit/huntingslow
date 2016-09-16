@@ -49,9 +49,7 @@
 .article-summary__byline {
   @include smallest-grey;
   color: $earl-grey;
-  a {
-    @include link-underline(#fff, $fontcolor, #fff, $brand-primary);
-  }
+  @include link-apparatus-underline;
 }
 
 .article-summary__date {
