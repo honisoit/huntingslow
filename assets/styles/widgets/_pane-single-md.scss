@@ -26,6 +26,7 @@
 
 .single-md__copy {
   display: block;
+  margin: $baseline/4 0 $baseline/2 0;
 }
 
 .single-md__byline {
@@ -34,8 +35,10 @@
 }
 
 .single-md__headline {
+  margin: $baseline/2 0 $baseline/4 0;
 }
 
 .single-md__standfirst {
   @include small-body;
+  margin: $baseline/4 0 $baseline/2 0;
 }

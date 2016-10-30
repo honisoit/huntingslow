@@ -18,6 +18,10 @@
   }
 }
 
+.front__array {
+  padding-bottom: 0;
+}
+
 .front__strap > div,
 .front__array > div {
   @include media($medium) {

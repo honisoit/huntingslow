@@ -6,6 +6,7 @@
 .single-lg__image {
   margin: 0;
   display: none;
+  height:auto;
   img {
     width: 100%;
     margin: auto;
@@ -29,12 +30,12 @@
 
 .single-lg__byline {
   @include small-sans;
-  margin: 0;
+  margin: $baseline 0 0 0;
 }
 
 .single-lg__headline {
   // margin: $baseline 0;
-  margin: 0;
+  margin: 0 0 $baseline/2 0;
 }
 
 .single-lg__primary-tag {
@@ -43,4 +44,8 @@
   @include media($medium) {
     @include small-sans-prominent;
   }
+}
+
+.single-lg__standfirst {
+  margin: $baseline/2 0;
 }
