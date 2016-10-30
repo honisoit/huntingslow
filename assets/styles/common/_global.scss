@@ -69,8 +69,8 @@ h3 {
 
 h4 {
   font-family: $font-family-headlines;
-  @include typi-base;
-  margin: $baseline/4 0;
+  @include typi($size3-map);
+  margin: $baseline/4 0 $baseline/2 0;
 }
 
 h5 {
@@ -225,7 +225,7 @@ figure {
 }
 
 @mixin padding {
-  padding: 0 $baseline/4;
+  padding: 0 $baseline/2;
 }
 
 @mixin gradient-background-horizontal {
@@ -248,6 +248,12 @@ figure {
   @include media($medium) {
     display: flex;
   }
+}
+
+.flex-container__vertical {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 

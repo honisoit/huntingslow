@@ -1,10 +1,11 @@
 .single-sm {
   flex: 0 1 25%;
-  background-color: $brand-primary-light;
+  background-color: $light-grey;
 }
 
 .single-sm__headline {
   @include padding;
+  margin: $baseline/4 0 0 0;
 }
 
 .single-sm__image {
@@ -20,10 +21,13 @@
 .single-sm__primary-tag {
   @include padding;
   @include small-sans-prominent;
-  @include before-tag;
+  margin-top: $baseline/2;
+  margin-bottom: 0;
+
 }
 
 .single-sm__byline {
   @include small-sans;
   @include padding;
+  margin-top: $baseline/2;
 }
