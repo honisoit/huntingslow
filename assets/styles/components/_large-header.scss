@@ -1,8 +1,20 @@
+.search-form {
+  display: inline-block;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
 .large-header {
   background-color: $header-footer-bg-colour;
   //border-bottom: 1px solid #000;
-  padding: 0 1rem 0;
-
+  //padding: 0 1rem 0;
+  @include outer-container();
   //@include media($medium) {
     //@include outer-container();
     //padding: 1rem 0 0;
@@ -16,7 +28,7 @@
   padding-top: $baseline/2;
   @include media($large) {
     width: 25%;
-    margin: 0 auto;
+    margin: 0;
     padding-top: $baseline/1.5;
     padding-bottom: $baseline/2;
   }
@@ -74,7 +86,6 @@
   position: fixed;
   top: 0;
   right:-16rem;
-  margin: 0 auto;
   height: 100%;
   width: 16rem;
   background: $header-footer-bg-colour;
@@ -89,10 +100,9 @@
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 auto;
-    align-self: center;
+
     padding: 0 0 $baseline/2 0;
-    width: fit-content;
+    width: auto;
     border-style: none;
     background-color: inherit;
   }
