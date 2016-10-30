@@ -26,7 +26,8 @@
 // Template parts
 @import "components/license";
 @import "components/large-header";
-@import "components/search-form";
+// removing to try and get search working globally on the simplest terms
+//@import "components/search-form";
 @import "components/share";
 @import "components/tags";
 @import "components/footer";
