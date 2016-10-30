@@ -54,12 +54,12 @@
   <div class="footer__small-text">
   <?php
     $options = get_option( 'global_options' );
-    $option = $options['copyright'];
+    $option = $options['acknowledgment_text'];
     echo $option;
   ?>
   <?php
     $options = get_option( 'global_options' );
-    $option = $options['acknowledgment_text'];
+    $option = $options['copyright'];
     echo $option;
   ?>
   </div>

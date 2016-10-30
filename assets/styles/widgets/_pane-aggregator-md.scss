@@ -21,6 +21,7 @@
   margin: 0 0 $baseline/4;
 }
 
+
 .aggregator-md__title:after {
   content: '';
   position: relative;
@@ -53,12 +54,24 @@
     flex-direction: column;
     height: 100%;
   }
+  & > :first-child {
+    margin-top: 0;
+  }
 }
 
 .aggregator-md__headline {
-  @include small-sans;
-  margin: 0 0 $baseline/4;
+  @include small-body;
+  //margin: 0 0 $baseline/4;
+  margin: $baseline/4 0;
   padding: 0 0 $baseline/4;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $mid-grey;
   flex: 1 0 auto;
+}
+
+
+.aggregator-md__primary-tag {
+  @include small-sans-prominent;
+  color: black;
+  margin-top: $baseline/4;
+  @include before-tag;
 }

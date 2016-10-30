@@ -153,13 +153,12 @@ figure {
   a:hover {
     border-bottom: 1px solid $brand-primary;
   }
-  li {
-    margin-bottom: $baseline/2;
-  }
 }
 
 @mixin link-apparatus-underline {
-  border-bottom: 1px solid $brand-primary; 
+  a {
+    color: $brand-primary;
+  }
 }
 
 

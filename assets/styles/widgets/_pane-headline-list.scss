@@ -10,13 +10,15 @@
 
 .headline-list__primary-tag {
   @include small-sans-prominent;
-  color: black;
-  margin-top: $baseline/2;
+  color: $mid-grey;
+  margin-top: $baseline/4;
   @include before-tag;
 }
 
 .headline-list__headline {
-  @include small-body;
+  font-family: $font-family-headlines;
+  font-size: ms(-1);
+  font-weight: bold;
   margin: $baseline/4 0;
   padding-bottom: $baseline/4;
   border-bottom: 1px solid #000;

@@ -4,7 +4,8 @@
   //border-top-width: 1px;
   background-color: $header-footer-bg-colour;
   color: $headerfootertext;
-  @include media($large) {
+  padding: $baseline/2;
+  @include media($medium) {
     padding: $baseline/1.5 $baseline 0;
   }
   @include media($large) {
@@ -24,7 +25,7 @@
 .footer__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 $baseline 0;
   @include link-nav;
 }
 
@@ -58,9 +59,9 @@
 
 .footer__small-text {
   font-family: $font-family-sans-serif;
-  font-size: ms(-1);
+  font-size: ms(-2);
   // @include side-padding;
   padding: $baseline/2 0 $baseline/4;
   text-align: center;
-  color: $headerfootertext;
+  color: $headerfootertext2;
 }
