@@ -200,8 +200,11 @@ figure {
   font-family: $font-family-sans-serif;
   letter-spacing: 0.75px;
   text-transform: uppercase;
-  font-weight: 700;
+  //font-weight: 700;
   margin: $baseline/4 0;
+  a:link, a:active, a:hover, a:visited {
+    color: $earl-grey;
+  }
 }
 
 @mixin before-tag {
@@ -242,8 +245,6 @@ figure {
   @include outer-container();
 }
 
-
-
 .flex-container {
   @include media($medium) {
     display: flex;
@@ -254,6 +255,7 @@ figure {
   display: flex;
   flex-direction: column;
   height: 100%;
+  align-items: center;
 }
 
 

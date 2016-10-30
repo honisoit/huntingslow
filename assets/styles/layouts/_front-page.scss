@@ -1,12 +1,12 @@
 .front__strap,
 .front__array {
   //@include row();
-  margin-top: $baseline/2; 
+  margin-top: $baseline/2;
   padding-bottom: $baseline/2;
   display: block;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: black;
+  border-bottom-color: $mid-grey;
   @include media($medium) {
     display: flex;
   }

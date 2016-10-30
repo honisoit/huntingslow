@@ -29,5 +29,5 @@
 .single-sm__byline {
   @include small-sans;
   @include padding;
-  margin-top: $baseline/2;
+  margin: $baseline/2 0;
 }

@@ -22,7 +22,8 @@
     display: inline-block;
     flex: 1 1 50%;
     float: right;
-    padding: 0 $baseline; //should probably remove later
+    @include padding;
+    align-self: center;
   }
 }
 

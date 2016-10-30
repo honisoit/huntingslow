@@ -10,16 +10,14 @@
 
 .headline-list__primary-tag {
   @include small-sans-prominent;
-  color: $mid-grey;
-  margin-top: $baseline/4;
-
+  margin: $baseline/8 0;
 }
 
 .headline-list__headline {
   font-family: $font-family-headlines;
-  font-size: ms(-1);
+  @include typi($size1-map);
   font-weight: bold;
-  margin: $baseline/4 0;
-  padding-bottom: $baseline/4;
-  border-bottom: 1px solid #000;
+  margin: $baseline/8 0 $baseline/4 0;
+  padding: 0 0 $baseline/4;
+  border-bottom: 1px solid $mid-grey;
 }
