@@ -19,9 +19,6 @@
           )
         );
     ?>
-    <form class="large-header__search-form search-form" role="search">
-      <input type="text" class="search-form__input" placeholder="Search">
-      <button type="submit" class="search-form__submit">Submit</button>
-    </form>
+    <?php get_search_form(); ?>
   </nav>
 </header>
