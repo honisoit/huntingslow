@@ -19,6 +19,46 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        var menuTrigger = function() {
+          var triggerElement = document.querySelector('.js-menu-tray-toggle');
+
+          triggerElement.addEventListener('click', function() {
+              var menuBody = document.querySelector('.menu-tray');
+              //var siteBody = document.querySelector('.js-site-wrapper');
+
+              if (menuBody.classList.contains('menu-tray--closed')) {
+                  menuBody.classList.remove('menu-tray--closed');
+                  menuBody.classList.add('menu-tray--open');
+                  //siteBody.addEventListener('click', function() {
+                    //menuTrigger();
+                  //});
+              }
+              else {
+                  menuBody.classList.remove('menu-tray--open');
+                  menuBody.classList.add('menu-tray--closed');
+              }
+          });
+        };
+
+        menuTrigger();
+        /**
+        var toggleTray = function toggleTray() {
+          const menuTray = $('.menu-tray');
+          if ( menuTray.hasClass('menu-tray--closed') ) {
+            menuTray.removeClass('menu-tray--closed')
+              .addClass('menu-tray--open');
+          } else {
+            menuTray.removeClass('menu-tray--open')
+              .addClass('menu-tray--closed');
+          };
+        };
+
+        $('.js-menu-tray-toggle').click(function() {
+          toggleTray();
+        });
+
+        const siteWrapper = $('.js-site-wrapper');
+        */
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

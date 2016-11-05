@@ -1,0 +1,29 @@
+.menu-tray {
+  position: fixed;
+  background-color: red;
+  width: 11em;
+  height: 100%;
+  top: 0;
+  z-index: 888;
+  overflow-y: scroll;
+}
+
+.menu-tray--closed {
+  left: -11em;
+}
+
+.menu-tray--open {
+  left: 0em;
+}
+
+.menu-tray__nav {
+
+}
+
+.menu-tray__nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-tray__nav-list-item {
+}
