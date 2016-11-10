@@ -12,3 +12,12 @@
   @include md-columns(7);
   @include side-padding;
 }
+
+.page-header { //gotta make this not centred
+  width: 100%;
+  align: none;
+}
+
+.page__title {
+  margin: 0 0 $baseline/4 0;
+}
