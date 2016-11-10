@@ -11,7 +11,7 @@
 }
 
 .large-header {
-  background-color: $header-footer-bg-colour;
+  //background-color: $header-footer-bg-colour;
   //border-bottom: 1px solid #000;
   //padding: 0 1rem 0;
   @include outer-container();
@@ -33,11 +33,11 @@
     padding-bottom: $baseline/2;
   }
   svg {
-    fill: $headerfootertext;
+    fill: $fontcolor;
   }
 
   svg:hover {
-    fill: lightercolor($headerfootertext, 100%);
+    fill: lightercolor($fontcolor, 20%);
   }
 }
 
