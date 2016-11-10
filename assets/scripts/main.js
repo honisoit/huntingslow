@@ -29,6 +29,7 @@
               if (menuBody.classList.contains('menu-tray--closed')) {
                   menuBody.classList.remove('menu-tray--closed');
                   menuBody.classList.add('menu-tray--open');
+                  triggerElement.classList.add('burger--open');
                   //siteBody.addEventListener('click', function() {
                     //menuTrigger();
                   //});
@@ -36,6 +37,7 @@
               else {
                   menuBody.classList.remove('menu-tray--open');
                   menuBody.classList.add('menu-tray--closed');
+                  triggerElement.classList.remove('burger--open');
               }
           });
         };
