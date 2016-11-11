@@ -41,7 +41,7 @@
   margin: 0;
   @include media($medium) {
     @include typi($size3-map);
-    margin-top: $baseline/2;
+    //margin-top: $baseline/4;
     margin-bottom: $baseline/2;
   }
 }
