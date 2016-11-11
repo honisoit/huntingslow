@@ -78,41 +78,6 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  */
 function widgets_init() {
   register_sidebar([
-    'name'          => __('Regular Article Sidebar', 'sage'),
-    'id'            => 'regular-article-sidebar',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ]);
-
-  register_sidebar([
-    'name'          => __('Archive Page Sidebar', 'sage'),
-    'id'            => 'archive-page-sidebar',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ]);
-
-  register_sidebar([
-    'name'          => __('Category Page Featured', 'sage'),
-    'id'            => 'category-page-featured',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ]);
-
-  register_sidebar([
-    'name'          => __('Article Related One', 'sage'),
-    'id'            => 'article-related-one',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ]);
-
-  register_sidebar([
-    'name'          => __('Article Related Two', 'sage'),
-    'id'            => 'article-related-two',
-    'before_widget' => '',
-    'after_widget'  => '',
-  ]);
-
-  register_sidebar([
     'name'          => __('Front Strap One (Banner)', 'sage'),
     'id'            => 'front-strap-one',
     'before_widget' => '',
@@ -197,12 +162,53 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Regular Article Sidebar', 'sage'),
+    'id'            => 'regular-article-sidebar',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Archive Page Sidebar', 'sage'),
+    'id'            => 'archive-page-sidebar',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Category Page Featured', 'sage'),
+    'id'            => 'category-page-featured',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Article Related One', 'sage'),
+    'id'            => 'article-related-one',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Article Related Two', 'sage'),
+    'id'            => 'article-related-two',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
+
+  register_sidebar([
     'name'          => __('Footer Demon', 'sage'),
     'id'            => 'footer-demon',
     'before_widget' => '',
     'after_widget'  => '',
   ]);
 
+  register_sidebar([
+    'name'          => __('Header Advertisement', 'sage'),
+    'id'            => 'header-ad',
+    'before_widget' => '',
+    'after_widget'  => '',
+  ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
