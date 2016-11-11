@@ -1,53 +1,18 @@
-
-
+/**
+ * Base typography
+ */
 html {
   @include typi-base();
 }
-
-// type
 
 body {
   font-family: $font-family-serif;
 }
 
-
 p {
   margin: 0 0 $baseline 0;
   -webkit-margin-before: $baseline;
   -webkit-margin-after: $baseline;
-}
-
-a:link,
-a:active,
-a:visited {
-  color: $font-color;
-  text-decoration:none;
-  img {
-    display:block;
-  }
-}
-
-
-a:hover {
-}
-
-hr {
-
-}
-
-@mixin visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.screen-reader-text {
-  @include visually-hidden;
 }
 
 h1 {
@@ -93,6 +58,42 @@ h5 {
   @include typi($size1-map);
 }
 
+a:link,
+a:active,
+a:visited {
+  color: $font-color;
+  text-decoration:none;
+  img {
+    display:block;
+  }
+}
+
+a:hover {
+}
+
+blockquote {
+  @include typi($size1-map);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 $baseline/2;
+  font-style: italic;
+  position:relative;
+  display: inline-block;
+  p {
+    margin:0;
+  }
+}
+
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 100%;
+  width: 3px;
+  @include gradient-background-vertical;
+}
+
 figure {
   margin: 0 $baseline/8;
   img {
@@ -100,8 +101,9 @@ figure {
   }
 }
 
-
-
+/**
+ * Typography mixins
+ */
 @mixin standfirst {
   font-family: $font-family-sans-serif;
   font-weight: 300;
@@ -111,13 +113,14 @@ figure {
   }
 }
 
-@mixin small-sans { //previously known as 'mono'. rip.
+@mixin small-sans {
   font-family: $font-family-sans-serif;
   @include typi($size1-map);
   margin: $baseline/8 0;
 }
 
-@mixin small-body { //smaller body font
+// Smaller style of body font, used in widgets
+@mixin small-body {
   @include typi($size1-map);
   font-family: $font-family-serif;
   line-height: $baseline * 2/3;
@@ -141,8 +144,6 @@ figure {
   color: $dark-grey;
 }
 
-// links
-
 @mixin link-body {
   a {
     @include link-underline(#fff, $font-color, $brand-primary-light, $brand-primary);
@@ -165,6 +166,7 @@ figure {
     font-weight: bold;
     color: $headerfootertext2;
   }
+
   a:hover {
     border-bottom: 1px solid $brand-primary;
   }
@@ -175,28 +177,6 @@ figure {
     color: $brand-primary;
   }
 }
-
-
-
-//temporary classes pls delete after design is done
-
-.small-sans-test {
-  @include small-sans;
-}
-
-.small-body-test {
-  @include small-body;
-}
-
-.standfirst-test {
-  @include standfirst;
-}
-
-.small-grey-test {
-  @include small-grey;
-}
-
-// end temporary classes
 
 @mixin brand-primary-link {
   a,
@@ -222,17 +202,19 @@ figure {
   }
 }
 
-@mixin before-tag {
-  & :before {
-    content: "// ";
-  }
+/**
+ * Utility mixins (should be split to another file)
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
-
-
-
-
-
-// end type
 
 @mixin side-padding {
   padding: 0 $baseline/2 0 $baseline/2;
@@ -256,6 +238,10 @@ figure {
   background: linear-gradient($brand-primary, $brand-secondary);
 }
 
+.screen-reader-text {
+  @include visually-hidden;
+}
+
 .content-wrapper {
   @include outer-container();
 }
@@ -271,28 +257,4 @@ figure {
   flex-direction: column;
   height: 100%;
   align-items: center;
-}
-
-
-blockquote {
-  @include typi($size1-map);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 $baseline/2;
-  font-style: italic;
-  position:relative;
-  display: inline-block;
-  p {
-    margin:0;
-  }
-}
-
-blockquote:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -3px;
-  height: 100%;
-  width: 3px;
-  @include gradient-background-vertical;
 }
