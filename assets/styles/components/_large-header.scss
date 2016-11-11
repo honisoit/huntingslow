@@ -100,8 +100,8 @@
 
   @include media($medium) {
     display: flex;
-
-    padding: 0 0 $baseline/2 0;
+    height: $baseline;
+    //padding: 0 0 $baseline/2 0;
     max-width: 100%;
     border-style: none;
   }
