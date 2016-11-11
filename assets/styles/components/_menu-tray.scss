@@ -8,6 +8,11 @@
   border-right: 1px solid $mid-grey;
   background-color: white;
   transition: .15s ease-in-out;
+
+  @include media($medium) {
+    display:none;
+  }
+
 }
 
 .menu-tray--closed {
