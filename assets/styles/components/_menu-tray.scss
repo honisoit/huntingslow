@@ -1,0 +1,39 @@
+.menu-tray {
+  position: fixed;
+  width: 11em;
+  height: 100%;
+  top: 0;
+  z-index: 888;
+  overflow-y: scroll;
+  border-right: 1px solid $mid-grey;
+  background-color: white;
+  transition: .15s ease-in-out;
+}
+
+.menu-tray--closed {
+  left: -11em;
+}
+
+.menu-tray--open {
+  left: 0em;
+}
+
+.menu-tray__nav {
+}
+
+.menu-tray__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  //border-top-style: solid;
+  //border-top-width: 1px;
+  //border-top-color: #c7c7c7;
+}
+
+.menu-tray__nav-list-item {
+  @include link-nav;
+  padding: $baseline/4 0 $baseline/4 $baseline/2;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #c7c7c7;
+}
