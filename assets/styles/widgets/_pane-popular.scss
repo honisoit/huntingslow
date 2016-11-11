@@ -25,7 +25,7 @@
 
 .popular__list-item a {
   text-decoration: none;
-  font-color: $fontcolor;;
+  font-color: $font-color;;
   position: relative;
   top: -$baseline*0.75;
 }
@@ -46,7 +46,7 @@
   border: 1px solid $mid-grey;
   text-align: center;
   vertical-align: baseline;
-  font-color: $fontcolor;;
+  font-color: $font-color;;
   position: relative;
   left: -$baseline*1.5;
 }

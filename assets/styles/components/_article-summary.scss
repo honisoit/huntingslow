@@ -48,19 +48,19 @@
 
 .article-summary__byline {
   @include smallest-grey;
-  color: $earl-grey;
+  color: $dark-grey;
   @include link-apparatus-underline;
 }
 
 .article-summary__date {
   @include smallest-grey;
-  color: $earl-grey;
+  color: $dark-grey;
 }
 
 .article-summary__category-line {
   @include small-sans;
   display:none;
-  color: $earl-grey;
+  color: $dark-grey;
   @include media($medium) {
     @include small-sans-prominent;
   }

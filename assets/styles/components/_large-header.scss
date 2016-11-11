@@ -1,5 +1,5 @@
 .large-header {
-  border-bottom: 1px solid $earl-grey;
+  border-bottom: 1px solid $dark-grey;
   //padding: 0 1rem 0;
   @include outer-container();
   @include media($medium) {
@@ -87,7 +87,7 @@
   }
 
   svg {
-    fill: $fontcolor;
+    fill: $font-color;
   }
   //svg:hover {
   //  fill: lightercolor($headerfootertext, 40%);

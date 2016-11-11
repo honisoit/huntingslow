@@ -20,7 +20,7 @@ p {
 a:link,
 a:active,
 a:visited {
-  color: $fontcolor;
+  color: $font-color;
   text-decoration:none;
   img {
     display:block;
@@ -55,7 +55,7 @@ h1 {
   font-family: $font-family-headlines;
   margin-top: 0;
   margin-bottom: $baseline;
-  font-color: $fontcolor;
+  font-color: $font-color;
   @include media($medium) {
     @include typi($size5-map);
   }
@@ -66,7 +66,7 @@ h2 {
   font-family: $font-family-headlines;
   margin-top: $baseline;
   margin-bottom: $baseline;
-  font-color: $fontcolor;
+  font-color: $font-color;
   @include media($medium) {
     @include typi($size4-map);
   }
@@ -76,7 +76,7 @@ h3 {
   font-family: $font-family-headlines;
   @include typi-base;
   margin: $baseline/4 0;
-  font-color: $fontcolor;
+  font-color: $font-color;
   @include media($medium) {
     @include typi($size3-map);
   }
@@ -128,7 +128,7 @@ figure {
   @include typi($size1-map);
   margin-top: $baseline/2;
   font-family: $font-family-sans-serif;
-  color: $earl-grey;
+  color: $dark-grey;
 }
 
 @mixin smallest-grey {
@@ -138,18 +138,18 @@ figure {
   margin-top: $baseline/2;
   font-family: $font-family-sans-serif;
   text-transform: uppercase;
-  color: $earl-grey;
+  color: $dark-grey;
 }
 
 // links
 
 @mixin link-body {
   a {
-    @include link-underline(#fff, $fontcolor, $brand-primary-light, $brand-primary);
+    @include link-underline(#fff, $font-color, $brand-primary-light, $brand-primary);
   }
 
   a:hover {
-    @include link-underline(#fff, $fontcolor, $brand-primary-light, $fontcolor);
+    @include link-underline(#fff, $font-color, $brand-primary-light, $font-color);
   }
 }
 
@@ -205,12 +205,12 @@ figure {
     color: $brand-primary;
   }
   a:hover {
-    color: $earl-grey;
+    color: $dark-grey;
   }
 }
 
 @mixin small-sans-prominent {
-  color: $earl-grey;
+  color: $dark-grey;
   font-size: ms(-2);
   font-family: $font-family-sans-serif;
   letter-spacing: 0.75px;
@@ -218,7 +218,7 @@ figure {
   //font-weight: 700;
   margin: $baseline/4 0;
   a:link, a:active, a:hover, a:visited {
-    color: $earl-grey;
+    color: $dark-grey;
   }
 }
 
