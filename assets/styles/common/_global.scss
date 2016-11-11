@@ -35,6 +35,21 @@ hr {
 
 }
 
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.screen-reader-text {
+  @include visually-hidden;
+}
+
 h1 {
   @include typi($size4-map);
   font-family: $font-family-headlines;

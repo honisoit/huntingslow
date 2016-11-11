@@ -1,0 +1,32 @@
+.search-form {
+  width: 100%;
+  display: flex;
+}
+
+.search-form__label {
+  flex: 1 1 auto;
+}
+
+.search-form__field {
+  border: 0;
+  border-bottom: 1px solid $mid-grey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: $font-family-serif;
+  font-size: ms(-1);
+  color: $fontcolor;
+  height: 100%;
+  background-color: #ff3300;
+  //flex: 1 1 auto;
+  width: 100%;
+  min-width: $baseline*2;
+}
+
+.search-form__submit {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid $mid-grey;
+  height: 100%;
+  background-color: #ff33cc;
+  flex: 0 0 auto;
+}
