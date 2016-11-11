@@ -3,13 +3,25 @@
 }
 
 .page__links-column {
-  @include md-columns(3);
+  @include md-columns(3, -10);
 }
 
-.page__list {}
+.page__list {
+  background-color: $mid-grey;
+  margin: $baseline/2 0;
+  padding: $baseline/2;
+  @include media($medium) {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    //@include link-nav;
+  }
+}
 
 .page__content-column {
-  @include md-columns(7);
+  @include md-columns(7, 3);
   @include side-padding;
 }
 
