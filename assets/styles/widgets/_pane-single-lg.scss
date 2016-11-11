@@ -42,6 +42,7 @@
   @include small-sans;
   display: none;
   @include media($medium) {
+    display: block;
     @include small-sans-prominent;
   }
 }
