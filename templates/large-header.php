@@ -23,6 +23,8 @@
           )
         );
     ?>
-    <?php get_search_form(); ?>
+    <div class="large-header__search">
+      <?php get_search_form(); ?>
+    </div>
   </nav>
 </header>
