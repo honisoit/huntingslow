@@ -83,10 +83,14 @@ add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
 // Remove image size attributes from images added to a WordPress post
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
 
+/**
+ * Suppress The SEO Framework usage indicator in html
+ */
+add_filter( 'the_seo_framework_indicator', '__return_false' );
+
 /*
 * Theme settings
 */
-
 if ( function_exists( 'fm_register_submenu_page' ) ) {
    fm_register_submenu_page( 'global_options', 'options-general.php', 'Huntingslow Options' );
    add_action( 'fm_submenu_global_options', function() {
