@@ -15,6 +15,44 @@ p {
   -webkit-margin-after: $baseline;
 }
 
+
+/**
+ * Utility mixins (should be split to another file)
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin side-padding {
+  padding: 0 $baseline/2 0 $baseline/2;
+
+  @include media($large) {
+    padding: 0;
+  }
+}
+
+@mixin padding {
+  padding: 0 $baseline/2;
+}
+
+@mixin gradient-background-horizontal {
+  background: $brand-primary;
+  background: linear-gradient(90deg, $brand-primary, $brand-secondary);
+}
+
+@mixin gradient-background-vertical {
+  background: $brand-primary;
+  background: linear-gradient($brand-primary, $brand-secondary);
+}
+
+
 h1 {
   @include typi($size4-map);
   font-family: $font-family-headlines;
@@ -202,41 +240,7 @@ figure {
   }
 }
 
-/**
- * Utility mixins (should be split to another file)
- */
-@mixin visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
 
-@mixin side-padding {
-  padding: 0 $baseline/2 0 $baseline/2;
-
-  @include media($large) {
-    padding: 0;
-  }
-}
-
-@mixin padding {
-  padding: 0 $baseline/2;
-}
-
-@mixin gradient-background-horizontal {
-  background: $brand-primary;
-  background: linear-gradient(90deg, $brand-primary, $brand-secondary);
-}
-
-@mixin gradient-background-vertical {
-  background: $brand-primary;
-  background: linear-gradient($brand-primary, $brand-secondary);
-}
 
 .screen-reader-text {
   @include visually-hidden;
