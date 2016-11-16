@@ -114,6 +114,7 @@
   padding: 0;
   width: auto;
   flex: 1 0 auto;
+  display: inline-block;
 }
 
 .header__nav-list-item {
@@ -129,4 +130,5 @@
 
 .large-header__search {
   flex: 0 2 auto;
+  display:inline-block;
 }
