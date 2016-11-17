@@ -116,6 +116,16 @@ figure {
   }
 }
 
+.supra-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.site-wrapper {
+
+}
+
 /**
  * Typography mixins
  */

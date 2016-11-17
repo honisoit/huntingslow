@@ -10,21 +10,23 @@ use Roots\Sage\Wrapper;
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
     <?php get_template_part('templates/menu-tray'); ?>
-    <div class="js-site-wrapper">
-      <!--[if IE]>
-        <div class="alert alert-warning">
-          <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+    <div class="supra-wrapper">
+      <div class="js-site-wrapper site-wrapper">
+        <!--[if IE]>
+          <div class="alert alert-warning">
+            <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+          </div>
+        <![endif]-->
+        <div class="ad">
+          <?php dynamic_sidebar('header-ad'); ?>
         </div>
-      <![endif]-->
-      <div class="ad">
-        <?php dynamic_sidebar('header-ad'); ?>
+        <?php include Wrapper\template_path(); ?>
+        <?php
+          do_action('get_footer');
+          get_template_part('templates/footer');
+          wp_footer();
+        ?>
       </div>
-      <?php include Wrapper\template_path(); ?>
-      <?php
-        do_action('get_footer');
-        get_template_part('templates/footer');
-        wp_footer();
-      ?>
     </div>
   </body>
 </html>
