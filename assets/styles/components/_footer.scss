@@ -28,6 +28,11 @@
   padding: 0;
   margin: 0 0 $baseline 0;
   @include link-nav;
+  color: $mid-grey;
+
+  a {
+    color: $mid-grey;
+  }
 }
 
 .footer__column-item {
@@ -64,5 +69,5 @@
   // @include side-padding;
   padding: $baseline/2 0 $baseline/4;
   text-align: center;
-  color: $headerfootertext2;
+  color: $mid-grey;
 }

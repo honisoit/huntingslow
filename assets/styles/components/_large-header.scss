@@ -3,7 +3,7 @@
   //padding: 0 1rem 0;
   @include outer-container();
   @include media($medium) {
-    border: 0;
+    border-bottom: 1px solid $mid-grey;
   }
 }
 
@@ -77,17 +77,20 @@
 .large-header__logo {
   display: block;
   width: $baseline*5;
-  margin: auto;
-  padding-top: $baseline/2;
+  margin: $baseline/4 auto;
   @include media($medium) {
     width: 25%;
-    margin: 0;
-    padding-top: $baseline/1.5;
-    padding-bottom: $baseline/2;
+    margin: $baseline/2 0 $baseline/4 0;
+  }
+
+  a {
+    display:block;
   }
 
   svg {
-    fill: $font-color;
+    //fill: $font-color;
+    fill: linear-gradient(90deg, $brand-primary, $brand-secondary);
+    display:block;
   }
   //svg:hover {
   //  fill: lightercolor($headerfootertext, 40%);
@@ -113,22 +116,22 @@
   margin: 0;
   padding: 0;
   width: auto;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: inline-block;
 }
 
 .header__nav-list-item {
   display: inline;
   float: left;
-  padding-right: 0.5rem;
   border-style: none;
   padding: 0;
   margin: 0;
-  padding-right: 2rem;
+  margin-right: $baseline;
+  //padding-right: 2rem;
   @include link-nav;
 }
 
 .large-header__search {
-  flex: 0 2 auto;
+  flex: 0 1 auto;
   display:inline-block;
 }

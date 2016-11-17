@@ -14,18 +14,19 @@
   //border-bottom: 1px solid $mid-grey;
   -webkit-appearance: none;
   -moz-appearance: none;
-  font-family: $font-family-serif;
-  font-size: ms(-1);
+  font-family: $font-family-sans-serif;
+  font-size: ms(-2);
   color: $font-color;
+  text-transform: uppercase;
   height: 100%;
   min-height: 100%;
   max-height: 100%;
   box-sizing: content-box;
-  background-color: #ff3300;
+  //background-color: #ff3300;
   flex: 1;
   //width: 100%;
   width: auto;
-  min-width: $baseline*2;
+  min-width: $baseline;
   //display: inline-block;
   vertical-align: bottom;
 }
@@ -42,13 +43,18 @@
   background-color: #fff;
   border: 0;
   //border-bottom: 1px solid $mid-grey;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  background-color: #ff33cc;
+  //height: 100%;
+  //min-height: 100%;
+  //max-height: 100%;
+  //background-color: #ff33cc;
   flex: 1;
-  //display: inline-block;
+  display: inline-block;
   vertical-align: bottom;
   box-sizing: content-box;
   padding: 0;
+
+  svg {
+    display:block;
+  }
+
 }
