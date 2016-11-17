@@ -1,5 +1,6 @@
-.page {
+.page-wrapper {
   @include row();
+  padding: $baseline 0 0;
 }
 
 .page__links-column {
@@ -8,7 +9,7 @@
 
 .page__list {
   background-color: $light-grey;
-  margin: $baseline/2 0;
+  margin: $baseline/2 0 $baseline;
   padding: $baseline/2;
   @include media($medium) {
     margin: 0;
@@ -16,13 +17,18 @@
 
   li {
     list-style: none;
-    //@include link-nav;
+    @include link-nav;
+    text-align: center;
+    @include media($medium) {
+      text-align: left;
+    }
   }
 }
 
 .page__content-column {
   @include md-columns(7, 3);
   @include side-padding;
+  @include link-body;
 }
 
 .page-header { //gotta make this not centred

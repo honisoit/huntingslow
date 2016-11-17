@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <div class="page">
+  <div class="page-wrapper">
     <article class="page__content-column">
       <?php get_template_part('templates/page', 'header'); ?>
       <?php the_content(); ?>
