@@ -74,7 +74,7 @@ function setup() {
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
 /*
- * Register sidebars
+ * Register sidebars: the locations widgets can be placed
  */
 function widgets_init() {
   register_sidebar([

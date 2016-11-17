@@ -1,11 +1,7 @@
 <?php
-
-// namespace Roots\Sage\Walker;
-
 /**
- * Simple menu walker for the footer
+ * Simple menu walkers that return clean list items with BEM classes
  */
-
 class Header_Menu_Walker extends Walker {
   public function walk( $elements, $max_depth ) {
     $list = array ();

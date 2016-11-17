@@ -109,29 +109,6 @@ a:visited {
 a:hover {
 }
 
-blockquote {
-  @include typi($size1-map);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 $baseline/2;
-  font-style: italic;
-  position:relative;
-  display: inline-block;
-  p {
-    margin:0;
-  }
-}
-
-blockquote:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -3px;
-  height: 100%;
-  width: 3px;
-  @include gradient-background-vertical;
-}
-
 figure {
   margin: 0 $baseline/8;
   img {
@@ -261,4 +238,27 @@ figure {
   flex-direction: column;
   height: 100%;
   align-items: center;
+}
+
+blockquote {
+  @include typi($size1-map);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 $baseline/2;
+  font-style: italic;
+  position:relative;
+  display: inline-block;
+  p {
+    margin:0;
+  }
+}
+
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 100%;
+  width: 3px;
+  @include gradient-background-vertical;
 }

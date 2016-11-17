@@ -1,11 +1,8 @@
 <?php
-// Custom options for Huntingslow
-
 /**
  * Unregister the default widgets which we won't be using.
- * That's everything apart from text.
+ * That's everything apart from text ('WP_Widget_Text').
  */
-
 function huntingslow_unregister_default_widgets() {
   unregister_widget('WP_Widget_Pages');
   unregister_widget('WP_Widget_Calendar');
@@ -13,7 +10,6 @@ function huntingslow_unregister_default_widgets() {
   unregister_widget('WP_Widget_Links');
   unregister_widget('WP_Widget_Meta');
   unregister_widget('WP_Widget_Search');
-  // unregister_widget('WP_Widget_Text');
   unregister_widget('WP_Widget_Categories');
   unregister_widget('WP_Widget_Recent_Posts');
   unregister_widget('WP_Widget_Recent_Comments');
@@ -31,48 +27,48 @@ add_filter('widget_text', 'do_shortcode');
 /**
  * Filter the output of embedded images to remove inline styles.
  */
- add_filter('img_caption_shortcode','fix_img_caption_shortcode_inline_style',10,3);
+add_filter('img_caption_shortcode','fix_img_caption_shortcode_inline_style',10,3);
 
- function fix_img_caption_shortcode_inline_style($output,$attr,$content) {
- 	$atts = shortcode_atts( array(
- 		'id'	  => '',
- 		'align'	  => 'alignnone',
- 		'width'	  => '',
- 		'caption' => '',
- 		'class'   => '',
- 	), $attr, 'caption' );
+function fix_img_caption_shortcode_inline_style($output,$attr,$content) {
+	$atts = shortcode_atts( array(
+		'id'	  => '',
+		'align'	  => 'alignnone',
+		'width'	  => '',
+		'caption' => '',
+		'class'   => '',
+	), $attr, 'caption' );
 
- 	$atts['width'] = (int) $atts['width'];
- 	if ( $atts['width'] < 1 || empty( $atts['caption'] ) )
- 		return $content;
+  $atts['width'] = (int) $atts['width'];
+	if ( $atts['width'] < 1 || empty( $atts['caption'] ) )
+		return $content;
 
- 	if ( ! empty( $atts['id'] ) )
- 		$atts['id'] = 'id="' . esc_attr( $atts['id'] ) . '" ';
+	if ( ! empty( $atts['id'] ) )
+		$atts['id'] = 'id="' . esc_attr( $atts['id'] ) . '" ';
 
- 	$class = trim( 'wp-caption ' . $atts['align'] . ' ' . $atts['class'] );
+	$class = trim( 'wp-caption ' . $atts['align'] . ' ' . $atts['class'] );
 
- 	if ( current_theme_supports( 'html5', 'caption' ) ) {
- 		return '<figure ' . $atts['id'] . ' class="' . esc_attr( $class ) . '">'
- 		. do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $atts['caption'] . '</figcaption></figure>';
- 	}
+	if ( current_theme_supports( 'html5', 'caption' ) ) {
+		return '<figure ' . $atts['id'] . ' class="' . esc_attr( $class ) . '">'
+		. do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $atts['caption'] . '</figcaption></figure>';
+	}
 
- 	$caption_width = 10 + $atts['width'];
+	$caption_width = 10 + $atts['width'];
 
- 	$caption_width = apply_filters( 'img_caption_shortcode_width', $caption_width, $atts, $content );
+	$caption_width = apply_filters( 'img_caption_shortcode_width', $caption_width, $atts, $content );
 
- 	$style = '';
+	$style = '';
 
- 	return '<div ' . $atts['id'] . $style . 'class="' . esc_attr( $class ) . '">'
- 		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $atts['caption'] . '</p></div>';
- }
+	return '<div ' . $atts['id'] . $style . 'class="' . esc_attr( $class ) . '">'
+		. do_shortcode( $content ) . '<p class="wp-caption-text">' . $atts['caption'] . '</p></div>';
+}
 
- /**
- * Removes width and height attributes from image tags
- *
- * @param string $html
- *
- * @return string
- */
+/**
+* Removes width and height attributes from image tags
+*
+* @param string $html
+*
+* @return string
+*/
 function remove_image_size_attributes( $html ) {
     return preg_replace( '/(width|height)="\d*"/', '', $html );
 }
@@ -88,9 +84,9 @@ add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
  */
 add_filter( 'the_seo_framework_indicator', '__return_false' );
 
-/*
-* Theme settings
-*/
+/**
+ * Theme settings
+ */
 if ( function_exists( 'fm_register_submenu_page' ) ) {
    fm_register_submenu_page( 'global_options', 'options-general.php', 'Huntingslow Options' );
    add_action( 'fm_submenu_global_options', function() {
@@ -127,9 +123,11 @@ if ( function_exists( 'fm_register_submenu_page' ) ) {
    } );
 }
 
-// CUSTOM METABOXES - Standfirst, Post Format, Creative Commons License and
-// Primary Tag. Assigns them to the relevant post types
-
+/**
+ * Custom metaboxes
+ * Sets up fields for standfirst, post format, and primary tags
+ * Assigns them to the 'post' post type
+ */
 function add_standfirst() {
   $fm = new Fieldmanager_Textfield( array (
     'name' => 'standfirst',
