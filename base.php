@@ -21,12 +21,12 @@ use Roots\Sage\Wrapper;
           <?php dynamic_sidebar('header-ad'); ?>
         </div>
         <?php include Wrapper\template_path(); ?>
-        <?php
-          do_action('get_footer');
-          get_template_part('templates/footer');
-          wp_footer();
-        ?>
       </div>
+      <?php
+        do_action('get_footer');
+        get_template_part('templates/footer');
+        wp_footer();
+      ?>
     </div>
   </body>
 </html>
