@@ -151,15 +151,6 @@ function add_primary_tag() {
 }
 add_action( 'fm_post_post', 'add_primary_tag' );
 
-function add_cc_license() {
-  $fm = new Fieldmanager_Checkbox ( array (
-    'name' => 'cc_license',
-    'label' => 'This article is Creative Commons licensed'
-  ) );
-  $fm->add_meta_box( 'Creative Commons Licensing', array( 'post' ) );
-}
-add_action( 'fm_post_post', 'add_cc_license' );
-
 function add_post_format() {
   $fm = new Fieldmanager_Radios( false, array (
       'name'    => 'post_format',
