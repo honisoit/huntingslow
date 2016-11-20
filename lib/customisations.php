@@ -133,7 +133,7 @@ function add_standfirst() {
     'name' => 'standfirst',
     'label' => 'Label giving brief instructions on what we use for a standfirst'
   ));
-  $fm->add_meta_box( 'Standfirst', array( 'post', 'podcast' ) );
+  $fm->add_meta_box( 'Standfirst', array( 'post' ) );
 }
 add_action( 'fm_post_post', 'add_standfirst' );
 
@@ -147,7 +147,7 @@ function add_primary_tag() {
     'label' => 'This tag will be shown alongside the category and should be used to group stories by topic. E.g. "Student Politics" or "SUSF"',
     'datasource' => $primary_tag_datasource
   ) );
-  $fm->add_meta_box( 'Primary Tag', array( 'post', 'podcast' ) );
+  $fm->add_meta_box( 'Primary Tag', array( 'post' ) );
 }
 add_action( 'fm_post_post', 'add_primary_tag' );
 
@@ -156,7 +156,7 @@ function add_cc_license() {
     'name' => 'cc_license',
     'label' => 'This article is Creative Commons licensed'
   ) );
-  $fm->add_meta_box( 'Creative Commons Licensing', array( 'post', 'podcast' ) );
+  $fm->add_meta_box( 'Creative Commons Licensing', array( 'post' ) );
 }
 add_action( 'fm_post_post', 'add_cc_license' );
 
@@ -165,7 +165,9 @@ function add_post_format() {
       'name'    => 'post_format',
       'default_value' => '1',
       'options' => array (
-        1 => 'Regular', 2 => 'Feature (for Feature articles and those with large, impressive images)', 3 => 'Podcast', 4 => 'Shell (for apps; only if you know what is going on)' )
+        1 => 'Regular',
+        2 => 'Feature (for Feature articles and those with large, impressive images)',
+        3 => 'Shell (for apps; only if you know what is going on)' )
   ));
   $fm->add_meta_box( 'Format', 'post' );
 }
