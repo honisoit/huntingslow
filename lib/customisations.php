@@ -131,7 +131,7 @@ if ( function_exists( 'fm_register_submenu_page' ) ) {
 function add_standfirst() {
   $fm = new Fieldmanager_Textfield( array (
     'name' => 'standfirst',
-    'label' => 'Label giving brief instructions on what we use for a standfirst'
+    'label' => 'The standfirst appears immediately beneath the headline on articles, previews around the site, and social media. Do not include the author, the bylines will handle that.'
   ));
   $fm->add_meta_box( 'Standfirst', array( 'post' ) );
 }
@@ -144,7 +144,7 @@ function add_primary_tag() {
   ) );
   $fm = new Fieldmanager_Autocomplete( array(
     'name' => 'primary_tag',
-    'label' => 'This tag will be shown alongside the category and should be used to group stories by topic. E.g. "Student Politics" or "SUSF"',
+    'label' => 'Select on of the articles tags to feature prominently throughout the site. This should be used to group stories by topic. E.g. "Student Politics" or "SUSF". If the tag options are not loading, hit Save Draft below and try again.',
     'datasource' => $primary_tag_datasource
   ) );
   $fm->add_meta_box( 'Primary Tag', array( 'post' ) );
@@ -165,9 +165,9 @@ function add_post_format() {
       'name'    => 'post_format',
       'default_value' => '1',
       'options' => array (
-        1 => 'Regular',
-        2 => 'Feature (for Feature articles and those with large, impressive images)',
-        3 => 'Shell (for apps; only if you know what is going on)' )
+        1 => 'Regular. (Standard layout for all articles.)',
+        2 => 'Feature. (Article layout to feature images. Not yet ready for use.)',
+        3 => 'Shell. (For full-page embedded content. Only use if you know what is going on.)' )
   ));
   $fm->add_meta_box( 'Format', 'post' );
 }
