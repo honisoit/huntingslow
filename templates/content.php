@@ -12,7 +12,7 @@
       <h4 class="article-summary__headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
     </header>
     <div class="article-summary__excerpt">
-      <?php echo get_post_meta( get_the_id(), 'standfirst', true); ?>
+      <?php get_template_part('templates/standfirst'); ?>
     </div>
     <span>
       <time class="article-summary__date" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>

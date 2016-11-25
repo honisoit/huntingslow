@@ -15,7 +15,7 @@
   <div class="feat__titles">
     <h1><?php the_title(); ?></h1>
     <div class="feat__standfirst">
-      <p><?php echo get_post_meta( get_the_id(), 'standfirst', true); ?></p>
+      <?php get_template_part('templates/standfirst'); ?>
     </div>
     <div class="feat__byline">
         <?php get_template_part('templates/byline'); ?>

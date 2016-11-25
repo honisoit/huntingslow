@@ -13,7 +13,7 @@
           <h1><?php the_title(); ?></h1>
         </div>
         <div class="reg__standfirst">
-          <p><?php echo get_post_meta( get_the_id(), 'standfirst', true); ?></p>
+          <?php get_template_part('templates/standfirst'); ?>
         </div>
       </div>
       <div class="reg__meta-row">
