@@ -103,18 +103,18 @@
 
   @include media($medium) {
     display: flex;
-    height: $baseline;
+    height: $baseline*2/3;
+    margin-top: $baseline/2;
     //padding: 0 0 $baseline/2 0;
     max-width: 100%;
     border-style: none;
     overflow: hidden;
-    line-height: 1.6rem;
+    //line-height: 1.6rem;
   }
 }
 
 .large-header__nav-list {
   list-style: none;
-  vertical-align: middle;
   margin: 0;
   padding: 0;
   width: auto;
@@ -124,19 +124,17 @@
 
 .header__nav-list-item {
   display: inline-block;
-  border-style: none;
-  //float: left;
   padding: 0;
   margin: 0;
-  height: 100%;
   margin-right: $baseline;
-  //padding-right: 2rem;
   @include link-nav;
+  vertical-align: top;
+  line-height: inherit;
 
   a {
-    height:1.6rem;
-    line-height: 1.6rem;
-    display: block;
+    vertical-align: top;
+    display:block;
+
   }
 }
 
