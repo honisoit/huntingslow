@@ -9,7 +9,6 @@
         <div class="reg__category-line category-line">
           <?php get_template_part('templates/category-line'); ?>
         </div>
-
         <div class="reg__headline">
           <h1><?php the_title(); ?></h1>
         </div>
@@ -23,24 +22,15 @@
               the_post_thumbnail();
           } ?>
           <span class="reg__article-image__caption">
-            <?php
-              echo get_post(get_post_thumbnail_id())->post_excerpt;
-            ?>
+            <?php echo esc_html( get_post(get_post_thumbnail_id())->post_excerpt ); ?>
           </span>
         </div>
-
         <div class="reg__details">
           <div class="reg__byline-row">
             <div class="reg__bylinedate">
               <div class="reg__byline">
-                by
-                  <?php
-                    if ( function_exists( 'coauthors_posts_links' ) ) {
-                      coauthors_posts_links();
-                    } else {
-                      the_author_posts_link();
-                    }
-                  ?>
+                <span>by</span>
+                <?php get_template_part('templates/byline'); ?>
               </div>
               <div class="reg__date">
                 <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
@@ -51,7 +41,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </header>
     <div class="reg__content-row">

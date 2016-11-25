@@ -3,7 +3,13 @@
     <article class="page__content-column">
       <?php get_template_part('templates/page', 'header'); ?>
       <?php the_content(); ?>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+      <?php
+        // Todo: Consider removing this (unused?) block.
+        wp_link_pages([
+          'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),
+          'after' => '</p></nav>'
+        ]);
+      ?>
     </article>
     <aside class="page__links-column">
       <?php

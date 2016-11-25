@@ -1,8 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <?php
-      $the_post_format = get_post_meta( get_the_id(), 'post_format', true);
-      switch ($the_post_format) {
+      $the_post_format = get_post_meta( get_the_id(), 'post_format', true );
+      switch ( $the_post_format ) {
         case 1:
           get_template_part('templates/regular-article');
           break;

@@ -1,7 +1,11 @@
 <header>
-  <div class="feat__article-image"
-    style="background: url(<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); } ?>); background-size: cover;">
-
+  <?php
+    if ( has_post_thumbnail() ) {
+      $article_image_url = the_post_thumbnail_url();
+      $article_image_background = 'background: url(' . $article_image_url . ');';
+    }
+  ?>
+  <div class="feat__article-image" style="<?php echo esc_attr( $article_image_background ); ?> background-size: cover;">
   </div>
   <div class="feat__logo">
     <a class="" href="<?= esc_url(home_url('/')); ?>">
@@ -14,18 +18,11 @@
       <p><?php echo get_post_meta( get_the_id(), 'standfirst', true); ?></p>
     </div>
     <div class="feat__byline">
-        <?php echo fm_get_bylines_posts_links(); ?>
+        <?php get_template_part('templates/byline'); ?>
     </div>
   </div>
 </header>
-  <span class="reg__category"><?php the_category(','); ?> — </span>
-  <?php
-    $primary_tag_id = get_post_meta( get_the_id(), 'primary_tag', true );
-    $primary_tag_array = get_term_by( 'id', $primary_tag_id, 'post_tag', ARRAY_A);
-    echo ucwords($primary_tag_array['name']);
-  ?>
-
-
+<span class="reg__category"><?php get_template_part('templates/category-line'); ?></span>
 <div class="content-wrapper">
   <div class="feat__content-row">
     <div class="feat__content">
