@@ -11,16 +11,16 @@
     <h4 class="not-found__title">
       <?php
         $options = get_option( 'global_options' );
-        $option = $options['not_found_title'];
-        echo $option
+        $not_found_title = $options['not_found_title'];
+        echo esc_html( $not_found_title );
       ?>
     </h4>
     <p class="not-found__subtitle">
       <a href="<?php echo site_url(); ?>">
         <?php
           $options = get_option( 'global_options' );
-          $option = $options['not_found_subtitle'];
-          echo $option;
+          $not_found_subtitle = $options['not_found_subtitle'];
+          echo esc_html( $not_found_subtitle );
         ?>
       </a>
     </p>

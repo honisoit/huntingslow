@@ -7,13 +7,11 @@
     <?php dynamic_sidebar('front-strap-two'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap front-strap--three">
     <?php dynamic_sidebar('front-strap-three'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__array">
     <div class="front__array__headlines">
@@ -29,37 +27,31 @@
     </div>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-four'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-five'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-six'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-seven'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-eight'); ?>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="front__strap">
     <?php dynamic_sidebar('front-strap-nine'); ?>
