@@ -2,7 +2,17 @@
   <div class="content-wrapper">
     <div class="footer__link-row">
       <div class="footer__categories">
-        <h3 class="footer__column-title">From The Mines</h3>
+        <h3 class="footer__column-title">
+          <?php
+            // $menu_object = wp_get_nav_menu_object( '50' );
+            // if ( false == $menu_object) {
+              //echo 'Nope';
+            //} else {
+              //echo $menu_object->name;
+            //}
+          ?>
+          From the mines
+        </h3>
         <div class="footer__categories-column">
           <?php
               wp_nav_menu( array(
@@ -51,17 +61,16 @@
         ?>
       </div>
     </div>
-    <div class="footer__small-text">
-      <?php
-        $options = get_option( 'global_options' );
-        $acknowledgment_text = $options['acknowledgment_text'];
-        echo esc_html( $acknowledgment_text );
-      ?>
-      <?php
-        $options = get_option( 'global_options' );
-        $copyright = $options['copyright'];
-        echo esc_html( $copyright );
-      ?>
-    </div>
+    <?php $options = get_option( 'global_options' );
+    $acknowledgment_text = $options['acknowledgment_text'];
+    if ( ! empty( $acknowledgment_text ) ) : ?>
+      <div class="footer__acknowledgment-row">
+        <p class="footer__acknowledgment"><?php echo esc_html( $acknowledgment_text ); ?></p>
+      </div>
+    <?php endif;
+    $copyright = $options['copyright'];
+    if ( ! empty( $copyright ) ) : ?>
+      <p class="footer__copyright"><?php echo esc_html( $copyright ); ?></p>
+    <?php endif; ?>
   </div>
 </footer>
