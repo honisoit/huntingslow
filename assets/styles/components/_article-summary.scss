@@ -75,8 +75,11 @@
 .article-summary__excerpt {
   //display: none;
   @include small-body;
-  margin: $baseline/2 0;
   @include media($large) {
     display: block;
+  }
+
+  p {
+    margin: $baseline/2 0;
   }
 }
