@@ -11,3 +11,14 @@
   //display:none;
   @include lg-columns(3);
 }
+
+.archive__no-result {
+}
+
+.archive__no-result--search {
+  background-color: $light-grey;
+  display: block;
+  width: 100%;
+  padding: $baseline;
+  margin-top: $baseline/2;
+}
