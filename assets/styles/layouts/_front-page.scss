@@ -1,7 +1,7 @@
 .front__strap,
 .front__array {
   //@include row();
-  margin-top: $baseline/2;
+  //margin-top: $baseline/2;
   padding-bottom: $baseline/2;
   display: block;
   border-bottom-style: solid;
@@ -19,7 +19,7 @@
 }
 
 .front__array {
-  padding-bottom: 0;
+  padding-bottom: 0; // stops there from being double spacing
 }
 
 .front__strap > div,
