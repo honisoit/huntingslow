@@ -1,6 +1,5 @@
 .large-header {
   border-bottom: 1px solid $dark-grey;
-  //background-color: #000;
   height: $baseline*1.25;
   display: block;
   padding-top: $baseline/4;
@@ -8,7 +7,7 @@
   @include media($medium) {
     border-bottom: 1px solid $mid-grey;
     height: auto;
-    padding: 0;
+    padding: 0 $baseline/4;
   }
 }
 

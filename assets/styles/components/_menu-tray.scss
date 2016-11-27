@@ -4,7 +4,7 @@
   height: 100%;
   top: 0;
   z-index: 888;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-right: 1px solid $mid-grey;
   background-color: white;
   transition: .15s ease-in-out;
@@ -38,7 +38,10 @@
 .menu-tray__nav-list-item {
   @include link-nav;
   padding: $baseline/4 0 $baseline/4 $baseline/2;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #c7c7c7;
+  border-bottom: 1px solid $mid-grey;
+}
+
+.menu-tray__search-form {
+  padding: $baseline/4 $baseline/2;
+  border-bottom: 1px solid $mid-grey;
 }

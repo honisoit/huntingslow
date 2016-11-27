@@ -8,6 +8,8 @@
         'walker'            => new Tray_Menu_Walker
       ) );
     ?>
+    <div class="menu-tray__search-form">
     <?php get_search_form(); ?>
+    </div>
   </nav>
 </div>
