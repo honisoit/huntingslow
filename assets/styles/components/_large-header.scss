@@ -1,18 +1,23 @@
 .large-header {
   border-bottom: 1px solid $dark-grey;
-  //padding: 0 1rem 0;
+  //background-color: #000;
+  height: $baseline*1.25;
+  display: block;
+  padding-top: $baseline/4;
   @include outer-container();
   @include media($medium) {
     border-bottom: 1px solid $mid-grey;
+    height: auto;
+    padding: 0;
   }
 }
 
 .large-header__toggle {
-  display: inline;
+  display: block;
   position: absolute;
-  right: $baseline/2;
-  top: $baseline/2;
-  display: inline;
+  top: $baseline/4;
+  right: $baseline/4;
+  height: inherit;
 
   @include media($medium) {
     display: none;
@@ -76,8 +81,9 @@
 
 .large-header__logo {
   display: block;
-  width: $baseline*5;
-  margin: $baseline/4 auto;
+  width: $baseline*4;
+  margin: 0 auto $baseline/4 auto;
+  vertical-align: middle;
   @include media($medium) {
     width: 25%;
     margin: $baseline/2 0 $baseline/4 0;
@@ -89,7 +95,6 @@
 
   svg {
     //fill: $font-color;
-    fill: linear-gradient(90deg, $brand-primary, $brand-secondary);
     display:block;
   }
   //svg:hover {
