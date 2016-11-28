@@ -111,12 +111,6 @@ if ( function_exists( 'fm_register_submenu_page' ) ) {
                 'not_found_subtitle' => new Fieldmanager_Textfield( array (
 									'label' => 'Small text for the error page.'
 								) ),
-								'license' => new Fieldmanager_Group( array (
-									'label' => 'Creative Commons Options',
-									'children' => array(
-										'license_info' => new Fieldmanager_Textfield( 'License_Info' )
-									)
-								))
            )
        ) );
        $fm->activate_submenu_page();
