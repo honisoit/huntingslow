@@ -2,20 +2,29 @@
 .front__array {
   //@include row();
   //margin-top: $baseline/2;
+  @include side-padding;
   padding-bottom: $baseline/2;
   display: block;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: $mid-grey;
+
+  & > div {
+    margin: $baseline/2 0;
+  }
+
   @include media($medium) {
     display: flex;
+
+    & :first-child {
+      margin-left: 0;
+    }
+    & :last-child {
+      margin-right: 0;
+    }
+
   }
-  & :first-child {
-    margin-left: 0;
-  }
-  & :last-child {
-    margin-right: 0;
-  }
+
 }
 
 .front__array {

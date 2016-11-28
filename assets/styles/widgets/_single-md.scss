@@ -8,13 +8,15 @@
 }
 
 .single-md__image {
-  //margin: 0;
+  margin: 0;
   width: 100%;
   //height: 300px;
   //overflow: hidden;
   //display: block;
   img {
-    width: 100%;
+    width: calc(100%+$baseline/2);
+    margin-left: -$baseline/2;
+    margin-right: -$baseline/2;
     //height: 100%;
     //margin: -50px auto auto auto;
     }
@@ -35,7 +37,11 @@
 }
 
 .single-md__headline {
-  margin: $baseline/2 0 $baseline/4 0;
+  margin: $baseline/4 0;
+
+  @include media($medium) {
+    margin: $baseline/2 0 $baseline/4 0;
+  }
 }
 
 .single-md__standfirst {

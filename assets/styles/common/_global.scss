@@ -31,10 +31,12 @@ p {
 }
 
 @mixin side-padding {
-  padding: 0 $baseline/2 0 $baseline/2;
+  padding-left: $baseline/2;
+  padding-right: $baseline/2;
 
   @include media($large) {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -124,6 +126,7 @@ figure {
 
 .site-wrapper {
   flex: 1;
+  overflow-x:hidden;
 }
 
 /**
@@ -240,7 +243,10 @@ figure {
 
 .content-wrapper {
   @include outer-container();
-  margin-top: $baseline/2;
+
+  @include media($medium) {
+    margin: $baseline/2 auto;
+  }
 }
 
 .flex-container {

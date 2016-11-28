@@ -2,9 +2,13 @@
   padding: $baseline/4;
   text-align: center;
   max-width: 1200px;
-  margin: $baseline/2;
+  margin-bottom: $baseline/2;
   background-color: $dark-grey;
   @include gradient-background-horizontal;
+
+  @include media($medium) {
+    margin: $baseline/2;
+  }
 
   @include media($xlarge) {
     margin: $baseline/2 auto;

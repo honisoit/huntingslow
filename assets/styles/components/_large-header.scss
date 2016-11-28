@@ -7,7 +7,10 @@
   @include media($medium) {
     border-bottom: 1px solid $mid-grey;
     height: auto;
-    padding: 0 $baseline/4;
+    padding: 0 $baseline/2;
+  }
+  @include media($xlarge) {
+    padding: 0;
   }
 }
 
@@ -113,7 +116,6 @@
     max-width: 100%;
     border-style: none;
     overflow: hidden;
-    //line-height: 1.6rem;
   }
 }
 
