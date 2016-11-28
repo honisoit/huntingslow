@@ -3,15 +3,13 @@
   //@include row();
   //margin-top: $baseline/2;
   @include side-padding;
-  padding-bottom: $baseline/2;
   display: block;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: $mid-grey;
+
 
   & > div {
     margin-top: $baseline/2;
     margin-bottom: $baseline/2;
+
     @include media($medium) {
       margin: 0 $baseline/4 0 $baseline/4;
     }
@@ -19,6 +17,10 @@
 
   @include media($medium) {
     display: flex;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $mid-grey;
+    padding-bottom: $baseline/2;
 
     & :first-child {
       margin-left: 0;

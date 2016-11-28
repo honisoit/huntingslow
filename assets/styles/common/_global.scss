@@ -34,7 +34,7 @@ p {
   padding-left: $baseline/2;
   padding-right: $baseline/2;
 
-  @include media($large) {
+  @include media($xlarge) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -147,7 +147,7 @@ figure {
 @mixin small-sans {
   font-family: $font-family-sans-serif;
   @include typi($size1-map);
-  margin: $baseline/8 0;
+  //margin: $baseline/8 0;
 }
 
 // Smaller style of body font, used in widgets
