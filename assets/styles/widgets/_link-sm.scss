@@ -1,12 +1,18 @@
 .link-sm {
   flex: 1 1 25%;
-  //border-top: 3px solid rgb(0, 100, 200);
-  //background-color: rgb(100, 150, 200);
-  margin-right: 5px;
   box-sizing: border-box;
-  padding: $baseline/4;
+  padding: $baseline/2;
   text-align: center;
   background-color: darkercolor($brand-primary, 5%);
+  width: calc(100% + #{$baseline});
+  margin-left: -$baseline/2;
+  margin-right: -$baseline/2;
+
+  @include media($medium) {
+    margin-right: 5px;
+    margin-left: 0;
+    padding: $baseline/4;
+  }
 }
 
 .link-sm__content {
