@@ -35,6 +35,7 @@
 
 .front__array {
   padding-bottom: 0; // stops there from being double spacing
+
 }
 
 
@@ -46,8 +47,13 @@
 
 .front__array__secondary {
   flex: 0 1 80%;
-  margin-right: 0;
+  margin-right: -$baseline/2;
   padding-right: 0;
+  margin-left: -$baseline/2;
+
+  @include media($medium) {
+    margin-right: 0;
+  }
 
   & > .front__strap {
     margin-top: 0;
