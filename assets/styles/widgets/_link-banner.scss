@@ -1,15 +1,27 @@
 .link-banner {
-  @include gradient-background-horizontal;
-  margin-bottom: $baseline;
   padding: $baseline/4;
   text-align: center;
+  max-width: 1200px;
+  margin: $baseline/2;
+  background-color: $dark-grey;
+  @include gradient-background-horizontal;
+
+  @include media($xlarge) {
+    margin: $baseline/2 auto;
+  }
 }
 
 .link-banner--breaking {
-  background-color: rgb(250, 100, 100);
+  background-color: rgb(250, 50, 50);
+  background: linear-gradient(90deg, rgb(250, 50, 50), rgb(250, 50, 50));
 }
 
 .link-banner__text {
   @include small-sans;
   margin: 0;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
 }
