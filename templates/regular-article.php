@@ -20,10 +20,16 @@
         <div class="reg__article-image">
           <?php if ( has_post_thumbnail() ) {
               the_post_thumbnail();
-          } ?>
-          <span class="reg__article-image__caption">
-            <?php echo esc_html( get_post(get_post_thumbnail_id())->post_excerpt ); ?>
-          </span>
+          }
+
+          $attachment_post_object = get_post(get_post_thumbnail_id());
+          if ( ! is_null( $attachment_post_object ) ) : ?>
+            <span class="reg__article-image__caption">
+              <?php echo esc_html( $attachment_post_object->post_excerpt ); ?>
+            </span>
+          <?php else: ?>
+            <p>[Imagine a bloody picture here]</p>
+          <?php endif; ?>
         </div>
         <div class="reg__details">
           <div class="reg__byline-row">
