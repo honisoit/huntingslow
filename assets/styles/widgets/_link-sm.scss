@@ -1,19 +1,31 @@
 .link-sm {
   flex: 1 1 25%;
-  border-top: 3px solid rgb(0, 100, 200);
-  background-color: rgb(100, 150, 200);
+  //border-top: 3px solid rgb(0, 100, 200);
+  //background-color: rgb(100, 150, 200);
+  margin-right: 5px;
+  box-sizing: border-box;
   padding: $baseline/4;
   text-align: center;
+  background-color: darkercolor($brand-primary, 5%);
+}
+
+.link-sm__content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .link-sm__title {
-  @include typi($size1-map);
-  font-family: $font-family-serif;
-  padding: $baseline/4;
-  margin: 0
+  @include typi($size3-map);
+  font-family: $font-family-headlines;
+  padding: 0 $baseline/4;
+  margin-bottom: $baseline/2;
+  color: #fff;
 }
 
 .link-sm__text {
   @include small-sans;
   margin: 0;
+  color: #fff;
 }
