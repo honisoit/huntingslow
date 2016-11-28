@@ -89,8 +89,11 @@ h3 {
 
 h4 {
   font-family: $font-family-headlines;
-  @include typi($size3-map);
   margin: $baseline/4 0 $baseline/2 0;
+  @include typi($size1-map);
+  @include media($medium) {
+    @include typi($size3-map);
+  }
 }
 
 h5 {
@@ -112,7 +115,7 @@ a:hover {
 }
 
 figure {
-  margin: 0 $baseline/8;
+  margin: 0 $baseline/8 0 0; // does this ever need a left margin?
   img {
     display:block;
   }
@@ -126,7 +129,7 @@ figure {
 
 .site-wrapper {
   flex: 1;
-  overflow-x:hidden;
+  overflow-x:hidden; // probably don't need, will check later (was necessary before bc i wasn't interpolating variables in calcs for full-width images)
 }
 
 /**

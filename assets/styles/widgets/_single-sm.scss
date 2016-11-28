@@ -1,24 +1,44 @@
 .single-sm {
   background-color: $light-grey;
-  width: 50%;
+  width: calc(100% + #{$baseline});
+  margin-left: -$baseline/2;
+  margin-right: -$baseline/2;
+  @include clearfix;
 
-  @include media ($medium) {
+  @include media($medium) {
+    display: block;
     flex: 0 1 25%;
+  }
+
+}
+
+.single-sm__text {
+  float:right;
+  width: calc(50% - #{$baseline/8});
+  @include media($medium) {
+    float: none;
+    width: auto;
   }
 }
 
 .single-sm__headline {
   @include padding;
-  margin: $baseline/4 0 0 0;
+  margin: $baseline/4 0;
 }
 
 .single-sm__image {
-  width: 100%;
-  margin: 0;
+  width: 50%;
+  float: left;
+
   img {
     width: 100%;
     height: 100%;
     margin: auto;
+  }
+
+  @include media($medium) {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -27,11 +47,20 @@
   @include small-sans-prominent;
   margin-top: $baseline/2;
   margin-bottom: 0;
+  display: none;
+
+  @include media($medium) {
+    display: inline;
+  }
 
 }
 
 .single-sm__byline {
-  @include small-sans;
+  font-size: ms(-2);
+  font-family: $font-family-sans-serif;
   @include padding;
   margin: $baseline/2 0;
+  @include media($medium) {
+    @include small-sans;
+  }
 }

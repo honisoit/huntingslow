@@ -14,12 +14,14 @@
   //overflow: hidden;
   //display: block;
   img {
-    width: calc(100%+$baseline/2);
+    width: calc(100% + #{$baseline});
     margin-left: -$baseline/2;
     margin-right: -$baseline/2;
-    //height: 100%;
-    //margin: -50px auto auto auto;
+
+    @include media($medium) {
+      width: 100%;
     }
+  }
 }
 
 .single-md__primary-tag {

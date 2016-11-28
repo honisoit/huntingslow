@@ -10,7 +10,11 @@
   border-bottom-color: $mid-grey;
 
   & > div {
-    margin: $baseline/2 0;
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/2;
+    @include media($medium) {
+      margin: 0 $baseline/4 0 $baseline/4;
+    }
   }
 
   @include media($medium) {
@@ -31,12 +35,7 @@
   padding-bottom: 0; // stops there from being double spacing
 }
 
-.front__strap > div,
-.front__array > div {
-  @include media($medium) {
-    margin: 0 $baseline/4 0 $baseline/4;
-  }
-}
+
 
 
 .front__array__headlines {
