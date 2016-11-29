@@ -1,7 +1,11 @@
 .category__banner {
   @include row();
-  width: 100%;
   text-align: center;
   border-bottom: 1px solid $mid-grey;
-  margin: 0 0 $baseline/2 0;
+  margin: 0 $baseline/2 $baseline/2 $baseline/2;
+
+  @include media($medium) {
+   margin: 0 0 $baseline/2 0;
+   width: 100%;
+ }
 }

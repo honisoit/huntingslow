@@ -1,13 +1,14 @@
 .large-header {
   border-bottom: 1px solid $dark-grey;
   height: $baseline*1.25;
-  display: block;
+  display: flex;
   padding-top: $baseline/4;
   @include outer-container();
   @include media($medium) {
     border-bottom: 1px solid $mid-grey;
     height: auto;
     margin: 0 $baseline/2;
+    display: block;
   }
   @include media($xlarge) {
     margin: 0 auto;
@@ -15,10 +16,8 @@
 }
 
 .large-header__toggle {
-  display: block;
-  position: absolute;
-  top: $baseline/4;
-  right: $baseline/4;
+  flex: 0 0 auto;
+  margin-right: 2px;
   height: inherit;
 
   @include media($medium) {
@@ -42,7 +41,7 @@
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #444;
+  background: $font-color;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -82,14 +81,19 @@
 }
 
 .large-header__logo {
-  display: block;
   width: $baseline*4;
   margin: 0 auto $baseline/4 auto;
   vertical-align: middle;
+  display: block;
+  position:relative;
+  left: 16px;
+  
   @include media($medium) {
     width: 25%;
-    margin: $baseline/2 0 $baseline/4 0;
+    margin: $baseline/2 0 $baseline/4 0
+    left: auto;
   }
+
 
   a {
     display:block;
@@ -98,6 +102,7 @@
   svg {
     //fill: $font-color;
     display:block;
+
   }
   //svg:hover {
   //  fill: lightercolor($headerfootertext, 40%);
