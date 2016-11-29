@@ -1,6 +1,9 @@
 .headline-list {
-  & :last-child {
-    border-bottom: none;
+
+  @include media($medium) {
+    & :last-child {
+      border-bottom: none;
+    }
   }
 }
 
