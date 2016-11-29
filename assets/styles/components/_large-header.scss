@@ -87,10 +87,10 @@
   display: block;
   position:relative;
   left: 16px;
-  
+
   @include media($medium) {
     width: 25%;
-    margin: $baseline/2 0 $baseline/4 0
+    margin: $baseline/2 0 $baseline/4 0;
     left: auto;
   }
 
