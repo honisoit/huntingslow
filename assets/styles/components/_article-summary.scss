@@ -1,10 +1,10 @@
 .article-summary {
   @include row();
   margin-bottom: $baseline;
-  @include side-padding;
+  //@include side-padding;
   @include media($medium) {
     padding-left: 0;
-    padding-right: $baseline/2;
+    //padding-right: $baseline/2;
   }
   &:after {
     content: "";

@@ -6,7 +6,7 @@
   <div class="category__featured">
     <?php dynamic_sidebar('category-page-featured'); ?>
   </div>
-  <div class="archive">
+  <div class="archive__container">
     <div class="archive__main-column">
       <?php if (!have_posts()) : ?>
         <div class="alert alert-warning">

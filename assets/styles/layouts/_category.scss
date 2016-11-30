@@ -14,9 +14,8 @@
 }
 
 .category__featured {
-  @include side-padding;
   display: block;
-  margin-bottom: $baseline/2;
+  margin: 0 $baseline/2 $baseline/2 $baseline/2;
 
 
   & > div {
@@ -41,5 +40,10 @@
     & :last-child {
       margin-right: 0;
     }
+  }
+
+  @include media($xlarge) {
+    margin: 0;
+    margin-bottom: $baseline/2;
   }
 }

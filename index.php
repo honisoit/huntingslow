@@ -1,7 +1,7 @@
 <?php get_template_part('templates/large-header'); ?>
 
 <div class="content-wrapper">
-  <div class="archive">
+  <div class="archive__container">
     <div class="archive__main-column">
       <div class="archive__banner">
         <?php get_template_part('templates/page', 'header'); ?>

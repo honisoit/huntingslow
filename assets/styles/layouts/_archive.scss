@@ -1,5 +1,10 @@
-.archive {
+.archive__container {
   @include row();
+  @include padding;
+
+  @include media($xlarge) {
+    padding: 0;
+  }
 }
 
 .archive__main-column {
@@ -7,19 +12,19 @@
   @include lg-columns(9 of 12);
 
   @include media($large) {
-    margin-left: $baseline/2;
-    margin-right: 0;
+    padding: 0;
   }
 
-  @include media($xlarge) {
-    margin: 0;
-  }
 }
 
 .archive__sidebar {
   display: none;
   @include lg-columns(3 of 12);
 
+  @include media($large) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .archive__no-result {
@@ -29,7 +34,7 @@
   @include row();
   text-align: center;
   border-bottom: 1px solid $mid-grey;
-  margin: 0 $baseline/2 $baseline/2 $baseline/2;
+  margin: 0 0 $baseline/2 0;
 
   @include media($medium) {
    margin: 0 0 $baseline/2 0;

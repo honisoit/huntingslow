@@ -30,12 +30,11 @@
   @include link-body;
 }
 
-.page-header { //gotta make this not centred
+.page-header {
   width: 100%;
   align: none;
 }
 
 .page__title {
   margin: 0 0 $baseline/4 0;
-  //@include side-padding;
 }
