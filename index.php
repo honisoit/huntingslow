@@ -3,8 +3,9 @@
 <div class="content-wrapper">
   <div class="archive">
     <div class="archive__main-column">
-      <?php get_template_part('templates/page', 'header'); ?>
-
+      <div class="archive__banner">
+        <?php get_template_part('templates/page', 'header'); ?>
+      </div>
       <?php if (!have_posts()) : ?>
         <div class="archive__no-result">
           <?php _e('Sorry, no results were found.', 'sage'); ?>

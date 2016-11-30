@@ -15,6 +15,18 @@
 .archive__no-result {
 }
 
+.archive__banner {
+  @include row();
+  text-align: center;
+  border-bottom: 1px solid $mid-grey;
+  margin: 0 $baseline/2 $baseline/2 $baseline/2;
+
+  @include media($medium) {
+   margin: 0 0 $baseline/2 0;
+   width: 100%;
+ }
+}
+
 .archive__no-result--search {
   background-color: $light-grey;
   display: block;
