@@ -1,7 +1,7 @@
 <article class="article-summary">
   <div class="article-summary__image">
     <?php if ( has_post_thumbnail() ) {
-        the_post_thumbnail();
+        the_post_thumbnail('thumbnail');
     } ?>
   </div>
   <div class="article-summary__copy">
