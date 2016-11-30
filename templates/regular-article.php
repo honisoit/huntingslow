@@ -19,7 +19,7 @@
       <div class="reg__meta-row">
         <div class="reg__article-image">
           <?php if ( has_post_thumbnail() ) {
-              the_post_thumbnail();
+              the_post_thumbnail('thumbnail');
           }
 
           $attachment_post_object = get_post(get_post_thumbnail_id());
