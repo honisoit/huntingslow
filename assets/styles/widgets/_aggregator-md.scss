@@ -1,7 +1,8 @@
 .aggregator-md {
   flex: 0 1 50%;
-  // background-color: #ebebeb;
-  // padding: 0 $baseline/2 $baseline/2;
+  & > .flex-container {
+    height: calc(100% - #{$baseline*1.5});
+  }
 }
 
 .aggregator-md__featured {
@@ -22,7 +23,6 @@
 
 .aggregator-md__title {
   @include typi($size3-map);
-  // text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.3;
   color: black;
