@@ -25,11 +25,20 @@
 
 .reg__meta-row {
   @include row();
+  @include media($large) {
+    @include padding;
+  }
+  @include media($xlarge) {
+    padding: 0;
+  }
 }
 
 .reg__byline-row {
   @include row();
-  @include side-padding;
+  @include padding;
+  @include media($large) {
+    padding: 0;
+  }
 }
 
 .reg__main-column {
@@ -125,6 +134,9 @@
   @include side-padding;
   margin: $baseline/8 0 0 0;
   display: block;
+  @include media($large) {
+    padding: 0;
+  }
 }
 
 .reg__byline {
