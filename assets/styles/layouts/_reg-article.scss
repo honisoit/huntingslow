@@ -78,6 +78,16 @@
   @include lg-columns(10, 2);
 }
 
+.reg__article-image--none {
+  display: block;
+  width: 100%;
+  min-height: $baseline*2;
+  background-color: darkercolor($brand-primary, 5%);
+  padding: $baseline/2;
+  color: #fff;
+  text-align: center;
+}
+
 .reg__tags {
   @include sm-columns(12);
   @include md-columns(10, 1);

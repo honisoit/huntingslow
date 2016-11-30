@@ -28,7 +28,9 @@
               <?php echo esc_html( $attachment_post_object->post_excerpt ); ?>
             </span>
           <?php else: ?>
-            <p>[Imagine a bloody picture here]</p>
+            <div class="reg__article-image--none">
+              <p>[Imagine a bloody picture here]</p>
+            </div>
           <?php endif; ?>
         </div>
         <div class="reg__details">
