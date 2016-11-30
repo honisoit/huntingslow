@@ -7,6 +7,48 @@
   @include typi($size1-map);
   font-family: $font-family-sans-serif;
 }
+
+.page-numbers,
+a.page-numbers {
+  display: none;
+  @include media($medium) {
+    display: inline-block;
+    background-color: darkercolor($brand-primary, 10%);
+    margin-right: $baseline/8;
+    width: $baseline;
+    padding: $baseline/8 $baseline/4;
+    color: #fff;
+  }
+}
+
+a.page-numbers:hover {
+  background-color: $brand-primary-dark;
+}
+
+.page-numbers.current {
+  background-color: $brand-primary-dark;
+}
+
+.page-numbers.dots {
+  background-color: #fff;
+  color: $font-color;
+  width: auto;
+}
+
+.page-numbers.next {
+  width: auto;
+}
+
+.page-numbers.prev,
+.page-numbers.next {
+  width: auto;
+  display: inline-block;
+  background-color: darkercolor($brand-primary, 10%);
+  margin-right: $baseline/8;
+  padding: $baseline/8 $baseline/4;
+  color: #fff;
+}
+
 .nav-previous {}
 .nav-next {}
 
