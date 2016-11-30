@@ -68,10 +68,25 @@
 }
 
 .footer__acknowledgment {
-  @include md-columns(6, 3);
+  //@include md-columns(6, 3);
   @include small-body;
   text-align: center;
   margin: 0;
+  padding: $baseline/2 0;
+  border-top: 1px solid $dark-grey;
+  border-bottom: 1px solid $dark-grey;
+
+  @include media($medium) {
+    padding: $baseline/2 15%;
+  }
+}
+
+.footer__acknowledgement:before {
+  width: $baseline*2;
+  height: 3px;
+  content: "";
+  fill: $brand-primary;
+  margin: 0 auto;
 }
 
 .footer__copyright {
@@ -81,4 +96,5 @@
   padding: $baseline/2 0 $baseline/4;
   text-align: center;
   color: $mid-grey;
+
 }
