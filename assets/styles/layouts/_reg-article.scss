@@ -52,6 +52,11 @@
   @include lg-columns(10, 2);
   display: block;
   @include link-body;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .reg__details {
@@ -69,6 +74,11 @@
   display:none;
   @include lg-columns(3);
   padding-top: 800px; // remove later
+  padding-right: $baseline/2;
+
+  @include media($xlarge) {
+    padding-right: 0;
+  }
 }
 
 .reg__category-line {
@@ -102,6 +112,7 @@
   @include md-columns(10, 1);
   @include lg-columns(10, 2);
   @include small-sans;
+  text-transform: uppercase;
 }
 
 .reg__related {

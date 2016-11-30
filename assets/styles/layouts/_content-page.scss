@@ -10,7 +10,13 @@
   background-color: $light-grey;
   margin: $baseline/2 0 $baseline;
   padding: $baseline/2;
+
   @include media($medium) {
+    margin: 0;
+    margin-left: $baseline/2;
+  }
+
+  @include media($xlarge) {
     margin: 0;
   }
 

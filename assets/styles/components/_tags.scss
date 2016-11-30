@@ -17,9 +17,9 @@
   display: inline-block;
   margin-right: $baseline/8;
   margin-bottom: $baseline/8;
-  padding-left: $baseline/4;
-  padding-right: $baseline/4;
+  padding: $baseline/8 $baseline/4;
   background-color: $brand-primary;
+  font-size: ms(-2);
   color: #fff;
 }
 

@@ -179,7 +179,7 @@ figure {
   a {
     @include link-underline(#fff, $font-color, $brand-primary-light, $brand-primary);
 
-    & > span {
+    & > * {
       @include link-underline(#fff, $font-color, $brand-primary-light, $brand-primary);
     }
   }
@@ -187,7 +187,7 @@ figure {
   a:hover {
     @include link-underline(#fff, $font-color, $brand-primary-light, $font-color);
 
-    & > span {
+    & > * {
       @include link-underline(#fff, $font-color, $brand-primary-light, $font-color);
     }
   }
