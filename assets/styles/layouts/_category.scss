@@ -7,8 +7,39 @@
   @include media($medium) {
    margin: 0 $baseline/2 $baseline/2 $baseline/2;
   }
-  
+
    @include media($xlarge) {
      margin: 0 0 $baseline/2 0 ;
    }
+}
+
+.category__featured {
+  @include side-padding;
+  display: block;
+  margin-bottom: $baseline/2;
+
+
+  & > div {
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/2;
+
+    @include media($medium) {
+      margin: 0 $baseline/4 0 $baseline/4;
+    }
+  }
+
+  @include media($medium) {
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $mid-grey;
+    padding-bottom: $baseline/2;
+
+    & :first-child {
+      margin-left: 0;
+    }
+    & :last-child {
+      margin-right: 0;
+    }
+  }
 }

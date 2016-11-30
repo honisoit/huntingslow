@@ -8,6 +8,7 @@
 
   @include media($large) {
     margin-left: $baseline/2;
+    margin-right: 0;
   }
 
   @include media($xlarge) {
@@ -16,8 +17,9 @@
 }
 
 .archive__sidebar {
-  //display:none;
-  @include lg-columns(3);
+  display: none;
+  @include lg-columns(3 of 12);
+
 }
 
 .archive__no-result {
